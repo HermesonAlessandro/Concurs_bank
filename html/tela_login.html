@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Declaração do tipo de documento HTML5 e define o idioma principal como português do Brasil. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentuação e caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o layout responsivo para se adaptar a diferentes tamanhos de tela. -->
+
+    <title>Tela de login</title>
+    <!-- Define o título da aba do navegador. -->
+</head>
+
+<body>
+    <header>
+        <!-- Cabeçalho da página, normalmente usado para elementos de navegação e identidade visual. -->
+
+        <a href="tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a>
+        <!-- Imagem do logotipo com dimensões definidas para controle do layout. O "alt" é um texto descritivo caso a imagem não carregue. -->
+
+        <a href="tela_inicial.html"><button>Home</button></a>
+        <!-- Botão para navegar para a página inicial. Utiliza a tag <a> para criar um link. -->
+
+        <a href="tela_sobre_nos.html"><button>Sobre nós</button></a>
+        <!-- Botão que direciona para a página "Sobre nós". -->
+
+        <button>Contato</button>
+        <!-- Botão de contato (precisa de um link se for redirecionar para uma página específica). -->
+
+        <a href="tela_login.html"><button>Entrar</button></a>
+        <!-- Botão para acessar a página de login. -->
+
+        <a href="tela_cadastro.html"><button>Cadastra-se</button></a>
+        <!-- Botão para ir para a página de cadastro. -->
+
+        <hr>
+        <!-- Linha horizontal separando o cabeçalho do restante do conteúdo. -->
+    </header>
+
+    <main>
+        <!-- Elemento principal que contém o formulário de login. -->
+
+        <form method="post">
+            <!-- Formulário configurado para enviar os dados usando o método POST. -->
+
+            <fieldset>
+                <!-- Agrupamento de elementos do formulário para melhor organização e estilização. -->
+
+                <legend>Login</legend>
+                <!-- Título do grupo de campos, que aparece dentro da borda do fieldset. -->
+
+                <label for="email">Email:</label>
+                <!-- Rótulo para o campo de email, indicando claramente sua função. -->
+
+                <input type="email" id="email" name="email" required>
+                <!-- Campo de entrada para email. O atributo "required" exige que o usuário preencha esse campo antes de enviar o formulário. -->
+
+                <br><br>
+
+                <label for="senha">Senha:</label>
+                <!-- Rótulo para o campo de senha. -->
+
+                <input type="password" id="senha" name="senha">
+                <!-- Campo de entrada para senha, escondendo os caracteres digitados. -->
+
+                <br><br>
+
+                <button type="submit">Logar</button>
+                <!-- Botão que envia o formulário ao servidor. -->
+            </fieldset> <!-- Fechamento da tag fieldset -->
+        </form> <!-- Fechamento da tag form -->
+    </main> <!-- Fechamento da tag do main -->
+</body> <!-- Fechamento do corpo do site -->
+</html> <!-- Fechamento da tag do html -->
