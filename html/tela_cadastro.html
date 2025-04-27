@@ -19,7 +19,7 @@
     <br><br> <!-- Quebras de linha para criar espaçamento entre o cabeçalho e o conteúdo principal -->
 
     <main> <!-- Elemento que agrupa o conteúdo principal da página -->
-        <form method="post"> <!-- Início de um formulário HTML. O atributo 'method="post"' especifica que os dados serão enviados ao servidor via POST -->
+        <form id ="validacao" method="post"> <!-- Início de um formulário HTML. O atributo 'method="post"' especifica que os dados serão enviados ao servidor via POST -->
             <fieldset> <!-- Agrupamento visual de elementos dentro do formulário -->
                 <label for="cpf">Cpf:</label> <!-- Rótulo para o campo de entrada do CPF -->
                 <input type="text" id="cpf" name="cpf" placeholder="digite seu cpf" required> <!-- Campo de entrada para CPF com validação obrigatória -->
@@ -53,5 +53,6 @@
             </fieldset> <!-- Fechamento da tag do fieldset -->
         </form> <!-- Fechamento da tag form -->
     </main> <!-- Fechamento da tag main -->
+    <script src="../js/validacao.js"></script> <!-- Importando o js -->
 </body> <!-- Final do corpo do documento -->
 </html> <!-- Final do documento HTML -->
