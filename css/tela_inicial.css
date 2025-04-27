@@ -13,7 +13,7 @@
         max-width: 35%; /* A largura máxima da imagem será 35% da largura do contêiner pai */
         height: 30%; /* Define a altura da imagem para 30% do seu tamanho original */
         position: relative; /* Permite o uso de valores de deslocamento (como "bottom") */
-        bottom: 60px; /* Desloca a imagem para cima (60px em relação à sua posição normal) */
+        bottom: 100px; /* Desloca a imagem para cima (60px em relação à sua posição normal) */
     }
 
     /* Estilo para o botão com id "button_iniciar" */

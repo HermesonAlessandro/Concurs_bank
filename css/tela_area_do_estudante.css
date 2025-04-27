@@ -89,6 +89,6 @@
     width: 900px; /* Define a largura da área do estudante como 900px */
     height: 400px; /* Define a altura da área do estudante como 400px */
     position: relative; /* Posiciona a área do estudante de forma relativa */
-    top: 130px; /* Desloca a área 130px para baixo */
-    left: 120px; /* Desloca a área 120px para a direita */
+    top: 90px; /* Desloca a área 130px para baixo */
+    left: 200px; /* Desloca a área 120px para a direita */
 }
