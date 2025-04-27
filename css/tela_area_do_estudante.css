@@ -1,0 +1,94 @@
+/* Estilo do corpo da página, com um gradiente de fundo de azul escuro para ciano */
+.corpo_site {
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
+    padding: 100px; /* Define um espaçamento de 100px em todos os lados do corpo da página */
+}
+
+/* Estilo para a imagem */
+#imagem {
+    width: 10%; /* Define a largura da imagem como 10% da largura do contêiner pai */
+    height: 100%; /* Define a altura da imagem como 90% da altura original */
+    position: relative; /* Permite usar propriedades de deslocamento, como 'bottom' e 'left' */
+    bottom: 10px; /* Desloca a imagem 10px para cima a partir da posição padrão */
+    left: 20px; /* Desloca a imagem 20px para a esquerda */
+}
+
+/* Estilos para os botões 'sobre', 'home', 'contatos' e 'entrar' */
+#button_sobre,
+#button_home,
+#button_contatos,
+#button_entrar {
+    color: white; /* Define a cor do texto como branca */
+    background-color: #003366; /* Define a cor de fundo dos botões como azul escuro */
+    width: 110px; /* Define a largura de todos os botões como 110px */
+    margin: 10px; /* Adiciona uma margem de 10px ao redor de cada botão */
+    border-radius: 20px; /* Arredonda os cantos dos botões com um raio de 20px */
+    font-size: 20px; /* Define o tamanho da fonte para 20px */
+}
+
+/* Estilos específicos para o botão 'cadastro' */
+#button_cadastro {
+    color: white; /* Define a cor do texto como branca */
+    background-color: #003366; /* Define a cor de fundo do botão como azul escuro */
+    border-radius: 20px; /* Arredonda os cantos do botão com um raio de 20px */
+    width: 140px; /* Define a largura do botão como 140px */
+    font-size: 19px; /* Define o tamanho da fonte para 19px */
+    padding: 3px; /* Adiciona um preenchimento de 3px ao redor do texto do botão */
+}
+
+/* Estilos para o fundo do menu */
+#fundo_menu {
+    background-color: rgb(238, 236, 236, 0.5); /* Define a cor de fundo como cinza claro e com opacidade */
+    width: 100%; /* O fundo ocupará toda a largura da tela */
+    height: 142px; /* Define a altura do fundo como 142px */
+    position: absolute; /* Posiciona o fundo de forma absoluta na página */
+    top: 0; /* Fica alinhado no topo da página */
+    left: 0; /* Fica alinhado à esquerda */
+    z-index: -1; /* Coloca o fundo atrás do conteúdo da página */
+}
+
+/* Estilos para o contêiner de botões */
+.buttons_menu {
+    position: relative; /* Posiciona os botões de forma relativa ao seu contêiner */
+    bottom: 140px; /* Desloca os botões 140px para cima */
+    left: 480px; /* Posiciona os botões 480px à direita */
+    width: 20%; /* Define a largura do contêiner de botões como 20% */
+    
+    display: flex; /* Usa Flexbox para alinhar os botões dentro do contêiner */
+    justify-content: center; /* Alinha os botões horizontalmente no centro */
+    gap: 10px; /* Adiciona um espaço de 10px entre os botões */
+    margin-top: 50px; /* Adiciona uma margem superior de 50px */
+}
+
+/* Estilos para o botão de registro */
+.buttons_registro {
+    position: relative; /* Posiciona o botão de registro de forma relativa */
+    left: 950px; /* Posiciona o botão 950px à direita */
+    bottom: 85px; /* Desloca o botão 85px para cima */
+    margin: 0px; /* Remove qualquer margem do botão de registro */
+    font-size: 30px; /* Define o tamanho da fonte do botão de registro para 30px */
+}
+
+/* Estilo para a linha */
+#linha {
+    width: 1800px; /* Define a largura da linha como 1800px */
+    position: relative; /* Posiciona a linha de forma relativa */
+    top: 90px; /* Desloca a linha 90px para baixo */
+    right: 500px; /* Desloca a linha 500px para a direita */
+}
+
+/* Estilos para o texto do corpo */
+.corpo_texto {
+    position: relative; /* Posiciona o texto do corpo de forma relativa */
+    top: 180px; /* Desloca o texto 180px para baixo */
+    color: white; /* Define a cor do texto como branca */
+}
+
+/* Estilos para a área do estudante */
+#buttons_area_estudante {
+    width: 900px; /* Define a largura da área do estudante como 900px */
+    height: 400px; /* Define a altura da área do estudante como 400px */
+    position: relative; /* Posiciona a área do estudante de forma relativa */
+    top: 130px; /* Desloca a área 130px para baixo */
+    left: 120px; /* Desloca a área 120px para a direita */
+}

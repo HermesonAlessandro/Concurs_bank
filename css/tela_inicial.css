@@ -1,0 +1,30 @@
+/* Estilo para o corpo do site */
+.corpo_site {
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    padding: 20px; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
+    margin: 10px; /* Centraliza o contêiner com margens automáticas (precisa de largura definida para funcionar) */
+}
+
+/* Media query para telas com largura mínima de 300px  */
+@media (min-width: 308px) {
+/* Estilo para o elemento com id "imagem" */
+    #imagem {
+        max-width: 35%; /* A largura máxima da imagem será 35% da largura do contêiner pai */
+        height: 30%; /* Define a altura da imagem para 30% do seu tamanho original */
+        position: relative; /* Permite o uso de valores de deslocamento (como "bottom") */
+        bottom: 60px; /* Desloca a imagem para cima (60px em relação à sua posição normal) */
+    }
+
+    /* Estilo para o botão com id "button_iniciar" */
+    #button_iniciar {
+        color: white; /* Define a cor do texto do botão como branca */
+        background-color: #003366; /* Define o fundo do botão como azul escuro */
+        border-radius: 15px; /* Cria bordas arredondadas no botão com raio de 15px */
+        box-sizing: border-box; /* Faz com que o padding e a borda sejam considerados no tamanho total do botão */
+        width: 200px; /* Define a largura do botão para 200px */
+        padding: 20px; /* Adiciona 20px de espaçamento interno ao redor do texto do botão */
+        position: relative; /* Define a posição como relativa, permitindo deslocamento com "bottom" */
+        bottom: 55px; /* Desloca o botão para cima (55px em relação à sua posição normal) */
+    }
+}
