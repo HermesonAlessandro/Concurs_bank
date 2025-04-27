@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5. -->
+
+<html lang="en">
+<!-- Início do documento HTML, com idioma definido como inglês. -->
+
+<head>
+    <!-- Cabeçalho da página: configurações iniciais e links de recursos. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 (permite acentuação, por exemplo). -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a página para ser responsiva em dispositivos móveis (corrigido: antes estava "width=<div>"). -->
+
+    <title>Tela De Alteração de Senha</title>
+    <!-- Título da aba do navegador. -->
+
+</head>
+
+<body>
+<!-- Início do corpo da página, onde o conteúdo visível é inserido. -->
+
+    <header>
+        <!-- Área do cabeçalho da página, geralmente usada para logo e navegação. -->
+
+        <img src="" alt="Logo">
+        <!-- Imagem do logotipo. O atributo "src" define o caminho da imagem e "alt" é o texto alternativo. -->
+
+        <button>HOME</button>
+        <!-- Botão para navegação à página inicial. -->
+
+        <button>SOBRE NÓS</button>
+        <!-- Botão para navegar até a seção "Sobre Nós". -->
+
+        <button>CONTATO</button>
+        <!-- Botão para a página de contato. -->
+
+        <button>PERFIL</button>
+        <!-- Botão para visualizar o perfil do usuário. -->
+
+        <hr>
+        <!-- Linha horizontal para separar o cabeçalho do conteúdo principal. -->
+    </header>
+
+    <main>
+    <!-- Início do conteúdo principal da página. -->
+
+        <form method="post">
+            <!-- Início do formulário. "method=post" envia os dados de forma segura para o servidor. -->
+
+            <fieldset>
+                <!-- Agrupa os campos do formulário dentro de uma borda. -->
+
+                <legend>ALTERAR SENHA</legend>
+                <!-- Título do fieldset. -->
+
+                <label for="email">Email:</label>
+                <!-- Rótulo associado ao campo de email. -->
+
+                <input type="email" id="email" name="email" required>
+                <!-- Campo para digitar o email. "required" torna obrigatório o preenchimento. -->
+
+                <br><br>
+                <!-- Quebra de linha dupla para espaçamento visual. -->
+
+                <label for="Novasenha">Nova Senha:</label>
+                <!-- Rótulo para o campo de nova senha. -->
+
+                <input type="password" id="Novasenha" name="Novasenha" required>
+                <!-- Campo para digitar a nova senha. Agora com "required" também (sugestão para garantir preenchimento). -->
+
+                <br><br>
+
+                <label for="ConfirmarSenha">Confirmar Senha:</label>
+                <!-- Rótulo para confirmar a nova senha. -->
+
+                <input type="password" id="ConfirmarSenha" name="ConfirmarSenha" required>
+                <!-- Campo para confirmar a nova senha. "required" obrigatório. -->
+
+                <br><br>
+
+                <button type="submit">ALTERAR</button>
+                <!-- Botão para enviar o formulário e alterar a senha. "type=submit" para confirmar envio. -->
+
+            </fieldset>
+            <!-- Fim do agrupamento dos campos do formulário. -->
+        </form>
+        <!-- Fim do formulário. -->
+
+    </main>
+    <!-- Fim da área principal da página. -->
+
+</body>
+<!-- Fim do corpo da página. -->
+
+</html>
+<!-- Fim do documento HTML. -->
