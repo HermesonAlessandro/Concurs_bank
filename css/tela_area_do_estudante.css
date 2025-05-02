@@ -14,10 +14,7 @@
 }
 
 /* Estilos para os botões 'sobre', 'home', 'contatos' e 'entrar' */
-#button_sobre,
-#button_home,
-#button_contatos,
-#button_entrar {
+#button_sobre,#button_home,#button_contatos,#button_entrar {
     color: white; /* Define a cor do texto como branca */
     background-color: #003366; /* Define a cor de fundo dos botões como azul escuro */
     width: 110px; /* Define a largura de todos os botões como 110px */
@@ -51,7 +48,7 @@
 .buttons_menu {
     position: relative; /* Posiciona os botões de forma relativa ao seu contêiner */
     bottom: 140px; /* Desloca os botões 140px para cima */
-    left: 480px; /* Posiciona os botões 480px à direita */
+    left: 41%; /* Posiciona os botões 480px à direita */
     width: 20%; /* Define a largura do contêiner de botões como 20% */
     
     display: flex; /* Usa Flexbox para alinhar os botões dentro do contêiner */
@@ -63,19 +60,12 @@
 /* Estilos para o botão de registro */
 .buttons_registro {
     position: relative; /* Posiciona o botão de registro de forma relativa */
-    left: 950px; /* Posiciona o botão 950px à direita */
+    left: 82%; /* Posiciona o botão 950% à direita */
     bottom: 85px; /* Desloca o botão 85px para cima */
     margin: 0px; /* Remove qualquer margem do botão de registro */
     font-size: 30px; /* Define o tamanho da fonte do botão de registro para 30px */
 }
 
-/* Estilo para a linha */
-#linha {
-    width: 1800px; /* Define a largura da linha como 1800px */
-    position: relative; /* Posiciona a linha de forma relativa */
-    top: 90px; /* Desloca a linha 90px para baixo */
-    right: 500px; /* Desloca a linha 500px para a direita */
-}
 
 /* Estilos para o texto do corpo */
 .corpo_texto {
@@ -90,5 +80,5 @@
     height: 400px; /* Define a altura da área do estudante como 400px */
     position: relative; /* Posiciona a área do estudante de forma relativa */
     top: 90px; /* Desloca a área 130px para baixo */
-    left: 200px; /* Desloca a área 120px para a direita */
+    left: 140px; /* Desloca a área 120px para a direita */
 }
