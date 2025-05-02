@@ -1,84 +1,140 @@
 /* Estilo do corpo da página, com um gradiente de fundo de azul escuro para ciano */
 .corpo_site {
-    background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
-    padding: 100px; /* Define um espaçamento de 100px em todos os lados do corpo da página */
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo em gradiente do azul escuro ao ciano */
+    padding: 100px; /* Adiciona espaçamento interno de 100px em todos os lados */
 }
 
 /* Estilo para a imagem */
 #imagem {
-    width: 10%; /* Define a largura da imagem como 10% da largura do contêiner pai */
-    height: 100%; /* Define a altura da imagem como 90% da altura original */
-    position: relative; /* Permite usar propriedades de deslocamento, como 'bottom' e 'left' */
-    bottom: 10px; /* Desloca a imagem 10px para cima a partir da posição padrão */
-    left: 20px; /* Desloca a imagem 20px para a esquerda */
+    width: 9%; /* Define a largura da imagem como 9% do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem automaticamente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    position: relative; /* Permite o uso de propriedades de deslocamento como bottom e left */
+    bottom: 16px; /* Move a imagem 16px para cima */
+    left: 20px; /* Move a imagem 20px para a direita */
 }
 
-/* Estilos para os botões 'sobre', 'home', 'contatos' e 'entrar' */
-#button_sobre,#button_home,#button_contatos,#button_entrar {
-    color: white; /* Define a cor do texto como branca */
-    background-color: #003366; /* Define a cor de fundo dos botões como azul escuro */
-    width: 110px; /* Define a largura de todos os botões como 110px */
-    margin: 10px; /* Adiciona uma margem de 10px ao redor de cada botão */
-    border-radius: 20px; /* Arredonda os cantos dos botões com um raio de 20px */
-    font-size: 20px; /* Define o tamanho da fonte para 20px */
+/* Estilo para o efeito hover (passar o mouse) e cursor dos botões */
+#button_sobre:hover,
+#button_home:hover,
+#button_contatos:hover,
+#button_entrar:hover,
+#button_cadastro:hover {
+    background-color: #005599; /* Altera a cor de fundo quando o botão está em hover */
+    cursor: pointer; /* Muda o cursor para o ponteiro, indicando que é clicável */
 }
 
-/* Estilos específicos para o botão 'cadastro' */
-#button_cadastro {
-    color: white; /* Define a cor do texto como branca */
-    background-color: #003366; /* Define a cor de fundo do botão como azul escuro */
-    border-radius: 20px; /* Arredonda os cantos do botão com um raio de 20px */
-    width: 140px; /* Define a largura do botão como 140px */
-    font-size: 19px; /* Define o tamanho da fonte para 19px */
-    padding: 3px; /* Adiciona um preenchimento de 3px ao redor do texto do botão */
+/* Estilo para o foco (acessibilidade com teclado) nos botões */
+#button_sobre:focus,
+#button_home:focus,
+#button_contatos:focus,
+#button_entrar:focus,
+#button_cadastro:focus {
+    outline: 2px solid #ffffff; /* Aplica uma borda branca em volta para indicar foco */
+    background-color: #0077cc; /* Muda a cor de fundo quando o botão está focado */
 }
 
-/* Estilos para o fundo do menu */
-#fundo_menu {
-    background-color: rgb(238, 236, 236, 0.5); /* Define a cor de fundo como cinza claro e com opacidade */
-    width: 100%; /* O fundo ocupará toda a largura da tela */
-    height: 142px; /* Define a altura do fundo como 142px */
-    position: absolute; /* Posiciona o fundo de forma absoluta na página */
-    top: 0; /* Fica alinhado no topo da página */
-    left: 0; /* Fica alinhado à esquerda */
-    z-index: -1; /* Coloca o fundo atrás do conteúdo da página */
+/* Estilo comum dos botões de navegação */
+#button_sobre, #button_home, #button_contatos, #button_entrar {
+    position: relative; /* Necessário para o z-index funcionar corretamente */
+    color: white; /* Cor do texto branca */
+    background-color: #003366; /* Cor de fundo azul escuro */
+    width: 110px; /* Largura fixa de 110px */
+    margin: 10px; /* Espaçamento externo de 10px ao redor */
+    border-radius: 20px; /* Cantos arredondados */
+    font-size: 20px; /* Tamanho da fonte */
+    z-index: 2; /* Garante que fiquem acima de elementos com z-index menor */
 }
 
-/* Estilos para o contêiner de botões */
+/* Container que agrupa os botões do menu */
 .buttons_menu {
-    position: relative; /* Posiciona os botões de forma relativa ao seu contêiner */
-    bottom: 140px; /* Desloca os botões 140px para cima */
-    left: 41%; /* Posiciona os botões 480px à direita */
-    width: 20%; /* Define a largura do contêiner de botões como 20% */
-    
-    display: flex; /* Usa Flexbox para alinhar os botões dentro do contêiner */
-    justify-content: center; /* Alinha os botões horizontalmente no centro */
-    gap: 10px; /* Adiciona um espaço de 10px entre os botões */
-    margin-top: 50px; /* Adiciona uma margem superior de 50px */
+    position: relative; /* Permite ajustar a posição com bottom */
+    bottom: 140px; /* Move o contêiner 140px para cima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: fit-content; /* Adapta a largura ao conteúdo (sobrescrito depois) */
+    width: 20%; /* Define largura como 20% da tela */
+    display: flex; /* Usa Flexbox para posicionar os botões em linha */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaço de 10px entre os botões */
+    margin-top: 50px; /* Espaçamento acima do grupo de botões */
 }
 
-/* Estilos para o botão de registro */
+/* Fundo semitransparente atrás do menu */
+#fundo_menu {
+    pointer-events: none; /* Faz com que o fundo não bloqueie interações do mouse */
+    background-color: rgb(238, 236, 236, 0.5); /* Fundo cinza claro com opacidade de 50% */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    height: 142px; /* Altura fixa de 142px */
+    position: absolute; /* Posicionamento absoluto na página */
+    top: 0; /* Fixa no topo da tela */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1; /* Fica abaixo dos botões */
+}
+
+/* Estilo específico do botão "cadastro" */
+#button_cadastro {
+    color: white; /* Texto branco */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 20px; /* Cantos arredondados */
+    width: 140px; /* Largura maior do que os demais botões */
+    font-size: 19px; /* Fonte levemente menor */
+    padding: 3px; /* Espaçamento interno pequeno */
+}
+
+/* Estilo do botão de registro (cadastro/login do lado direito) */
 .buttons_registro {
-    position: relative; /* Posiciona o botão de registro de forma relativa */
-    left: 82%; /* Posiciona o botão 950% à direita */
-    bottom: 85px; /* Desloca o botão 85px para cima */
-    margin: 0px; /* Remove qualquer margem do botão de registro */
-    font-size: 30px; /* Define o tamanho da fonte do botão de registro para 30px */
+    position: relative; /* Permite o uso de left/bottom */
+    left: 82%; /* Move o botão para a direita (82% do contêiner) */
+    bottom: 85px; /* Move o botão 85px para cima */
+    margin: 0px; /* Remove margens */
+    font-size: 30px; /* Aumenta o tamanho da fonte */
+    z-index: 2; /* Garante que esteja acima do fundo */
 }
 
-
-/* Estilos para o texto do corpo */
+/* Estilo para o texto no corpo da página */
 .corpo_texto {
-    position: relative; /* Posiciona o texto do corpo de forma relativa */
-    top: 180px; /* Desloca o texto 180px para baixo */
-    color: white; /* Define a cor do texto como branca */
+    position: relative; /* Permite usar deslocamento */
+    top: 180px; /* Move o texto 180px para baixo */
+    color: white; /* Cor do texto branca */
 }
 
-/* Estilos para a área do estudante */
+/* Área destinada a botões ou conteúdos do estudante */
 #buttons_area_estudante {
-    width: 900px; /* Define a largura da área do estudante como 900px */
-    height: 400px; /* Define a altura da área do estudante como 400px */
-    position: relative; /* Posiciona a área do estudante de forma relativa */
-    top: 90px; /* Desloca a área 130px para baixo */
-    left: 140px; /* Desloca a área 120px para a direita */
+    width: 900px; /* Largura fixa */
+    height: 400px; /* Altura fixa */
+    position: relative; /* Permite usar top */
+    top: 90px; /* Move para baixo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: block; /* Garante que seja tratado como um bloco */
+}
+
+/* Estilos para dispositivos com tela menor que 768px */
+@media (max-width: 768px) {
+    .buttons_menu {
+        flex-wrap: wrap; /* Quebra os botões para a próxima linha se necessário */
+        width: 100%; /* Ocupa toda a largura da tela */
+        justify-content: center; /* Centraliza os botões */
+        left: 0; /* Alinha à esquerda */
+        bottom: auto; /* Remove o deslocamento para cima */
+        top: 10px; /* Move um pouco para baixo */
+    }
+
+    .buttons_registro {
+        left: 0; /* Remove o deslocamento lateral */
+        position: static; /* Usa o fluxo normal da página */
+        font-size: 22px; /* Reduz o tamanho da fonte */
+        margin-top: 15px; /* Adiciona espaço acima do botão */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    #buttons_area_estudante {
+        width: 90%; /* Aumenta a largura relativa à tela */
+        left: 5%; /* Pequeno deslocamento à esquerda */
+        height: auto; /* Altura automática conforme o conteúdo */
+    }
+
+    #imagem {
+        width: 40%; /* Aumenta a largura da imagem */
+        left: 0; /* Remove o deslocamento à direita */
+    }
 }
