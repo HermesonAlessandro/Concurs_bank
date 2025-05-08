@@ -2,16 +2,18 @@
 .corpo_site {
     background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo em gradiente do azul escuro ao ciano */
     padding: 100px; /* Adiciona espaçamento interno de 100px em todos os lados */
+    width: 24%;
 }
 
 /* Estilo para a imagem */
 #imagem {
-    width: 9%; /* Define a largura da imagem como 9% do contêiner pai */
+    width: 35%; /* Define a largura da imagem como 9% do contêiner pai */
     height: auto; /* Mantém a proporção da imagem automaticamente */
     max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
     position: relative; /* Permite o uso de propriedades de deslocamento como bottom e left */
-    bottom: 16px; /* Move a imagem 16px para cima */
-    left: 20px; /* Move a imagem 20px para a direita */
+    bottom: 125px; /* Move a imagem 16px para cima */
+    right: 40px; /* Move a imagem 20px para a direita */
+    z-index: 2;
 }
 
 /* Estilo para o efeito hover (passar o mouse) e cursor dos botões */
@@ -35,8 +37,7 @@
 }
 
 /* Estilo comum dos botões de navegação */
-#button_sobre, #button_home, #button_contatos, #button_entrar {
-    position: relative; /* Necessário para o z-index funcionar corretamente */
+#button_sobre, #button_home,#button_contatos, #button_entrar {
     color: white; /* Cor do texto branca */
     background-color: #003366; /* Cor de fundo azul escuro */
     width: 110px; /* Largura fixa de 110px */
@@ -48,16 +49,17 @@
 
 /* Container que agrupa os botões do menu */
 .buttons_menu {
-    position: relative; /* Permite ajustar a posição com bottom */
-    bottom: 140px; /* Move o contêiner 140px para cima */
     margin: 0 auto; /* Centraliza horizontalmente */
     width: fit-content; /* Adapta a largura ao conteúdo (sobrescrito depois) */
     width: 20%; /* Define largura como 20% da tela */
     display: flex; /* Usa Flexbox para posicionar os botões em linha */
-    justify-content: center; /* Centraliza os botões horizontalmente */
     gap: 10px; /* Espaço de 10px entre os botões */
     margin-top: 50px; /* Espaçamento acima do grupo de botões */
-}
+    position: relative;
+    bottom: 220px; 
+    left: 190px;
+    z-index: 2;
+    }
 
 /* Fundo semitransparente atrás do menu */
 #fundo_menu {
@@ -84,8 +86,8 @@
 /* Estilo do botão de registro (cadastro/login do lado direito) */
 .buttons_registro {
     position: relative; /* Permite o uso de left/bottom */
-    left: 82%; /* Move o botão para a direita (82% do contêiner) */
-    bottom: 85px; /* Move o botão 85px para cima */
+    left: 283.5%; /* Move o botão para a direita (82% do contêiner) */
+    bottom: 325px; /* Move o botão 85px para cima */
     margin: 0px; /* Remove margens */
     font-size: 30px; /* Aumenta o tamanho da fonte */
     z-index: 2; /* Garante que esteja acima do fundo */
@@ -94,7 +96,7 @@
 /* Estilo para o texto no corpo da página */
 .corpo_texto {
     position: relative; /* Permite usar deslocamento */
-    top: 180px; /* Move o texto 180px para baixo */
+    top: 200px; /* Move o texto 180px para baixo */
     color: white; /* Cor do texto branca */
 }
 
@@ -104,6 +106,7 @@
     height: 400px; /* Altura fixa */
     position: relative; /* Permite usar top */
     top: 90px; /* Move para baixo */
+    left: 130px;
     margin: 0 auto; /* Centraliza horizontalmente */
     display: block; /* Garante que seja tratado como um bloco */
 }
