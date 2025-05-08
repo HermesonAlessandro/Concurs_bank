@@ -1,4 +1,4 @@
-/* Estilo para o corpo do site */
+/* =================== Estilo do corpo da página =================== */
 .corpo_site {
     background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
     text-align: center; /* Centraliza o texto dentro do contêiner */
@@ -6,7 +6,7 @@
     margin: 10px; /* Centraliza o contêiner com margens automáticas (precisa de largura definida para funcionar) */
 }
 
-/* Media query para telas com largura mínima de 300px  */
+/* =================== Media query para telas com largura mínima de 300px =================== */                
 @media (min-width: 308px) {
 /* Estilo para o elemento com id "imagem" */
     #imagem {
@@ -16,7 +16,7 @@
         bottom: 100px; /* Desloca a imagem para cima (60px em relação à sua posição normal) */
     }
 
-    /* Estilo para o botão com id "button_iniciar" */
+ /* =================== Estilo para o botão com id "button_iniciar" =================== */     
     #button_iniciar {
         color: white; /* Define a cor do texto do botão como branca */
         background-color: #003366; /* Define o fundo do botão como azul escuro */
