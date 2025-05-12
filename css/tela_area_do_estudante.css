@@ -1,38 +1,20 @@
 /* =================== Estilo do corpo da página =================== */
 .corpo_site {
-    background: linear-gradient(#003366, #40E0D0); 
-    /* Fundo com gradiente que vai do azul escuro ao ciano */
-
-    padding: 100px; 
-    /* Espaçamento interno em todos os lados do conteúdo */
-
-    width: 24%; 
-    /* Define a largura do conteúdo principal */
+    background: linear-gradient(#003366, #40E0D0);  /* Fundo com gradiente azul escuro para ciano */
+    padding: 100px;                                 /* Espaçamento interno (todos os lados) */
+    width: 24%;                                     /* Largura fixa do conteúdo principal */
 }
 
 
 /* =================== Estilo da imagem principal =================== */
 #imagem {
-    width: 35%; 
-    /* Largura da imagem relativa ao elemento pai */
-
-    height: auto; 
-    /* Mantém a proporção original da imagem */
-
-    max-width: 100%; 
-    /* Impede que a imagem ultrapasse o tamanho do container */
-
-    position: relative; 
-    /* Permite deslocamento com 'top', 'bottom', 'left', 'right' */
-
-    bottom: 125px; 
-    /* Move a imagem para cima */
-
-    right: 40px; 
-    /* Move a imagem para a direita */
-
-    z-index: 2; 
-    /* Garante que a imagem fique sobreposta a elementos com z-index menor */
+    width: 35%;                /* Imagem ocupa 35% do container pai */
+    height: auto;              /* Mantém proporção original da imagem */
+    max-width: 100%;           /* Garante que imagem não ultrapasse o container */
+    position: relative;        /* Permite usar bottom e right para mover */
+    bottom: 125px;             /* Move imagem 125px para cima */
+    right: 40px;               /* Move imagem 40px para a direita */
+    z-index: 2;                /* Fica acima de elementos com z-index menor */
 }
 
 
@@ -42,11 +24,8 @@
 #button_contatos:hover,
 #button_entrar:hover,
 #button_cadastro:hover {
-    background-color: #005599; 
-    /* Altera a cor de fundo no hover */
-
-    cursor: pointer; 
-    /* Mostra o ponteiro de clique (mão) para indicar interatividade */
+    background-color: #005599;  /* Cor de fundo ao passar o mouse */
+    cursor: pointer;            /* Muda cursor para “mãozinha” indicando clique */
 }
 
 
@@ -56,11 +35,8 @@
 #button_contatos:focus,
 #button_entrar:focus,
 #button_cadastro:focus {
-    outline: 2px solid #ffffff; 
-    /* Adiciona borda branca ao redor para acessibilidade */
-
-    background-color: #0077cc; 
-    /* Muda a cor de fundo quando o botão está focado */
+    outline: 2px solid #ffffff;   /* Borda branca para acessibilidade ao focar */
+    background-color: #0077cc;    /* Altera cor de fundo ao focar */
 }
 
 
@@ -68,166 +44,133 @@
 #button_sobre, 
 #button_home,
 #button_contatos, 
-#button_entrar {
-    color: white; 
-    /* Cor do texto branca */
-
-    background-color: #003366; 
-    /* Cor de fundo azul escuro */
-
-    width: 110px; 
-    /* Largura fixa */
-
-    margin: 10px; 
-    /* Espaço externo ao redor de cada botão */
-
-    border-radius: 20px; 
-    /* Bordas arredondadas */
-
-    font-size: 20px; 
-    /* Tamanho da fonte */
-
-    z-index: 2; 
-    /* Mantém os botões acima do fundo do menu */
+#button_entrar,
+#button_cadastro {
+    color: white;               /* Texto branco */
+    background-color: #003366;  /* Fundo azul escuro */
+    width: 110px;               /* Largura fixa */
+    margin: 10px;               /* Espaçamento externo entre os botões */
+    border-radius: 20px;        /* Bordas arredondadas */
+    font-size: 20px;            /* Tamanho da fonte */
+    z-index: 2;                 /* Sobreposição ao fundo */
 }
 
 
 /* =================== Container dos botões de menu =================== */
 .buttons_menu {
-    margin: 0 auto; 
-    /* Centraliza o grupo de botões horizontalmente */
-
-    width: 20%; 
-    /* Define uma largura proporcional à tela */
-
-    display: flex; 
-    /* Alinha os botões lado a lado com flexbox */
-
-    gap: 10px; 
-    /* Espaço entre os botões */
-
-    margin-top: 50px; 
-    /* Espaço acima dos botões */
-
-    position: relative; 
-    /* Permite movimentar o container em relação à posição padrão */
-
-    bottom: 220px; 
-    /* Move os botões para cima */
-
-    left: 190px; 
-    /* Move os botões para a direita */
-
-    z-index: 2; 
-    /* Coloca o grupo acima do fundo do menu */
+    margin: 0 auto;         /* Centraliza o container na horizontal */
+    width: 20%;             /* Largura do grupo de botões */
+    display: flex;          /* Layout flexível em linha */
+    gap: 10px;              /* Espaço entre os botões */
+    margin-top: 50px;       /* Espaço acima do menu */
+    position: relative;     /* Permite usar bottom e left */
+    bottom: 210px;          /* Move o menu 210px para cima */
+    left: 20px;             /* Desloca o menu 20px para a direita */
+    z-index: 2;             /* Sobreposição */
 }
 
 
 /* =================== Fundo semitransparente atrás do menu =================== */
 #fundo_menu {
-    pointer-events: none; 
-    /* Impede que o fundo capture eventos de clique */
-
-    background-color: rgb(238, 236, 236, 0.5); 
-    /* Cor de fundo cinza claro com 50% de opacidade */
-
-    width: 100%; 
-    /* Ocupa toda a largura da tela */
-
-    height: 142px; 
-    /* Altura do fundo */
-
-    position: absolute; 
-    /* Posiciona o fundo em relação à tela */
-
-    top: 0; 
-    /* Cola o fundo no topo da página */
-
-    left: 0; 
-    /* Alinha à esquerda */
-
-    z-index: 1; 
-    /* Coloca atrás dos botões */
+    pointer-events: none;                         /* Impede clique no fundo */
+    background-color: rgb(238, 236, 236, 0.5);    /* Cinza claro com opacidade */
+    width: 100%;                                  /* Ocupa toda a largura */
+    height: 142px;                                /* Altura do fundo */
+    position: absolute;                           /* Posicionamento fixo */
+    top: 0;                                       /* Cola no topo */
+    left: 0;                                      /* Alinha à esquerda */
+    z-index: 1;                                   /* Atrás dos botões */
 }
 
 
-/* =================== Botão de cadastro (com estilo diferenciado) =================== */
+/* =================== Botão de cadastro com tamanho diferente =================== */
 #button_cadastro {
-    color: white; 
-    background-color: #003366; 
-    border-radius: 20px; 
-    width: 140px; 
-    font-size: 19px; 
-    padding: 3px;
+    color: white;               /* Texto branco */
+    background-color: #003366;  /* Fundo azul escuro */
+    border-radius: 20px;        /* Bordas arredondadas */
+    width: 140px;               /* Largura maior que os outros */
+    font-size: 19px;            /* Fonte um pouco menor que os demais */
+    padding: 3px;               /* Padding reduzido */
 }
 
 
-/* =================== Estilo para o grupo de botões de registro (ex: login/cadastro) =================== */
+/* =================== Container dos botões de registro (login/cadastro) =================== */
 .buttons_registro {
-    position: relative; 
-    left: 283.5%; 
-    /* Deslocamento lateral para direita (muito amplo, talvez ajuste necessário) */
-
-    bottom: 325px; 
-    /* Move para cima */
-
-    margin: 0px; 
-    font-size: 30px; 
-    z-index: 2; 
+    position: relative;       /* Permite mover com left e bottom */
+    left: 283.5%;             /* Move para a direita  */
+    bottom: 340px;            /* Move o grupo para cima */
+    margin: 0px;              /* Sem margem externa */
+    z-index: 2;               /* Sobreposição */
 }
 
 
-/* =================== Estilo do texto central no corpo da página =================== */
-.corpo_texto {
-    position: relative; 
-    top: 200px; 
-    color: white; 
-    /* Torna o texto visível sobre fundo escuro */
-}
-
-
-/* =================== Área dedicada a botões ou seções específicas do estudante =================== */
+/* =================== Área de botões para estudante =================== */
 #buttons_area_estudante {
-    width: 900px; 
-    height: 400px; 
-    position: relative; 
-    top: 90px; 
-    left: 130px; 
-    margin: 0 auto; 
-    display: block; 
+    width: 900px;          /* Largura fixa */
+    height: 200px;         /* Altura fixa */
+    position: relative;    /* Para mover com bottom/left */
+    bottom: 60px;          /* Move para cima */
+    left: 130px;           /* Move para a direita */
+    margin: 0 auto;        /* Centraliza horizontalmente */
+    display: block;        /* Comportamento de bloco */
 }
 
 
-/* =================== Estilos adaptados para telas menores (até 768px) =================== */
+
+/* =================== Estilos para telas menores (até 768px) =================== */
 @media (max-width: 768px) {
-    .buttons_menu {
-        flex-wrap: wrap; 
-        /* Quebra os botões para a próxima linha se necessário */
 
-        width: 100%; 
-        justify-content: center; 
-        left: 0; 
-        bottom: auto; 
-        top: 10px;
-    }
-
-    .buttons_registro {
-        left: 0; 
-        position: static; 
-        font-size: 22px; 
-        margin-top: 15px; 
-        text-align: center; 
-    }
-
-    #buttons_area_estudante {
-        width: 90%; 
-        left: 5%; 
-        height: auto; 
-        /* Permite ajuste automático com base no conteúdo */
+    .corpo_site {
+        width: 95%;              /* Aumenta a largura do conteúdo para preencher mais a tela */
+        padding: 40px;           /* Reduz o espaçamento interno */
     }
 
     #imagem {
-        width: 40%; 
-        left: 0; 
+        width: 80%;              /* Torna a imagem maior e mais legível */
+        bottom: 0;               /* Remove deslocamento vertical */
+        right: 0;                /* Remove deslocamento horizontal */
+        margin: 0 auto;          /* Centraliza horizontalmente */
+        display: block;          /* Garante que fique centralizada */
+    }
+
+    .buttons_menu {
+        flex-wrap: wrap;         /* Permite que os botões quebrem de linha */
+        width: 100%;             /* Ocupa toda a largura disponível */
+        justify-content: center; /* Centraliza os botões na tela */
+        left: 0;                 /* Remove deslocamento lateral */
+        bottom: 0;               /* Remove elevação */
+        top: auto;               /* Garante posicionamento padrão */
+        margin-top: 20px;        /* Espaço entre imagem e botões */
+    }
+
+    .buttons_registro {
+        left: 0;                 /* Remove deslocamento horizontal */
+        position: static;        /* Usa o fluxo normal da página */
+        display: flex;           /* Exibe botões lado a lado */
+        justify-content: center; /* Centraliza horizontalmente */
+        gap: 10px;               /* Espaço entre os botões */
+        margin-top: 20px;        /* Espaço acima */
+        font-size: 18px;         /* Fonte um pouco menor */
+    }
+
+    #button_sobre, 
+    #button_home,
+    #button_contatos, 
+    #button_entrar,
+    #button_cadastro {
+        width: 85%;              /* Botões ocupam maior parte da largura */
+        font-size: 18px;         /* Texto um pouco menor */
+    }
+
+    #buttons_area_estudante {
+        width: 95%;              /* Ocupa quase toda a largura da tela */
+        left: 0;                 /* Alinha à esquerda */
+        height: auto;            /* Ajusta altura conforme conteúdo */
+        margin: 20px auto;       /* Centraliza com margem vertical */
+    }
+
+    #fundo_menu {
+        height: auto;            /* Altura se ajusta automaticamente */
+        padding: 10px 0;         /* Espaçamento interno */
     }
 }
