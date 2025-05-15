@@ -42,7 +42,7 @@
     <main>
         <!-- Elemento principal que contém o formulário de login. -->
 
-        <form method="post">
+        <form id="validacao_login" method="post" action="../php/login.php">
             <!-- Formulário configurado para enviar os dados usando o método POST. -->
 
             <fieldset>
@@ -54,7 +54,7 @@
                 <label for="email">Email:</label>
                 <!-- Rótulo para o campo de email, indicando claramente sua função. -->
 
-                <input type="email" id="email" name="email" required>
+                <input type="text" id="email" name="email">
                 <!-- Campo de entrada para email. O atributo "required" exige que o usuário preencha esse campo antes de enviar o formulário. -->
 
                 <br><br>
@@ -62,7 +62,7 @@
                 <label for="senha">Senha:</label>
                 <!-- Rótulo para o campo de senha. -->
 
-                <input type="password" id="senha" name="senha">
+                <input type="text" id="senha" name="senha">
                 <!-- Campo de entrada para senha, escondendo os caracteres digitados. -->
 
                 <br><br>
@@ -76,5 +76,6 @@
             </fieldset> <!-- Fechamento da tag fieldset -->
         </form> <!-- Fechamento da tag form -->
     </main> <!-- Fechamento da tag do main -->
+    <script src="../js/validacao_login.js" defer></script> <!-- Importando o js -->
 </body> <!-- Fechamento do corpo do site -->
 </html> <!-- Fechamento da tag do html -->

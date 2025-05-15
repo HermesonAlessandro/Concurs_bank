@@ -1,5 +1,5 @@
-// Seleciona o formulário que possui o id 'validacao' e adiciona um evento para quando for submetido
-document.querySelector('#validacao').addEventListener('submit', function(e) {
+// Seleciona o formulário que possui o id 'validacao_cadastro' e adiciona um evento para quando for submetido
+document.querySelector('#validacao_cadastro').addEventListener('submit', function(e) {
     // Previne o envio padrão do formulário para permitir validações antes de submeter
     e.preventDefault();
     
