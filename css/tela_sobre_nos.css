@@ -1,294 +1,165 @@
-
+/* ======== Estilo base para todo o corpo ======== */
 .corpo_site {
-    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo em gradiente azul escuro para ciano */
-    padding: 100px; /* Adiciona espaço interno em todos os lados */
-    width: 24%; /* Define a largura do conteúdo como 24% da tela (isso limita o fundo) */
+    background: linear-gradient(#003366, #40E0D0); /* Fundo em gradiente do azul escuro ao turquesa */
+    max-width: 100%; /* Largura máxima de 100% da tela */
+    width: 90%; /* Largura padrão de 90% */
+    padding: 66px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
+/* ======== Título da página ======== */
 #titulo {
-    font-size: 40px; /* Define o tamanho da fonte do título */
-    color: #ffffff; /* Cor branca para o texto */
-    position: relative; /* Permite deslocar o elemento usando top/bottom/left/right */
-    bottom: 220px; /* Move o título para cima 220px */
+    font-size: 40px; /* Tamanho grande para o texto */
+    color: #ffffff; /* Cor branca */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 110px; /* Espaço acima do título */
 }
 
+/* ======== Fundo atrás do texto principal ======== */
 #fundo_texto {
-    pointer-events: none; /* Impede interações com o elemento (clicar, etc.) */
-    width: 80%; /* Define que o fundo ocupa 80% da largura da tela */
-    background-color: #003366; /* Cor de fundo azul escuro */
-    border-radius: 12px; /* Arredonda os cantos */
-    height: 50%; /* Altura do fundo (metade da altura da tela) */
-    position: absolute; /* Posiciona em relação à tela */
-    top: 40%; /* Move para 40% da altura da tela a partir do topo */
-    z-index: 1; /* Coloca atrás dos elementos com z-index maior */
+    width: 100%; /* Largura total */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 12px; /* Cantos arredondados */
+    margin: 40px auto; /* Espaço vertical e centralização horizontal */
+    padding: 20px; /* Espaço interno */
 }
 
+/* ======== Texto principal ======== */
 #texto {
-    font-size: 25px; /* Tamanho da fonte do texto */
-    color: aliceblue; /* Cor clara para o texto */
-    margin: 25px; /* Espaçamento externo */
-    max-width: 95%; /* Limita o texto a 95% da largura do container */
-    z-index: 2; /* Garante que fique acima do fundo */
+    font-size: 24px; /* Tamanho da fonte */
+    color: aliceblue; /* Cor clara agradável */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 90%; /* Limita a largura */
 }
 
-/* ======== Estilo da imagem principal ======== */
+/* ======== Logo principal ======== */
 #imagem {
-    width: 35%; /* Define a largura da imagem como 35% do container pai */
-    height: auto; /* Mantém a proporção da imagem */
-    max-width: 100%; /* Garante que não ultrapasse o tamanho do container */
-    position: relative; /* Permite posicionamento com bottom/right */
-    bottom: 125px; /* Move a imagem para cima */
-    right: 40px; /* Move a imagem para a direita */
-    z-index: 2; /* Mantém a imagem sobre outros elementos */
+    width: 102px; /* Largura fixa */
+    max-width: 200px; /* Largura máxima permitida */
+    height: auto; /* Altura proporcional à largura */
+    margin-top: 0px; /* Sem espaço acima */
+    margin-left: 20px; /* Espaço à esquerda */
+    position: relative; /* Permite sobreposição com z-index */
+    z-index: 2; /* Fica acima de elementos com z-index menor */
 }
 
-/* ======== Estilo de hover dos botões ======== */
+/* ======== Estilo padrão dos botões ======== */
+#button_sobre,
+#button_home,
+#button_contatos,
+#button_entrar,
+#button_cadastro {
+    color: white; /* Texto branco */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 25px; /* Espaço interno */
+    border: none; /* Sem borda */
+    transition: background-color 0.3s ease; /* Transição suave ao mudar de cor */
+    position: relative; /* Para sobreposição */
+    z-index: 2; /* Acima do fundo translúcido */
+}
+
+/* Botão cadastro com largura maior */
+#button_cadastro {
+    width: auto; /* Largura automática */
+    min-width: 140px; /* Largura mínima */
+}
+
+/* ======== Efeitos de hover e foco ======== */
 #button_sobre:hover,
 #button_home:hover,
 #button_contatos:hover,
 #button_entrar:hover,
 #button_cadastro:hover {
-    background-color: #005599; /* Cor de fundo ao passar o mouse */
-    cursor: pointer; /* Muda o cursor para mão (indicando que é clicável) */
+    background-color: #005599; /* Azul mais claro no hover */
+    cursor: pointer; /* Muda o cursor para mãozinha */
 }
 
-/* ======== Estilo de foco nos botões (teclado) ======== */
 #button_sobre:focus,
 #button_home:focus,
 #button_contatos:focus,
 #button_entrar:focus,
 #button_cadastro:focus {
-    outline: 2px solid #ffffff; /* Borda branca para indicar foco */
-    background-color: #0077cc; /* Altera a cor de fundo quando em foco */
-}
-
-/* ======== Estilo padrão dos botões ======== */
-#button_sobre, 
-#button_home,
-#button_contatos, 
-#button_entrar,
-#button_cadastro {
-    color: white; /* Cor do texto branca */
-    background-color: #003366; /* Fundo azul escuro */
-    width: 110px; /* Largura fixa do botão */
-    margin: 10px; /* Espaço externo ao redor */
-    border-radius: 20px; /* Bordas arredondadas */
-    font-size: 20px; /* Tamanho da fonte */
-    z-index: 2; /* Garante que fiquem acima do fundo */
+    outline: 2px solid #ffffff; /* Contorno branco no foco */
+    background-color: #0077cc; /* Azul mais claro no foco */
 }
 
 /* ======== Container dos botões de navegação ======== */
 .buttons_menu {
-    margin: 0 auto; /* Centraliza horizontalmente */
-    width: 20%; /* Largura do container dos botões */
-    display: flex; /* Ativa o Flexbox para organizar os botões lado a lado */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebrar linha */
     gap: 10px; /* Espaço entre os botões */
-    margin-top: 50px; /* Espaçamento acima */
-    position: relative; /* Permite usar bottom e left */
-    bottom: 210px; /* Move o container para cima */
-    left: 19px; /* Move o container para a direita */
-    z-index: 2; /* Garante que fique acima do fundo */
+    margin-top: -40px; /* Move para cima */
 }
 
 /* ======== Container dos botões de login/cadastro ======== */
 .buttons_registro {
-    position: relative; /* Permite deslocamento */
-    left: 283.5%; /* Move para a direita */
-    bottom: 340px; /* Move para cima */
-    margin: 0px; /* Remove margem externa */
-    font-size: 20px; /* Tamanho da fonte (não aplicado diretamente nos botões) */
-    z-index: 2; /* Garante sobreposição */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 9px; /* Espaço entre os botões */
+    margin-top: -108px; /* Sobe o bloco */
+    margin-left: 80%; /* Alinha mais à direita */
 }
 
-/* ======== Estilo específico para o botão de cadastro ======== */
-#button_cadastro {
-    color: white; /* Texto branco */
-    background-color: #003366; /* Fundo azul escuro */
-    border-radius: 20px; /* Bordas arredondadas */
-    width: 140px; /* Largura maior que os demais botões */
-    font-size: 19px; /* Tamanho da fonte */
-    padding: 3px; /* Espaço interno */
-}
-
-/* ======== Fundo transparente atrás do menu ======== */
+/* ======== Fundo translúcido atrás do menu ======== */
 #fundo_menu {
-    pointer-events: none; /* Evita que interfira com cliques */
-    background-color: rgb(238, 236, 236, 0.5); /* Cor com 50% de transparência */
-    width: 100%; /* Ocupa toda a largura da tela */
-    height: 142px; /* Altura definida */
-    position: absolute; /* Posicionamento relativo à tela */
-    top: 0; /* Alinha no topo */
+    background-color: rgba(238, 236, 236, 0.5); /* Fundo cinza claro translúcido */
+    width: 100%; /* Largura total */
+    height: 142px; /* Altura fixa */
+    position: absolute; /* Fixa no topo */
+    top: 0; /* Alinha ao topo */
     left: 0; /* Alinha à esquerda */
-    z-index: 1; /* Coloca atrás dos elementos com z-index maior */
-}
-/* ======== Estilo para telas maiores ======== */
-.corpo_site {
-    background: linear-gradient(#003366, #40E0D0); /* Fundo em gradiente azul escuro para ciano */
-    padding: 100px; /* Adiciona 100px de espaço interno em todos os lados */
-    width: 24%; /* Largura do conteúdo como 24% da tela */
+    z-index: 1; /* Fica atrás dos botões */
 }
 
-/* ======== Estilo para telas pequenas (responsivo) ======== */
+/* ======== Responsividade para dispositivos menores ======== */
 @media (max-width: 768px) {
     .corpo_site {
-        width: 80%; /* Em telas menores, a largura aumenta para 80% */
-        padding: 50px; /* Reduz o padding para 50px */
+        padding: 20px; /* Reduz o espaço interno */
+        width: 95%; /* Ocupa mais da largura da tela */
     }
 
     #titulo {
-        font-size: 30px; /* Diminui o tamanho da fonte do título */
-        bottom: 180px; /* Ajusta a posição para que o título fique mais próximo */
-    }
-
-    #fundo_texto {
-        width: 90%; /* O fundo ocupa 90% da largura da tela em telas menores */
-        height: 60%; /* Aumenta a altura do fundo para 60% da altura da tela */
-        top: 30%; /* Ajusta a posição para 30% da altura da tela */
+        font-size: 28px; /* Reduz o tamanho do título */
+        margin-top: 210px; /* Ajusta espaço superior */
     }
 
     #texto {
-        font-size: 20px; /* Diminui o tamanho da fonte do texto */
-        margin: 15px; /* Reduz a margem externa */
+        font-size: 18px; /* Reduz o tamanho do texto */
+    }
+
+    .buttons_menu,
+    .buttons_registro {
+        flex-direction: row; /* Botões em linha */
+        align-items: center; /* Alinhamento vertical central */
     }
 
     #imagem {
-        width: 50%; /* Reduz a largura da imagem para 50% */
-        bottom: 80px; /* Ajusta a posição da imagem para 80px */
-        right: 20px; /* Ajusta a posição da imagem para 20px */
-    }
-
-    .buttons_menu {
-        width: 80%; /* Aumenta a largura do container dos botões para 80% */
-        gap: 5px; /* Reduz o espaço entre os botões */
-        bottom: 180px; /* Ajusta a posição dos botões para 180px */
-        left: 10px; /* Ajusta a posição para 10px */
-    }
-
-    .buttons_registro {
-        left: 240%; /* Ajusta a posição para a direita */
-        bottom: 240px; /* Ajusta a posição para 240px */
-    }
-
-    #button_sobre,
-    #button_home,
-    #button_contatos,
-    #button_entrar,
-    #button_cadastro {
-        font-size: 16px; /* Diminui o tamanho da fonte dos botões */
-        width: 100px; /* Ajusta a largura dos botões */
-    }
-
-    #button_cadastro {
-        width: 120px; /* Ajusta a largura do botão de cadastro */
+        width: 100px; /* Reduz a imagem */
+        margin-top: -50px auto; /* Ajusta posição e centraliza */
+        display: block; /* Garante que seja um bloco */
     }
 }
 
-/* ======== Estilo para telas muito pequenas (smartphones) ======== */
+/* ======== Ajustes adicionais para telas muito pequenas ======== */
 @media (max-width: 480px) {
-    .corpo_site {
-        width: 100%; /* O conteúdo ocupa toda a largura da tela */
-        padding: 30px; /* Reduz o padding para 30px */
-    }
-
-    #titulo {
-        font-size: 24px; /* Diminui ainda mais o tamanho da fonte do título */
-        bottom: 150px; /* Ajusta a posição do título */
-    }
-
-    #fundo_texto {
-        width: 100%; /* O fundo ocupa 100% da largura da tela */
-        height: 70%; /* Aumenta a altura do fundo para 70% da tela */
-        top: 20%; /* Ajusta a posição para 20% da altura da tela */
-    }
-
-    #texto {
-        font-size: 18px; /* Diminui ainda mais o tamanho da fonte do texto */
-        margin: 10px; /* Reduz a margem externa */
-    }
-
-    #imagem {
-        width: 70%; /* Aumenta a largura da imagem para 70% */
-        bottom: 60px; /* Ajusta a posição da imagem */
-        right: 10px; /* Ajusta a posição para 10px */
-    }
-
-    .buttons_menu {
-        width: 90%; /* Aumenta a largura dos botões para 90% da tela */
-        gap: 3px; /* Reduz o espaço entre os botões */
-        bottom: 150px; /* Ajusta a posição para 150px */
-        left: 5px; /* Ajusta a posição para 5px */
-    }
-
-    .buttons_registro {
-        left: 200%; /* Ajusta a posição para a direita */
-        bottom: 200px; /* Ajusta a posição para 200px */
-    }
-
     #button_sobre,
     #button_home,
     #button_contatos,
     #button_entrar,
     #button_cadastro {
-        font-size: 14px; /* Diminui o tamanho da fonte para caber melhor em telas pequenas */
-        width: 90px; /* Ajusta a largura dos botões */
-    }
-
-    #button_cadastro {
-        width: 110px; /* Ajusta a largura do botão de cadastro */
-    }
-}
-
-/* ======== Estilos para telas grandes (desktop) ======== */
-@media (min-width: 1024px) {
-    .corpo_site {
-        width: 24%; /* Largura original para telas grandes */
-        padding: 100px; /* Padding original */
+        font-size: 16px; /* Fonte menor */
+        padding: 8px 12px; /* Menor espaço interno */
     }
 
     #titulo {
-        font-size: 40px; /* Tamanho da fonte do título */
-        bottom: 220px; /* Posição original do título */
-    }
-
-    #fundo_texto {
-        width: 80%; /* Largura do fundo original */
-        height: 50%; /* Altura original do fundo */
-        top: 40%; /* Posição original do fundo */
+        font-size: 24px; /* Título ainda menor */
     }
 
     #texto {
-        font-size: 25px; /* Tamanho de fonte original do texto */
-        margin: 25px; /* Margem original */
-    }
-
-    #imagem {
-        width: 35%; /* Largura original da imagem */
-        bottom: 125px; /* Posição original da imagem */
-        right: 40px; /* Posição original da imagem */
-    }
-
-    .buttons_menu {
-        width: 20%; /* Largura original do container de botões */
-        gap: 10px; /* Espaçamento entre os botões */
-        bottom: 210px; /* Posição original do container de botões */
-        left: 19px; /* Posição original do container de botões */
-    }
-
-    .buttons_registro {
-        left: 283.5%; /* Posição original do container de botões de registro */
-        bottom: 340px; /* Posição original */
-    }
-
-    #button_sobre,
-    #button_home,
-    #button_contatos,
-    #button_entrar,
-    #button_cadastro {
-        font-size: 20px; /* Tamanho original da fonte dos botões */
-        width: 110px; /* Largura original dos botões */
-    }
-
-    #button_cadastro {
-        width: 140px; /* Largura original do botão de cadastro */
+        font-size: 16px; /* Texto mais compacto */
     }
 }
