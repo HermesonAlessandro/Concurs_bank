@@ -11,7 +11,7 @@ $nome_completo = $_POST['nome_completo'];
 $idade = $_POST['idade'];
 $sexo = $_POST['sexo'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
 // Cria a instrução SQL para inserir um novo estudante na tabela 'estudante'
 $sql = "INSERT INTO estudante (cpf, nome_completo, idade, sexo, email, senha) VALUES (?, ?, ?, ?, ?, ?)";
