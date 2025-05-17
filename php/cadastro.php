@@ -1,6 +1,11 @@
 <?php
-// Inclui o arquivo de conexão com o banco de dados
-include_once "conexao.php";
+session_start(); // Inicia uma sessão PHP para armazenar informações do usuário
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Configura o MySQLi para exibir erros e usar exceções
+include_once "conexao.php"; // Inclui o arquivo de conexão com o banco de dados
+
+if (!$mysqli) {
+    die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error); // Verifica se há erro na conexão e encerra a execução do script
+}
 
 // Exibe o conteúdo da variável $_POST para fins de depuração
 var_dump($_POST);
@@ -38,7 +43,6 @@ if($stmt->execute()){
 
 // Fecha a consulta preparada
 $stmt->close();
-
 // Fecha a conexão com o banco de dados
 $mysqli->close();
 ?>

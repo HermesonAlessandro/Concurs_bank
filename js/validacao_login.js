@@ -20,6 +20,5 @@ document.querySelector('#validacao_login').addEventListener('submit', function(e
     }
     
     // Se todas as validações forem aprovadas, exibe uma mensagem de sucesso e submete o formulário
-    alert('Login realizado com sucesso!');
     this.submit(); // Submete o formulário após validação bem-sucedida
 });
