@@ -9,6 +9,12 @@ document.querySelector('#validacao_cadastro').addEventListener('submit', functio
     const idade = document.getElementById('idade').value;  // Idade digitada pelo usuário
     const email = document.getElementById('email').value;  // Email digitado pelo usuário
     const senha = document.getElementById('senha').value;  // Senha digitada pelo usuário
+
+    // Verifica se algum campo está vazio
+    if(!cpf || !nome || !idade || !email || !senha){
+        alert('Todos os campos devem ser preechidos!');
+        return; // Interrompe o processamento do formulário
+    }
     
     // Validação do CPF: deve conter exatamente 11 dígitos numéricos (desconsiderando pontos e hífen)
     if (!/^\d{11}$/.test(cpf.replace(/\D/g, ''))) { // Remove caracteres não numéricos e verifica se restam 11 dígitos
@@ -40,8 +46,6 @@ document.querySelector('#validacao_cadastro').addEventListener('submit', functio
         return; // Interrompe o processamento do formulário
     }
     
-    // Se todas as validações forem aprovadas, exibe uma mensagem de sucesso e submete o formulário
-    alert('Cadastro realizado com sucesso!');
     this.submit(); // Submete o formulário após validação bem-sucedida
 });
 

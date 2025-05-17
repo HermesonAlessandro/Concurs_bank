@@ -18,6 +18,22 @@ $sexo = $_POST['sexo'];
 $email = $_POST['email'];
 $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
+// Primeiro, verifica se o CPF já está cadastrado
+$sql_verifica = "SELECT cpf FROM estudante WHERE cpf = ?";
+$stmt_verifica = $mysqli->prepare($sql_verifica);
+$stmt_verifica->bind_param("s", $cpf);
+$stmt_verifica->execute();
+$resultado_verifica = $stmt_verifica->get_result();
+
+if($resultado_verifica->num_rows > 0){
+    // Se o CPF já existir, exibe um alerta e interrompe o fluxo
+    echo "<script>
+            alert('CPF já cadastrado! Por favor, use um CPF diferente.');
+            window.history.back(); // Retorna para a página anterior
+          </script>";
+    exit();
+}
+
 // Cria a instrução SQL para inserir um novo estudante na tabela 'estudante'
 $sql = "INSERT INTO estudante (cpf, nome_completo, idade, sexo, email, senha) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -35,10 +51,14 @@ $stmt->bind_param("ssisss", $cpf, $nome_completo, $idade, $sexo, $email, $senha)
 // Executa a consulta SQL para inserir os dados no banco de dados
 if($stmt->execute()){
     // Se a inserção foi bem-sucedida, redireciona o usuário para a tela de login
-    header("location: ../html/tela_login.html");
+    echo "<script>
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = '../html/tela_login.html';
+          </script>";
+    exit();
 }else{
     // Se houve erro na inserção, exibe uma mensagem de erro
-    echo "Error ao cadastrar o estudante!".$stmt->error;
+    echo "<script>alert('Erro ao cadastrar o estudante! Tente novamente.'); window.history.back();</script>";
 }
 
 // Fecha a consulta preparada

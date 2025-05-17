@@ -7,6 +7,12 @@ document.querySelector('#validacao_login').addEventListener('submit', function(e
     const email = document.getElementById('email').value;  // Email digitado pelo usuário
     const senha = document.getElementById('senha').value;  // Senha digitada pelo usuário
 
+    // Verifica se algum campo está vazio
+    if(!email || !senha){
+        alert('Todos os campos devem ser preechidos!');
+        return; // Interrompe o processamento do formulário
+    }
+
     // Validação do email: deve seguir o formato padrão de e-mails (com @ e domínio)
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { // Usa expressão regular para validar estrutura do email
         alert('Email inválido (deve conter @ e domínio)');
