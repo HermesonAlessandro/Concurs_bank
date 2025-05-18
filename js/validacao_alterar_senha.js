@@ -20,15 +20,15 @@ document.querySelector('#validacao_alterar_senha').addEventListener('submit', fu
         return; // Interrompe o processamento do formulário
     }
     
-    // Validação da senha: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas e minúsculas
-    if (novasenha.length < 8 || !/[A-Z]/.test(novasenha) || !/[a-z]/.test(novasenha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas
-        alert('Senha deve ter 8+ caracteres com maiúsculas e minúsculas');
+    // Validação da novasenha: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, um numero e um caractere especial
+    if (novasenha.length < 8 || !/[A-Z]/.test(novasenha) || !/[a-z]/.test(novasenha) || !/[0-9]/.test(novasenha) || !/[!@#$%^&*(),.?":{}|<>]/.test(novasenha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas/um numero e um caractere especial
+        alert('Nova senha deve ter pelo menos 8 caracteres, incluindo maiúsculas, minúsculas, um número e um caractere especial');
         return; // Interrompe o processamento do formulário
     }
 
-    // Confirmação da senha digitada: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas e minúsculas
-    if (confirmarsenha.length < 8 || !/[A-Z]/.test(confirmarsenha) || !/[a-z]/.test(confirmarsenha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas
-        alert('Senhas não coincidem, senha deve ter 8+ caracteres com maiúsculas e minúsculas');
+    // Validação da confirmação da senha: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, um numero e um caractere especial
+    if (confirmarsenha.length < 8 || !/[A-Z]/.test(confirmarsenha) || !/[a-z]/.test(confirmarsenha) || !/[0-9]/.test(confirmarsenha) || !/[!@#$%^&*(),.?":{}|<>]/.test(confirmarsenha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas/um numero e um caractere especial
+        alert('Senhas não coincidem, Senha deve ter pelo menos 8 caracteres, incluindo maiúsculas, minúsculas, um número e um caractere especial');
         return; // Interrompe o processamento do formulário
     }
     

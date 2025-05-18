@@ -14,6 +14,12 @@ $email = $_POST['email']; // Obtém o e-mail enviado pelo formulário
 $senha = $_POST['senha']; // Obtém a senha enviada pelo formulário
 $email = filter_var($email, FILTER_SANITIZE_EMAIL); // Sanitiza o e-mail para evitar injeções maliciosas
 
+// Validação da senha no servidor
+if(strlen($senha) < 8 || !preg_match('/[A-Z]/', $senha) || !preg_match('/[a-z]/', $senha) || !preg_match('/[0-9]/', $senha) || !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $senha)){
+    echo "";
+    exit();
+}
+
 // Inicializa a variável de tentativas de login, caso ainda não tenha sido definida
 if (!isset($_SESSION['tentativas_login'])) {
     $_SESSION['tentativas_login'] = 0;

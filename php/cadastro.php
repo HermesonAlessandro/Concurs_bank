@@ -16,7 +16,16 @@ $nome_completo = $_POST['nome_completo'];
 $idade = $_POST['idade'];
 $sexo = $_POST['sexo'];
 $email = $_POST['email'];
-$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+$senha = $_POST['senha'];
+
+// Validação da senha no servidor
+if(strlen($senha) < 8 || !preg_match('/[A-Z]/', $senha) || !preg_match('/[a-z]/', $senha) || !preg_match('/[0-9]/', $senha) || !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $senha)){
+    echo "";
+    exit();
+}
+
+// Criptografa a senha antes de armazenar
+$senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
 // Primeiro, verifica se o CPF já está cadastrado
 $sql_verifica = "SELECT cpf FROM estudante WHERE cpf = ?";
@@ -46,7 +55,7 @@ if(!$stmt){
 }
 
 // Associa os valores das variáveis aos parâmetros da consulta SQL
-$stmt->bind_param("ssisss", $cpf, $nome_completo, $idade, $sexo, $email, $senha);
+$stmt->bind_param("ssisss", $cpf, $nome_completo, $idade, $sexo, $email, $senha_hash);
 
 // Executa a consulta SQL para inserir os dados no banco de dados
 if($stmt->execute()){

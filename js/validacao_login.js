@@ -19,9 +19,9 @@ document.querySelector('#validacao_login').addEventListener('submit', function(e
         return; // Interrompe o processamento do formulário
     }
     
-    // Validação da senha: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas e minúsculas
-    if (senha.length < 8 || !/[A-Z]/.test(senha) || !/[a-z]/.test(senha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas
-        alert('Senha deve ter 8+ caracteres com maiúsculas e minúsculas');
+    // Validação da senha: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, um numero e um caractere especial
+    if (senha.length < 8 || !/[A-Z]/.test(senha) || !/[a-z]/.test(senha) || !/[0-9]/.test(senha) || !/[!@#$%^&*(),.?":{}|<>]/.test(senha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas/um numero e um caractere especial
+        alert('Senha deve ter pelo menos 8 caracteres, incluindo maiúsculas, minúsculas, um número e um caractere especial');
         return; // Interrompe o processamento do formulário
     }
     
