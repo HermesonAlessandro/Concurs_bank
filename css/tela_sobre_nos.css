@@ -65,7 +65,14 @@
     width: auto; /* Largura automática */
     min-width: 140px; /* Largura mínima */
 }
-
+#rodape_diretos_autorais{
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   color: #ffffff;
+   bottom: 440px;
+   z-index: 2;
+}
 /* ======== Efeitos de hover e foco ======== */
 #button_sobre:hover,
 #button_home:hover,
@@ -142,6 +149,14 @@
         margin-top: -50px auto; /* Ajusta posição e centraliza */
         display: block; /* Garante que seja um bloco */
     }
+    #rodape_diretos_autorais{
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   color: #ffffff;
+   bottom: 460px;
+   z-index: 2;
+}
 }
 
 /* ======== Ajustes adicionais para telas muito pequenas ======== */
@@ -162,4 +177,12 @@
     #texto {
         font-size: 16px; /* Texto mais compacto */
     }
+    #rodape_diretos_autorais{
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   color: #ffffff;
+   bottom: 520px;
+   z-index: 2;
+}
 }

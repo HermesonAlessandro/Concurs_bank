@@ -6,6 +6,13 @@
     margin: 10px; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
 }
 
+#rodape_diretos_autorais{
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   color: #ffffff;
+}
+
 /* =================== Media query para telas com largura mínima de 308px =================== */
 @media (min-width: 308px) {
 

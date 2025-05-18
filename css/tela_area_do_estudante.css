@@ -1,6 +1,7 @@
 /* ======== Estilo base para todo o corpo ======== */
+
 .corpo_site {
-    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro ao turquesa */
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro ao azul mais claro */
     max-width: 100%; /* Define a largura máxima como 100% da tela */
     width: 90%; /* Define a largura padrão como 90% */
     padding: 255px 20px; /* Adiciona espaçamento interno: 255px em cima/baixo, 20px nas laterais */
@@ -24,6 +25,24 @@
     padding: 20px; /* Espaço interno de 20px em todos os lados */
 }
 
+.tres_imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:29px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.tres_imagens img{
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(3, 54, 61, 0);
+    transition: transform 0.1s;
+}
+.tres_imagens img:hover{
+    transform: scale(1.10);
+}
 /* ======== Texto principal ======== */
 #texto {
     font-size: 24px; /* Tamanho da fonte do texto principal */
@@ -33,7 +52,7 @@
 }
 
 /* ======== Logo principal ======== */
-#imagem {
+#logo {
     width: 102px; /* Largura fixa da imagem */
     max-width: 200px; /* Define uma largura máxima */
     height: auto; /* Altura proporcional à largura */
@@ -42,14 +61,26 @@
     position: relative; /* Permite uso de z-index */
     z-index: 2; /* Fica acima de elementos com z-index menor */
 }
+#designer{
+    width: 200px ;
+    height: 200px;
+    max-width: 600px;
+}
 
+#rodape_diretos_autorais{
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   color: #ffffff;
+   bottom: 290px;
+   z-index: 2;
+}
 /* ======== Estilo padrão dos botões ======== */
 #button_sobre,
 #button_home,
 #button_contatos,
 #button_entrar,
-#button_cadastro,
-#button_area_estudante {
+#button_cadastro {
     color: white; /* Cor do texto branca */
     background-color: #003366; /* Fundo azul escuro */
     border-radius: 20px; /* Bordas arredondadas */
@@ -62,16 +93,13 @@
 }
 
 /* Estilo adicional específico para o botão "Área do Estudante" */
-#button_area_estudante {
-    margin-top: 30px; /* Espaço acima do botão */
-    margin-left: 35%; /* Desloca da esquerda, tentando centralizar */
-    padding: 90px; /* Espaço interno proporcional  */
-}
+
 
 /* Botão cadastro com largura maior */
 #button_cadastro {
     width: auto; /* Largura automática com base no conteúdo */
     min-width: 140px; /* Garante uma largura mínima */
+   
 }
 
 /* ======== Efeitos de hover e foco ======== */
@@ -132,49 +160,79 @@
         width: 95%; /* Aumenta um pouco a largura */
     }
 
-    #titulo {
-        font-size: 28px; /* Diminui o tamanho do título */
-        margin-top: 210px; /* Adiciona mais espaço acima */
-    }
-
-    #texto {
-        font-size: 18px; /* Reduz o tamanho da fonte */
-    }
-
     .buttons_menu,
     .buttons_registro {
         flex-direction: row; /* Coloca os botões em linha */
         align-items: center; /* Alinha ao centro verticalmente */
     }
 
-    #button_area_estudante {
-        margin-top: 200px; /* Adiciona espaço acima no modo mobile */
-        margin-left: 150px;
-    }
 
-    #imagem {
+    #logo {
         width: 100px; /* Reduz o tamanho da imagem */
-        margin-top: -50px ; /* Sobe e tenta centralizar */
+        margin-top: -20px ; /* Sobe e tenta centralizar */
         display: block; /* Transforma a imagem em bloco (necessário para centralizar) */
     }
+}
+#rodape_diretos_autorais{
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   color: #ffffff;
+   bottom:490px;
+   z-index: 2;
+}
+.tres_imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:29px;
+    margin-top: 180px;
+    flex-wrap: wrap;
+}
+.tres_imagens img{
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(3, 54, 61, 0);
+    transition: transform 0.1s;
+}
+.tres_imagens img:hover{
+    transform: scale(1.10);
+}
+.buttons_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    margin-top: -30px;
 }
 
 /* ======== Ajustes adicionais para telas muito pequenas ======== */
 @media (max-width: 480px) {
+    #fundo_menu{
+        width:  495px;
+    }
     #button_sobre,
     #button_home,
     #button_contatos,
-    #button_entrar,
-    #button_cadastro {
-        font-size: 16px; /* Diminui o tamanho da fonte dos botões */
+    #button_entrar
+     {
+        font-size: 5px; /* Diminui o tamanho da fonte dos botões */
         padding: 8px 12px; /* Reduz o padding interno */
+        margin-top: 40px;
     }
-
-    #titulo {
-        font-size: 24px; /* Reduz ainda mais o título */
-    }
-
-    #texto {
-        font-size: 16px; /* Tamanho menor para o texto principal */
-    }
+#button_cadastro{
+    font-size: 5px; /* Diminui o tamanho da fonte dos botões */
+        padding: 8px 12px; /* Reduz o padding interno */
+        margin-top: 0px;
+}
+#rodape_diretos_autorais{
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   color: #ffffff;
+   margin-top: -155px;
+   font-size: 10px;
+   z-index: 2;
+}
 }
