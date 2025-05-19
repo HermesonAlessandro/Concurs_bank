@@ -14,6 +14,13 @@
 
   /* Arredonda as bordas do card em 3 pixels para um visual mais suave */
   border-radius: 3px;
+
+  /*animacao com transicao do card */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+  /*linkando a transicao quando usuario colocar o mouse em cima do card*/
+.card:hover {
+  transform: scale(1.03);
 }
 
 /* Define o estilo da classe "title", que normalmente se refere ao cargo do membro */
@@ -37,5 +44,5 @@ a {
 /* Define o estilo para os botões e links quando o usuário passa o mouse sobre eles */
 button:hover, a:hover {
   /* Reduz a opacidade para 70%, criando um efeito visual de "fade" quando o usuário interage */
-  opacity: 0.7;
+  opacity: 0.5;
 }
