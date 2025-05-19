@@ -241,13 +241,13 @@
         padding: 8px 12px; /* Reduz o padding interno */
         margin-top: 0px;
 }
-#rodape_diretos_autorais{
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   color: #ffffff;
-   margin-top: -155px;
-   font-size: 10px;
-   z-index: 2;
+#rodape_diretos_autorais {
+   display: flex; /* Define um contêiner flexível para organizar os elementos internos */
+   justify-content: flex-end; /* Alinha o conteúdo à extremidade direita do rodapé */
+   position: relative; /* Define uma posição relativa ao seu contêiner pai */
+   color: #ffffff; /* Define a cor do texto como branca */
+   margin-top: -155px; /* Ajusta a margem superior para reposicionar o rodapé */
+   font-size: 10px; /* Define o tamanho da fonte do texto */
+   z-index: 2; /* Controla a ordem de empilhamento, garantindo que o rodapé fique acima de outros elementos */
 }
 }

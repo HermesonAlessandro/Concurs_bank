@@ -65,6 +65,7 @@
     width: auto; /* Largura automática */
     min-width: 140px; /* Largura mínima */
 }
+
 /* Estilizando o rodapé de direitos autorais */
 #rodape_diretos_autorais {
    display: flex; /* Utiliza Flexbox para organização do layout */
@@ -74,6 +75,7 @@
    bottom: 433px; /* Move o elemento para cima, ajustando a posição vertical */
    z-index: 2; /* Garante que ele fique sobre outros elementos */
 }
+
 /* ======== Efeitos de hover e foco ======== */
 #button_estudante:hover,
 #button_home:hover,
@@ -122,14 +124,16 @@
     left: 0; /* Alinha à esquerda */
     z-index: 1; /* Fica atrás dos botões */
 }
-@media (max-width: 1053px){
-    .rodape_diretos_autorais{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: -10px;
+
+@media (max-width: 1053px) { /* Define regras para telas com largura máxima de 1053px */
+    .rodape_diretos_autorais {
+        display: flex; /* Define um contêiner flexível para organizar os elementos */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        margin-top: -10px; /* Ajusta a margem superior para um posicionamento refinado */
     }
 }
+
 /* ======== Responsividade para dispositivos menores ======== */
 @media (max-width: 768px) {
     .corpo_site {
@@ -166,6 +170,7 @@
    bottom: 460px; /* Ajusta a posição do elemento para cima em 460px */
    z-index: 2; /* Garante que o rodapé apareça sobre outros elementos */
 }
+
 }
 
 /* ======== Ajustes adicionais para telas muito pequenas ======== */
@@ -186,12 +191,12 @@
     #texto {
         font-size: 16px; /* Texto mais compacto */
     }
-    #rodape_diretos_autorais{
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   color: #ffffff;
-   bottom: 520px;
-   z-index: 2;
+    #rodape_diretos_autorais {
+   display: flex; /* Define um contêiner flexível para organizar os elementos */
+   justify-content: flex-end; /* Alinha o conteúdo à direita */
+   position: relative; /* Define a posição relativa ao seu contêiner pai */
+   color: #ffffff; /* Define a cor do texto como branca */
+   bottom: 520px; /* Move o elemento 520 pixels para cima */
+   z-index: 2; /* Define a ordem de empilhamento do elemento */
 }
 }
