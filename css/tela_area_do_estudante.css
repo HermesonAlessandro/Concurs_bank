@@ -9,19 +9,13 @@
 }
 
 /* ======== Título da página ======== */
-#titulo {
-    font-size: 40px; /* Define o tamanho da fonte do título como 40px */
-    color: #ffffff; /* Cor do texto branca */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 110px; /* Adiciona espaço acima do título */
-}
 
 /* ======== Fundo atrás do texto principal ======== */
 #fundo_texto {
     width: 100%; /* Define a largura total */
     background-color: #003366; /* Cor de fundo azul escuro */
     border-radius: 12px; /* Bordas arredondadas com raio de 12px */
-    margin: 40px auto; /* Espaço de 40px em cima e embaixo, centralizado horizontalmente */
+    margin: 40px ; /* Espaço de 40px em cima e embaixo, centralizado horizontalmente */
     padding: 20px; /* Espaço interno de 20px em todos os lados */
 }
 
@@ -136,9 +130,10 @@
 .buttons_menu {
     display: flex; /* Usa flexbox para organizar os botões */
     justify-content: center; /* Centraliza os botões */
+    align-items: center;
     flex-wrap: wrap; /* Permite quebra de linha se necessário */
     gap: 10px; /* Espaço entre os botões */
-    margin-top: -40px; /* Sobe o grupo de botões */
+    margin-top: 0px; /* Sobe o grupo de botões */
 }
 
 /* ======== Container dos botões de login/cadastro ======== */
@@ -158,11 +153,13 @@
     height: 142px; /* Altura fixa do fundo */
     position: absolute; /* Posicionamento absoluto no topo */
     top: 0; /* Alinha ao topo da tela */
-    left: 0; /* Alinha à esquerda da tela */
+    right: 0px; /* Alinha à esquerda da tela */
     z-index: 1; /* Atrás dos botões e imagens */
 }
 
 /* ======== Responsividade para dispositivos menores ======== */
+
+
 @media (max-width: 768px) {
     .corpo_site {
         padding: 20px; /* Reduz o espaçamento interno */

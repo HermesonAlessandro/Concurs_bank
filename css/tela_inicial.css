@@ -2,8 +2,9 @@
 .corpo_site {
     background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
     text-align: center; /* Centraliza o texto dentro do contêiner */
-    padding: 20px; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
-    margin: 10px; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
+    width: 81.7%;
+    padding: 10px; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
+    margin: auto; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
 }
 
 /* Estilização do rodapé de direitos autorais */

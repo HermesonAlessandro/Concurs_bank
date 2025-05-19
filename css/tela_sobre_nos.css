@@ -3,7 +3,7 @@
     background: linear-gradient(#003366, #40E0D0); /* Fundo em gradiente do azul escuro ao turquesa */
     max-width: 100%; /* Largura máxima de 100% da tela */
     width: 90%; /* Largura padrão de 90% */
-    padding: 66px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
+    padding: 91.5px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
     margin: 0 auto; /* Centraliza horizontalmente */
 }
 
@@ -44,7 +44,7 @@
 }
 
 /* ======== Estilo padrão dos botões ======== */
-#button_sobre,
+#button_estudante,
 #button_home,
 #button_contatos,
 #button_entrar,
@@ -71,11 +71,11 @@
    justify-content: flex-end; /* Alinha os elementos à direita */
    position: relative; /* Mantém a posição relativa ao seu elemento pai */
    color: #ffffff; /* Define a cor do texto como branco */
-   bottom: 440px; /* Move o elemento para cima, ajustando a posição vertical */
+   bottom: 433px; /* Move o elemento para cima, ajustando a posição vertical */
    z-index: 2; /* Garante que ele fique sobre outros elementos */
 }
 /* ======== Efeitos de hover e foco ======== */
-#button_sobre:hover,
+#button_estudante:hover,
 #button_home:hover,
 #button_contatos:hover,
 #button_entrar:hover,
@@ -84,7 +84,7 @@
     cursor: pointer; /* Muda o cursor para mãozinha */
 }
 
-#button_sobre:focus,
+#button_estudante:focus,
 #button_home:focus,
 #button_contatos:focus,
 #button_entrar:focus,
@@ -99,7 +99,7 @@
     justify-content: center; /* Centraliza os botões */
     flex-wrap: wrap; /* Permite quebrar linha */
     gap: 10px; /* Espaço entre os botões */
-    margin-top: -40px; /* Move para cima */
+    margin-top: -30px; /* Move para cima */
 }
 
 /* ======== Container dos botões de login/cadastro ======== */
@@ -122,7 +122,14 @@
     left: 0; /* Alinha à esquerda */
     z-index: 1; /* Fica atrás dos botões */
 }
-
+@media (max-width: 1053px){
+    .rodape_diretos_autorais{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+    }
+}
 /* ======== Responsividade para dispositivos menores ======== */
 @media (max-width: 768px) {
     .corpo_site {
@@ -163,7 +170,7 @@
 
 /* ======== Ajustes adicionais para telas muito pequenas ======== */
 @media (max-width: 480px) {
-    #button_sobre,
+    #button_estudante,
     #button_home,
     #button_contatos,
     #button_entrar,
