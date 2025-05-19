@@ -65,13 +65,14 @@
     width: auto; /* Largura automática */
     min-width: 140px; /* Largura mínima */
 }
-#rodape_diretos_autorais{
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   color: #ffffff;
-   bottom: 440px;
-   z-index: 2;
+/* Estilizando o rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Utiliza Flexbox para organização do layout */
+   justify-content: flex-end; /* Alinha os elementos à direita */
+   position: relative; /* Mantém a posição relativa ao seu elemento pai */
+   color: #ffffff; /* Define a cor do texto como branco */
+   bottom: 440px; /* Move o elemento para cima, ajustando a posição vertical */
+   z-index: 2; /* Garante que ele fique sobre outros elementos */
 }
 /* ======== Efeitos de hover e foco ======== */
 #button_sobre:hover,
@@ -149,13 +150,14 @@
         margin-top: -50px auto; /* Ajusta posição e centraliza */
         display: block; /* Garante que seja um bloco */
     }
-    #rodape_diretos_autorais{
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   color: #ffffff;
-   bottom: 460px;
-   z-index: 2;
+    /* Estilizando o rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Usa o modelo de layout flexível (Flexbox) */
+   justify-content: flex-end; /* Alinha os elementos à direita */
+   position: relative; /* Define a posição relativa ao seu contêiner pai */
+   color: #ffffff; /* Define a cor do texto como branco */
+   bottom: 460px; /* Ajusta a posição do elemento para cima em 460px */
+   z-index: 2; /* Garante que o rodapé apareça sobre outros elementos */
 }
 }
 

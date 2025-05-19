@@ -6,11 +6,12 @@
     margin: 10px; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
 }
 
-#rodape_diretos_autorais{
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   color: #ffffff;
+/* Estilização do rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Utiliza o modelo de layout flexível (Flexbox) */
+   justify-content: flex-end; /* Alinha os elementos à direita */
+   position: relative; /* Mantém a posição relativa ao elemento pai */
+   color: #ffffff; /* Define a cor do texto como branco */
 }
 
 /* =================== Media query para telas com largura mínima de 308px =================== */

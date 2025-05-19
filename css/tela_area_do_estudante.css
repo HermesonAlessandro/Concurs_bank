@@ -25,24 +25,30 @@
     padding: 20px; /* Espaço interno de 20px em todos os lados */
 }
 
+/* Estiliza o contêiner das três imagens */
 .tres_imagens {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:29px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    display: flex; /* Utiliza o modelo de layout flexível (Flexbox) */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    gap: 29px; /* Define o espaçamento entre as imagens */
+    margin-top: 40px; /* Adiciona margem superior ao contêiner */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
 }
-.tres_imagens img{
-    max-width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 2px 4px 8px rgba(3, 54, 61, 0);
-    transition: transform 0.1s;
+
+/* Estiliza as imagens dentro do contêiner */
+.tres_imagens img {
+    max-width: 250px; /* Define a largura máxima das imagens */
+    height: auto; /* Mantém a proporção original das imagens */
+    border-radius: 10px; /* Arredonda levemente as bordas das imagens */
+    box-shadow: 2px 4px 8px rgba(3, 54, 61, 0); /* Adiciona sombra às imagens */
+    transition: transform 0.1s; /* Suaviza a transformação ao passar o mouse */
 }
-.tres_imagens img:hover{
-    transform: scale(1.10);
+
+/* Adiciona um efeito de aumento quando o usuário passa o mouse */
+.tres_imagens img:hover {
+    transform: scale(1.10); /* Aumenta ligeiramente o tamanho da imagem */
 }
+
 /* ======== Texto principal ======== */
 #texto {
     font-size: 24px; /* Tamanho da fonte do texto principal */
@@ -61,20 +67,23 @@
     position: relative; /* Permite uso de z-index */
     z-index: 2; /* Fica acima de elementos com z-index menor */
 }
-#designer{
-    width: 200px ;
-    height: 200px;
-    max-width: 600px;
+/* Define as dimensões máximas e padrão do elemento com ID 'designer' */
+#designer {
+    width: 200px; /* Define uma largura fixa de 200px */
+    height: 200px; /* Define uma altura fixa de 200px */
+    max-width: 600px; /* Limita a largura máxima do elemento a 600px */
 }
 
-#rodape_diretos_autorais{
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   color: #ffffff;
-   bottom: 290px;
-   z-index: 2;
+/* Estiliza o rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Utiliza o modelo de layout flexível (Flexbox) */
+   justify-content: flex-end; /* Alinha o conteúdo à direita */
+   position: relative; /* Mantém a posição relativa ao elemento pai */
+   color: #ffffff; /* Define a cor do texto como branco */
+   bottom: 290px; /* Ajusta a posição vertical do elemento */
+   z-index: 2; /* Garante que o rodapé fique sobre outros elementos */
 }
+
 /* ======== Estilo padrão dos botões ======== */
 #button_sobre,
 #button_home,
@@ -173,38 +182,47 @@
         display: block; /* Transforma a imagem em bloco (necessário para centralizar) */
     }
 }
-#rodape_diretos_autorais{
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   color: #ffffff;
-   bottom:490px;
-   z-index: 2;
+/* Estiliza o rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Usa Flexbox para organizar os elementos */
+   justify-content: flex-end; /* Alinha o conteúdo à direita */
+   position: relative; /* Mantém a posição relativa ao elemento pai */
+   color: #ffffff; /* Define a cor do texto como branco */
+   bottom: 490px; /* Ajusta a posição do rodapé para cima */
+   z-index: 2; /* Garante que o rodapé apareça sobre outros elementos */
 }
+
+/* Estiliza o contêiner das três imagens */
 .tres_imagens {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:29px;
-    margin-top: 180px;
-    flex-wrap: wrap;
+    display: flex; /* Aplica Flexbox para organizar as imagens */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Alinha as imagens verticalmente */
+    gap: 29px; /* Define o espaçamento entre as imagens */
+    margin-top: 180px; /* Ajusta a margem superior para posicionamento */
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha conforme necessário */
 }
-.tres_imagens img{
-    max-width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 2px 4px 8px rgba(3, 54, 61, 0);
-    transition: transform 0.1s;
+
+/* Estiliza cada imagem dentro do contêiner */
+.tres_imagens img {
+    max-width: 250px; /* Define uma largura máxima para as imagens */
+    height: auto; /* Mantém a proporção original das imagens */
+    border-radius: 10px; /* Aplica um efeito de bordas arredondadas */
+    box-shadow: 2px 4px 8px rgba(3, 54, 61, 0); /* Adiciona sombra às imagens */
+    transition: transform 0.1s; /* Adiciona uma transição suave ao efeito */
 }
-.tres_imagens img:hover{
-    transform: scale(1.10);
+
+/* Efeito ao passar o mouse sobre as imagens */
+.tres_imagens img:hover {
+    transform: scale(1.10); /* Aumenta ligeiramente o tamanho da imagem */
 }
-.buttons_menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-    margin-top: -30px;
+
+/* Estiliza o menu de botões */
+.buttons_menu {
+    display: flex; /* Usa Flexbox para organização */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Alinha os botões verticalmente */
+    flex-wrap: wrap; /* Permite que os botões se ajustem conforme necessário */
+    margin-top: -30px; /* Ajusta a posição vertical do menu */
 }
 
 /* ======== Ajustes adicionais para telas muito pequenas ======== */
