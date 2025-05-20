@@ -1,0 +1,202 @@
+/* ======== Estilo base para todo o corpo ======== */
+.corpo_site {
+    background: linear-gradient(#003366, #40E0D0); /* Fundo em gradiente do azul escuro ao turquesa */
+    max-width: 100%; /* Largura máxima de 100% da tela */
+    width: 90%; /* Largura padrão de 90% */
+    padding: 91.5px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* ======== Título da página ======== */
+#titulo {
+    font-size: 40px; /* Tamanho grande para o texto */
+    color: #ffffff; /* Cor branca */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 110px; /* Espaço acima do título */
+}
+
+/* ======== Fundo atrás do texto principal ======== */
+#fundo_texto {
+    width: 100%; /* Largura total */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 12px; /* Cantos arredondados */
+    margin: 40px auto; /* Espaço vertical e centralização horizontal */
+    padding: 20px; /* Espaço interno */
+}
+
+/* ======== Texto principal ======== */
+#texto {
+    font-size: 24px; /* Tamanho da fonte */
+    color: aliceblue; /* Cor clara agradável */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 90%; /* Limita a largura */
+}
+
+/* ======== Logo principal ======== */
+#imagem {
+    width: 102px; /* Largura fixa */
+    max-width: 200px; /* Largura máxima permitida */
+    height: auto; /* Altura proporcional à largura */
+    margin-top: 0px; /* Sem espaço acima */
+    margin-left: 20px; /* Espaço à esquerda */
+    position: relative; /* Permite sobreposição com z-index */
+    z-index: 2; /* Fica acima de elementos com z-index menor */
+}
+
+/* ======== Estilo padrão dos botões ======== */
+#button_estudante,
+#button_home,
+#button_contatos,
+#button_entrar,
+#button_cadastro {
+    color: white; /* Texto branco */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 25px; /* Espaço interno */
+    border: none; /* Sem borda */
+    transition: background-color 0.3s ease; /* Transição suave ao mudar de cor */
+    position: relative; /* Para sobreposição */
+    z-index: 2; /* Acima do fundo translúcido */
+}
+
+/* Botão cadastro com largura maior */
+#button_cadastro {
+    width: auto; /* Largura automática */
+    min-width: 140px; /* Largura mínima */
+}
+
+/* Estilizando o rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Utiliza Flexbox para organização do layout */
+   justify-content: flex-end; /* Alinha os elementos à direita */
+   position: relative; /* Mantém a posição relativa ao seu elemento pai */
+   color: #ffffff; /* Define a cor do texto como branco */
+   bottom: 433px; /* Move o elemento para cima, ajustando a posição vertical */
+   z-index: 2; /* Garante que ele fique sobre outros elementos */
+}
+
+/* ======== Efeitos de hover e foco ======== */
+#button_estudante:hover,
+#button_home:hover,
+#button_contatos:hover,
+#button_entrar:hover,
+#button_cadastro:hover {
+    background-color: #005599; /* Azul mais claro no hover */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+}
+
+#button_estudante:focus,
+#button_home:focus,
+#button_contatos:focus,
+#button_entrar:focus,
+#button_cadastro:focus {
+    outline: 2px solid #ffffff; /* Contorno branco no foco */
+    background-color: #0077cc; /* Azul mais claro no foco */
+}
+
+/* ======== Container dos botões de navegação ======== */
+.buttons_menu {
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebrar linha */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: -30px; /* Move para cima */
+}
+
+/* ======== Container dos botões de login/cadastro ======== */
+.buttons_registro {
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 9px; /* Espaço entre os botões */
+    margin-top: -108px; /* Sobe o bloco */
+    margin-left: 80%; /* Alinha mais à direita */
+}
+
+/* ======== Fundo translúcido atrás do menu ======== */
+#fundo_menu {
+    background-color: rgba(238, 236, 236, 0.5); /* Fundo cinza claro translúcido */
+    width: 100%; /* Largura total */
+    height: 142px; /* Altura fixa */
+    position: absolute; /* Fixa no topo */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1; /* Fica atrás dos botões */
+}
+
+@media (max-width: 1053px) { /* Define regras para telas com largura máxima de 1053px */
+    .rodape_diretos_autorais {
+        display: flex; /* Define um contêiner flexível para organizar os elementos */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        margin-top: -10px; /* Ajusta a margem superior para um posicionamento refinado */
+    }
+}
+
+/* ======== Responsividade para dispositivos menores ======== */
+@media (max-width: 768px) {
+    .corpo_site {
+        padding: 20px; /* Reduz o espaço interno */
+        width: 95%; /* Ocupa mais da largura da tela */
+    }
+
+    #titulo {
+        font-size: 28px; /* Reduz o tamanho do título */
+        margin-top: 210px; /* Ajusta espaço superior */
+    }
+
+    #texto {
+        font-size: 18px; /* Reduz o tamanho do texto */
+    }
+
+    .buttons_menu,
+    .buttons_registro {
+        flex-direction: row; /* Botões em linha */
+        align-items: center; /* Alinhamento vertical central */
+    }
+
+    #imagem {
+        width: 100px; /* Reduz a imagem */
+        margin-top: -50px auto; /* Ajusta posição e centraliza */
+        display: block; /* Garante que seja um bloco */
+    }
+    /* Estilizando o rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Usa o modelo de layout flexível (Flexbox) */
+   justify-content: flex-end; /* Alinha os elementos à direita */
+   position: relative; /* Define a posição relativa ao seu contêiner pai */
+   color: #ffffff; /* Define a cor do texto como branco */
+   bottom: 460px; /* Ajusta a posição do elemento para cima em 460px */
+   z-index: 2; /* Garante que o rodapé apareça sobre outros elementos */
+}
+
+}
+
+/* ======== Ajustes adicionais para telas muito pequenas ======== */
+@media (max-width: 480px) {
+    #button_estudante,
+    #button_home,
+    #button_contatos,
+    #button_entrar,
+    #button_cadastro {
+        font-size: 16px; /* Fonte menor */
+        padding: 8px 12px; /* Menor espaço interno */
+    }
+
+    #titulo {
+        font-size: 24px; /* Título ainda menor */
+    }
+
+    #texto {
+        font-size: 16px; /* Texto mais compacto */
+    }
+    #rodape_diretos_autorais {
+   display: flex; /* Define um contêiner flexível para organizar os elementos */
+   justify-content: flex-end; /* Alinha o conteúdo à direita */
+   position: relative; /* Define a posição relativa ao seu contêiner pai */
+   color: #ffffff; /* Define a cor do texto como branca */
+   bottom: 520px; /* Move o elemento 520 pixels para cima */
+   z-index: 2; /* Define a ordem de empilhamento do elemento */
+}
+}

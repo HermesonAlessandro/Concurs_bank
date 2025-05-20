@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Configuração para que a página seja responsiva e adaptável a dispositivos móveis. -->
 
-    <title>Tela alterar senha</title>
+    <title>Alterar senha</title>
     <!-- Define o título da aba do navegador. -->
 </head>
 
@@ -17,7 +17,7 @@
     <header>
         <!-- Início do cabeçalho, geralmente usado para elementos de identidade e navegação do site. -->
 
-        <img src="../img/Logo(CB).png" alt="Logo" width="80" height="50">
+        <a href="../html/tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo" width="80" height="50"></a>
         <!-- Exibe o logo da página. O atributo "src" aponta para a imagem e "alt" fornece um texto alternativo caso a imagem não seja carregada. -->
 
         <a href="tela_inicial.html"><button>Home</button></a>
@@ -36,7 +36,7 @@
     <main>
         <!-- Seção principal da página onde está o formulário de alteração de senha. -->
 
-        <form method="post">
+        <form id="validacao_alterar_senha" method="post" action="../php/alterar_senha.php">
         <!-- Início do formulário. O método "post" envia os dados de forma segura ao servidor. -->
 
             <fieldset>
@@ -48,7 +48,7 @@
                 <label for="email">Email:</label>
                 <!-- Rótulo para o campo de email, indicando sua função. -->
 
-                <input type="email" id="email" name="email" required>
+                <input type="text" id="email" name="email">
                 <!-- Campo para inserir o email. O atributo "required" obriga o usuário a preenchê-lo. -->
 
                 <br><br>
@@ -57,7 +57,7 @@
                 <label for="Novasenha">Nova senha:</label>
                 <!-- Rótulo indicando que esse campo é para digitar a nova senha. -->
 
-                <input type="password" id="novasenha" name="novasenha" required>
+                <input type="password" id="novasenha" name="novasenha">
                 <!-- Campo para digitar a nova senha. O tipo "password" oculta os caracteres digitados por segurança. -->
 
                 <br><br>
@@ -65,7 +65,7 @@
                 <label for="ConfirmarSenha">Confirmar Senha:</label>
                 <!-- Rótulo indicando que esse campo é para confirmar a nova senha. -->
 
-                <input type="password" id="confirmarsenha" name="confirmarsenha" required>
+                <input type="password" id="confirmarsenha" name="confirmarsenha">
                 <!-- Campo para reescrever a senha, garantindo que o usuário digitou corretamente. -->
 
                 <br><br>
@@ -78,6 +78,7 @@
         <!-- Fim do formulário. -->
     </main>
     <!-- Fim da seção principal da página. -->
-
+<script src="../js/validacao_alterar_senha.js" defer></script> <!-- Importando o js -->    
+<p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
 </body> <!-- Fechamento do corpo do site -->
 </html> <!-- Fechamento da tag HTML -->

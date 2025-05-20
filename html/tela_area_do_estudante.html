@@ -4,39 +4,38 @@
     <!-- Cabeçalho da página, onde metadados importantes são definidos -->
     <meta charset="UTF-8"> <!-- Configuração de codificação de caracteres UTF-8, para suportar caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração para tornar o site responsivo em dispositivos móveis -->
-    <link rel="stylesheet" href="..\css\tela_area_do_estudante.css">
+    <link rel="stylesheet" href="../css/tela_area_do_estudante.css">
     <title>Àrea do estudante</title> <!-- Título da página, visível na aba do navegador -->
 </head> <!-- Fechamento da "cabeça" do site -->
 <body class="corpo_site"> <!-- Início do corpo da página, onde o conteúdo principal será mostrado ao usuário -->
-  <div id="fundo_menu">  
+    <header id="fundo_menu">
     <!-- Exibição da logo do projeto -->
-    <a href="tela_inicial.html"><img id ="imagem" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a> 
+    <a href="tela_inicial.html"><img id ="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a> 
          <!-- Atributo 'src' especifica o caminho da imagem; 'alt' fornece uma descrição alternativa caso a imagem não carregue; 
               'width' e 'height' definem o tamanho em pixels -->
-
+           
     <!-- Criação de botões que ficarão disponíveis na Área do Estudante -->
     
     <div class="buttons_menu">
     <a href="tela_inicial.html"><button id="button_home">Home</button></a> <!-- Botão que direciona à página inicial -->
     <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a> <!-- Botão para acessar informações sobre o projeto e os motivos por trás de sua criação -->
-    <button id="button_contatos">Contatos</button> <!-- Botão para acessar os dados e meios de contato -->
+    <a href="tela_contato.html"><button id="button_contatos">Contatos</button></a> <!-- Botão para acessar os dados e meios de contato -->
     
-</div>
     </div>
+    
     
     <div class="buttons_registro">
     <a href="tela_login.html"><button id="button_entrar">Entrar</button></a> <!-- Botão para login de usuários -->
     <a href="tela_cadastro.html"><button id="button_cadastro">Cadastra-se</button></a> <!-- Botão para cadastro de novos estudantes, permitindo acesso posterior ao site -->
     </div>
-
+    </header>
 
             <!-- Botão que representa o acesso à área específica do estudante -->
-        <button id ="buttons_area_estudante">Área do Estudante</button> 
-        <div class="corpo_texto"> <!-- Contêiner para agrupar elementos relacionados ao Mural de Acesso do Estudante -->
-
-        <p>Ainda estamos criando essa parte</p> <!-- Mensagem informativa sobre o estado atual da área do estudante -->
-        <p>Em breve você poderá ver seus dados, progresso e muito mais!</p> <!-- Aviso sobre recursos futuros disponíveis nessa área -->
-    </div> <!-- Fechamento da tag div -->
-
+    <div class="tres_imagens">
+    <img id ="progamador" src="../img/Progamador.jpg" alt="Figura_do_Site" >
+    <img id ="tecnolaga" src="../img/Tecnolaga.jpg" alt="Figura_do_Site">
+    <img id ="Especialista" src="../img/Designer.jpg" alt="Figura_do_Site" width="300">
+    </div>
+<p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
 </body> <!-- Fechamento do corpo do site -->
 </html> <!-- Fechamento da tag HTML do site -->

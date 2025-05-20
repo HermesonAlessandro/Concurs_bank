@@ -9,12 +9,12 @@ $mysqli = new mysqli($hostname, $usuario, $senha, $banco_de_dados, $porta);
 /*
 Basicamente ele vai tentar estabelecer conexão com o banco de dados, se a conexão for bem estabelecida, a variável
 $mysqli contera o objeto de conexão para interagir com o banco de dados: executar consultas, obter resultados.
-Se a mesma falhar a propiedade connect_errno vai tratar esse erro do objeto $mysqli.
+Se a mesma falhar a propriedade connect_errno vai tratar esse erro do objeto $mysqli.
 */
 if($mysqli -> connect_errno){
     echo "Falha ao se conectar: (".$mysqli -> connect_errno.")".$mysqli -> connect_error;
 }else{
-    echo "Banco conectado com sucesso";
+    echo "";
 }
 /*
 Basicamente, esse trecho de código está verificando se a conexão com o banco de dados foi estabelecida com sucesso ou não, 

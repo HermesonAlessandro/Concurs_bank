@@ -1,30 +1,61 @@
-/* Estilo para o corpo do site */
+/* =================== Estilo do corpo da página =================== */
 .corpo_site {
     background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
     text-align: center; /* Centraliza o texto dentro do contêiner */
-    padding: 20px; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
-    margin: 10px; /* Centraliza o contêiner com margens automáticas (precisa de largura definida para funcionar) */
+    width: 81.7%;
+    padding: 10px; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
+    margin: auto; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
 }
 
-/* Media query para telas com largura mínima de 300px  */
+/* Estilização do rodapé de direitos autorais */
+#rodape_diretos_autorais {
+   display: flex; /* Utiliza o modelo de layout flexível (Flexbox) */
+   justify-content: flex-end; /* Alinha os elementos à direita */
+   position: relative; /* Mantém a posição relativa ao elemento pai */
+   color: #ffffff; /* Define a cor do texto como branco */
+}
+
+/* =================== Media query para telas com largura mínima de 308px =================== */
 @media (min-width: 308px) {
-/* Estilo para o elemento com id "imagem" */
+
+    /* Estilo para o elemento com id "imagem" */
     #imagem {
-        max-width: 35%; /* A largura máxima da imagem será 35% da largura do contêiner pai */
-        height: 30%; /* Define a altura da imagem para 30% do seu tamanho original */
-        position: relative; /* Permite o uso de valores de deslocamento (como "bottom") */
-        bottom: 100px; /* Desloca a imagem para cima (60px em relação à sua posição normal) */
+        max-width: 35%; /* A imagem ocupa no máximo 35% da largura da tela */
+        height: auto; /* Altura proporcional à largura para manter a proporção original */
+        display: block; /* Garante que a imagem se comporte como bloco */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        /* position e bottom removidos conforme anotação */
     }
 
-    /* Estilo para o botão com id "button_iniciar" */
+    /* =================== Estilo para o botão com id "button_iniciar" =================== */
     #button_iniciar {
-        color: white; /* Define a cor do texto do botão como branca */
-        background-color: #003366; /* Define o fundo do botão como azul escuro */
-        border-radius: 15px; /* Cria bordas arredondadas no botão com raio de 15px */
-        box-sizing: border-box; /* Faz com que o padding e a borda sejam considerados no tamanho total do botão */
-        width: 200px; /* Define a largura do botão para 200px */
-        padding: 20px; /* Adiciona 20px de espaçamento interno ao redor do texto do botão */
-        position: relative; /* Define a posição como relativa, permitindo deslocamento com "bottom" */
-        bottom: 55px; /* Desloca o botão para cima (55px em relação à sua posição normal) */
+        color: white; /* Cor do texto: branco */
+        background-color: #003366; /* Fundo azul escuro */
+        border-radius: 15px; /* Bordas arredondadas */
+        box-sizing: border-box; /* Inclui padding e borda na largura total */
+        width: 200px; /* Largura fixa de 200px */
+        padding: 20px; /* Espaçamento interno de 20px */
+        margin-top: 20px; /* Espaço de 20px acima do botão */
     }
+}
+
+/* =================== Media query para telas com largura máxima de 480px =================== */
+@media (max-width: 480px) {
+
+    /* Ajustes para imagem em telas pequenas */
+    #imagem {
+        max-width: 70%; /* A imagem ocupa até 70% da largura */
+    }
+
+    /* Ajustes para botão em telas pequenas */
+    #button_iniciar {
+        width: 150px; /* Largura menor para caber melhor */
+        padding: 15px; /* Reduz o padding */
+        font-size: 16px; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* =================== Media query duplicada e vazia - pode remover =================== */
+@media (min-width: 308px) {
+    /* estilos */
 }

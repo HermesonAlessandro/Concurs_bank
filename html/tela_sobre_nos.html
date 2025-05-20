@@ -4,20 +4,32 @@
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
     <title>Sobre nós</title> <!-- Define o título da página -->
+    <link rel = "stylesheet" href = "../css/tela_sobre_nos.css">
 </head> <!-- Fechamento da tag "cabeça" do site -->
-<body> <!-- Início do corpo da página -->
-
-    <header> <!-- Cabeçalho da página -->
-        <a href="tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a> <!-- Adiciona uma imagem como logo, com tamanho definido -->
-        <a href="tela_inicial.html"><button>Home</button></a> <!-- Botão para navegar para a página inicial -->
-        <a href="tela_sobre_nos.html"><button>Sobre nós</button></a> <!-- Botão para acessar a seção "Sobre nós" -->
-        <a href="tela_contato.html"><button>Contato</button></a> <!-- Botão para acessar a seção de contatos -->
-        <a href="tela_login.html"><button>Entrar</button></a> <!-- Botão para fazer login -->
-        <a href="tela_cadastro.html"><button>Cadastra-se</button></a> <!-- Botão para se cadastrar -->
+<body class="corpo_site"> <!-- Início do corpo da página -->
+    <header id="fundo_menu" > <!-- Cabeçalho da página -->
+       
+        <a href="tela_inicial.html"><img  id ="imagem" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a> <!-- Adiciona uma imagem como logo, com tamanho definido -->
+       <div class="buttons_menu">
+        <a href="tela_inicial.html"><button id="button_home">Home</button></a> <!-- Botão para navegar para a página inicial -->
+        <a href="tela_area_do_estudante.html"><button id="button_estudante">Àrea do estudante</button></a> <!-- Botão para acessar a seção "Sobre nós" -->
+        <a href="tela_contato.html"><button id="button_contatos">Contatos</button></a> <!-- Botão para acessar a seção de contatos -->
+        </div>   
+    <div class="buttons_registro">
+        <a href="tela_login.html"><button id="button_entrar">Entrar</button></a> <!-- Botão para fazer login -->
+        <a href="tela_cadastro.html"><button id="button_cadastro">Cadastra-se</button></a> <!-- Botão para se cadastrar -->
+    </div>
     </header> <!-- Fechamento da tag de cabeçalho da página -->
 
-    <h1>Sobre nós</h1> <!-- Título principal da página -->
-    <p>Testo sobre a motivação do trabalho será alocado aqui</p> <!-- Texto descritivo sobre o trabalho ou projeto -->
+    <h1 id ="titulo">Sobre nós</h1> <!-- Título principal da página -->
+     <div id="fundo_texto">
+    <p id="texto">Com a chegada do terceiro período letivo da faculdade, fomos apresentados à disciplina de desenvolvimento web, na qual adquirimos conhecimentos sobre HTML, CSS, JavaScript, PHP e banco de dados. Como parte da matéria, fomos desafiados a entregar um projeto funcional.
 
+Diante desse desafio, formamos uma equipe composta por cinco membros para desenvolver a aplicação. Após diversas conversas em grupo, chegamos à definição do eixo temático do trabalho: um banco de questões voltado para concursos públicos na área de Tecnologia da Informação. O projeto recebeu o nome de "Concurs Bank", e também foi criada uma identidade visual, incluindo a logo.
+
+Com a implementação dessa aplicação, esperamos oferecer aos usuários uma ferramenta prática e eficiente para aprimorar seus estudos, auxiliando na preparação para concursos e promovendo uma melhor experiência de aprendizado.
+</p> <!-- Texto descritivo sobre o trabalho ou projeto -->
+</div>
+<p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
 </body> <!-- Fim do corpo da página -->
 </html> <!-- Fim do documento HTML -->
