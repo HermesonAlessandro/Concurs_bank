@@ -33,7 +33,7 @@
 }
 
 /* ======== Logo principal ======== */
-#imagem {
+#logo {
     width: 102px; /* Largura fixa */
     max-width: 200px; /* Largura máxima permitida */
     height: auto; /* Altura proporcional à largura */
@@ -67,12 +67,12 @@
 }
 
 /* Estilizando o rodapé de direitos autorais */
-#rodape_diretos_autorais {
+#rodape_direitos_autorais {
    display: flex; /* Utiliza Flexbox para organização do layout */
    justify-content: flex-end; /* Alinha os elementos à direita */
    position: relative; /* Mantém a posição relativa ao seu elemento pai */
    color: #ffffff; /* Define a cor do texto como branco */
-   bottom: 433px; /* Move o elemento para cima, ajustando a posição vertical */
+   bottom: 463px; /* Move o elemento para cima, ajustando a posição vertical */
    z-index: 2; /* Garante que ele fique sobre outros elementos */
 }
 

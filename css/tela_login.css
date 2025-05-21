@@ -1,0 +1,150 @@
+.corpo_site {
+    background: linear-gradient(#003366, #40E0D0); /* Fundo em gradiente do azul escuro ao turquesa */
+    max-width: 100%; /* Largura máxima de 100% da tela */
+    width: 90%; /* Largura padrão de 90% */
+    padding: 203px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
+    margin: 0 auto; /* Centraliza horizontalmente */
+} 
+
+#button_sobre,
+#button_home,
+#button_contatos,
+#button_entrar,
+#button_cadastro,
+#button_se_cadastrar,
+#button_logar {
+    color: white; /* Texto branco */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 25px; /* Espaço interno */
+    border: none; /* Sem borda */
+    transition: background-color 0.3s ease; /* Transição suave ao mudar de cor */
+    position: relative; /* Para sobreposição */
+    z-index: 2; /* Acima do fundo translúcido */
+}
+#button_sobre:hover,
+#button_home:hover,
+#button_contatos:hover,
+#button_cadastro:hover,
+#button_logar:hover {
+    background-color: #005599; /* Azul mais claro no hover */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+}
+#logo {
+    width: 102px; /* Largura fixa */
+    max-width: 200px; /* Largura máxima permitida */
+    height: auto; /* Altura proporcional à largura */
+    margin-top: 0px; /* Sem espaço acima */
+    margin-left: 20px; /* Espaço à esquerda */
+    position: relative; /* Permite sobreposição com z-index */
+    z-index: 2; /* Fica acima de elementos com z-index menor */
+}
+
+#button_sobre:focus,
+#button_home:focus,
+#button_contatos:focus,
+#button_cadastro:focus,
+#button_logar:focus{
+    outline: 2px solid #ffffff; /* Contorno branco no foco */
+    background-color: #0077cc; /* Azul mais claro no foco */
+}
+.buttons_menu {
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebrar linha */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: -30px; /* Move para cima */
+}
+#button_cadastro{
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 9px; /* Espaço entre os botões */
+    margin-top: -108px; /* Sobe os botões */
+    margin-left: 87%; /* Empurra os botões para a direita */
+}
+
+/* ======== Container dos botões de login/cadastro ======== */
+#button_entrar{
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 9px; /* Espaço entre os botões */
+    margin-top: -1px; /* Sobe o bloco */
+    margin-left: 1250px; /* Alinha mais à direita */
+}
+.fundo_menu {
+    background-color: rgba(238, 236, 236, 0.5); /* Fundo translúcido */
+    width: 100%; /* Largura total */
+    height: 142px; /* Altura fixa do fundo */
+    position: absolute; /* Posicionamento absoluto no topo */
+    top: 0; /* Alinha ao topo da tela */
+    right: 0px; /* Alinha à esquerda da tela */
+    z-index: 1; /* Atrás dos botões e imagens */
+}
+.validacao_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    color:#ffffff;
+    margin-top: -350px;
+    margin-left: 460px;
+    width: 300px;
+    max-width: 500px;
+    font-size: 30px;
+    position: absolute;
+    z-index: 2;
+}
+#fundo_login{
+    background-color:#003366;
+    width: 420px;
+    margin-top: 100px;
+    margin-left: 450px;
+    border: solid #ffffff;
+    max-width: 500px;
+    height: 290px; 
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+
+}
+#titulo {
+    font-size: 40px; /* Tamanho grande para o texto */
+    color: #ffffff; /* Cor branca */
+    display: flex;
+    text-align: center; /* Centraliza o texto */
+    margin-left: 170px;
+}
+.validacao_login input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    font-size: 20px;
+}
+#texto_email, #texto_senha{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 100px;
+}
+#alterar_senha{
+    display: flex;
+    justify-content: center;
+    margin-top: -24px;
+    margin-left: -40px;
+    font-size: 15px;
+    color: #ffffff;
+}
+#button_logar{
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+    margin-left: 230px;
+}

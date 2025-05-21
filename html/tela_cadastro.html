@@ -3,28 +3,33 @@
 <head> <!-- Abertura da tag "cabeça" do site -->
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, que suporta caracteres especiais como acentos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva, adaptando-se a diferentes tamanhos de tela -->
+    <link rel="stylesheet" href="../css/tela_cadastro.css">
     <title>Cadastro</title> <!-- Define o título da página, exibido na aba do navegador -->
 </head> <!-- Fechamento da tag "cabeça" do site -->
-<body> <!-- Início do corpo do documento HTML, onde todo o conteúdo visível será exibido -->
-    <header> <!-- Seção do cabeçalho da página, geralmente usada para exibir a logo e opções de navegação -->
-        <a href="tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a> <!-- Exibe a imagem da logo. O atributo 'alt' é usado como descrição alternativa para acessibilidade, definindo também sua largura e altura -->
-        <a href="tela_inicial.html"><button>Home</button></a> <!-- Botão para a página inicial -->
-        <a href="tela_sobre_nos.html"><button>Sobre nós</button></a> <!-- Botão para a página de informações sobre o site ou projeto -->
-        <a href="tela_contato.html"><button>Contato</button></a> <!-- Botão para acessar a página de contatos -->
-        <a href="tela_login.html"><button>Entrar</button></a> <!-- Botão para iniciar o login -->
-        <hr> <!-- Linha horizontal para separação visual -->
+<body class="corpo_site"> <!-- Início do corpo do documento HTML, onde todo o conteúdo visível será exibido -->
+    <header id="fundo_menu"> <!-- Seção do cabeçalho da página, geralmente usada para exibir a logo e opções de navegação -->
+        <a href="tela_inicial.html"><img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a> <!-- Exibe a imagem da logo. O atributo 'alt' é usado como descrição alternativa para acessibilidade, definindo também sua largura e altura -->
+        <div class="buttons_menu">
+        <a href="tela_inicial.html"><button id="button_home">Home</button></a> <!-- Botão para a página inicial -->
+        <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a> <!-- Botão para a página de informações sobre o site ou projeto -->
+        <a href="tela_contato.html"><button id="button_contatos">Contato</button></a> <!-- Botão para acessar a página de contatos -->
+        </div>
+         
+        <a href="tela_login.html"><button id="button_entrar">Entrar</button></a> <!-- Botão para iniciar o login -->
+        
+     
     </header> <!-- Fechamento da tag header -->
-
+    <div id="fundo_cadastro"></div>
     <br><br> <!-- Quebras de linha para criar espaçamento entre o cabeçalho e o conteúdo principal -->
 
     <main> <!-- Elemento que agrupa o conteúdo principal da página -->
-        <form id ="validacao_cadastro" method="post" action="../php/cadastro.php"> <!-- Início de um formulário HTML. O atributo 'method="post"' especifica que os dados serão enviados ao servidor via POST -->
-            <fieldset> <!-- Agrupamento visual de elementos dentro do formulário -->
+        <form class ="validacao_cadastro" method="post" action="../php/cadastro.php"> <!-- Início de um formulário HTML. O atributo 'method="post"' especifica que os dados serão enviados ao servidor via POST -->
+            <div> <!-- Agrupamento visual de elementos dentro do formulário -->
                 <label for="cpf">Cpf:</label> <!-- Rótulo para o campo de entrada do CPF -->
                 <input type="text" id="cpf" name="cpf" placeholder="digite seu cpf"> <!-- Campo de entrada para CPF -->
                 <br> <!-- Quebra de linha para organização visual -->
 
-                <label for="nome_completo">Nome completo:</label> <!-- Rótulo para o campo de entrada do nome -->
+                <label for="nome_completo">Nome Completo:</label> <!-- Rótulo para o campo de entrada do nome -->
                 <input type="text" id="nome" name="nome_completo" placeholder="digite seu nome" > <!-- Campo de entrada para o nome completo -->
                 <br> <!-- Quebra de linha para organização visual -->
 
@@ -32,11 +37,11 @@
                 <input type="text" id="idade" name="idade" placeholder="digite sua idade"> <!-- Campo de entrada para a idade -->
                 <br> <!-- Quebra de linha para organização visual -->
 
-                <label for="sexo">Sexo:</label> <!-- Rótulo para a seleção do sexo -->
+                <label id="texto_sexo" for="sexo">Sexo:</label> <!-- Rótulo para a seleção do sexo -->
                 <select id="sexo" name="sexo"> <!-- Lista suspensa para selecionar o sexo -->
-                    <option value="masculino">masculino</option> <!-- Opção de sexo masculino -->
-                    <option value="feminino">feminino</option> <!-- Opção de sexo feminino -->
-                    <option value="outro">outro</option> <!-- Opção para outros gêneros -->
+                    <option value="masculino">Masculino</option> <!-- Opção de sexo masculino -->
+                    <option value="feminino">Feminino</option> <!-- Opção de sexo feminino -->
+                    <option value="outro">Outro</option> <!-- Opção para outros gêneros -->
                 </select> <!-- Fechamento da lista suspensa -->
                 <br> <!-- Quebra de linha para organização visual -->
 
@@ -48,11 +53,11 @@
                 <input type="password" id="senha" name="senha" placeholder="digite sua senha"> <!-- Campo de entrada de senha com ocultação do texto -->
                 <br> <!-- Quebra de linha para organização visual -->
                 
-                <button type="submit">cadastrar</button> <!-- Botão para submeter o formulário -->
-            </fieldset> <!-- Fechamento da tag do fieldset -->
+                <button id="button_se_cadastrar" type="submit">Cadastrar</button> <!-- Botão para submeter o formulário -->
+            </div> <!-- Fechamento da tag do fieldset -->
         </form> <!-- Fechamento da tag form -->
     </main> <!-- Fechamento da tag main -->
     <script src="../js/validacao_cadastro.js" defer></script> <!-- Importando o js -->
-    <p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
+
 </body> <!-- Final do corpo do documento -->
 </html> <!-- Final do documento HTML -->

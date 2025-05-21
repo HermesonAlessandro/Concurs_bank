@@ -8,72 +8,74 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Configura o layout responsivo para se adaptar a diferentes tamanhos de tela. -->
-
+    <link rel="stylesheet" href="../css/tela_login.css">
     <title>Login</title>
     <!-- Define o título da aba do navegador. -->
 </head>
 
-<body>
-    <header>
+<body class="corpo_site">
+     
+    <header class="fundo_menu">
+        
         <!-- Cabeçalho da página, normalmente usado para elementos de navegação e identidade visual. -->
-
-        <a href="tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a>
+        
+        <a href="tela_inicial.html"><img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a>
         <!-- Imagem do logotipo com dimensões definidas para controle do layout. O "alt" é um texto descritivo caso a imagem não carregue. -->
-
-        <a href="tela_inicial.html"><button>Home</button></a>
+        <div class="buttons_menu">
+        <a href="tela_inicial.html"><button id="button_home">Home</button></a>
         <!-- Botão para navegar para a página inicial. Utiliza a tag <a> para criar um link. -->
-
-        <a href="tela_sobre_nos.html"><button>Sobre nós</button></a>
+        
+        <a href="tela_sobre_nos.html"><button id="button_sobre" >Sobre nós</button></a>
         <!-- Botão que direciona para a página "Sobre nós". -->
 
-        <a href="tela_contato.html"><button>Contato</button></a>
+        <a href="tela_contato.html"><button  id="button_contatos" >Contato</button></a>
         <!-- Botão para navegar para a página de contatos. Utiliza a tag <a> para criar um link. -->
-
-        <a href="tela_cadastro.html"><button>Cadastra-se</button></a>
+            </div>
+        <a href="tela_cadastro.html"><button  id="button_cadastro">Cadastra-se</button></a>
         <!-- Botão para ir para a página de cadastro. -->
 
-        <hr>
+        
         <!-- Linha horizontal separando o cabeçalho do restante do conteúdo. -->
     </header>
 
     <main>
         <!-- Elemento principal que contém o formulário de login. -->
-
-        <form id="validacao_login" method="post" action="../php/login.php">
+        <div id="fundo_login"></div>
+        <form class="validacao_login" method="post" action="../php/login.php">
             <!-- Formulário configurado para enviar os dados usando o método POST. -->
 
-            <fieldset>
+            <div>
                 <!-- Agrupamento de elementos do formulário para melhor organização e estilização. -->
 
-                <legend>Login</legend>
+                <legend id="titulo">Login</legend>
                 <!-- Título do grupo de campos, que aparece dentro da borda do fieldset. -->
-
-                <label for="email">Email:</label>
+                <br>
+                <label id="texto_email" for="email">Email:</label>
                 <!-- Rótulo para o campo de email, indicando claramente sua função. -->
 
-                <input type="text" id="email" name="email">
+                <input id="input_email" type="text" id="email" name="email">
                 <!-- Campo de entrada para email. O atributo "required" exige que o usuário preencha esse campo antes de enviar o formulário. -->
 
-                <br><br>
+                
 
-                <label for="senha">Senha:</label>
+                <label id="texto_senha" for="senha">Senha:</label>
                 <!-- Rótulo para o campo de senha. -->
 
-                <input type="password" id="senha" name="senha">
+                <input id="input_senha" type="password" id="senha" name="senha">
                 <!-- Campo de entrada para senha, escondendo os caracteres digitados. -->
 
                 <br><br>
 
-                <a href="tela_alterar_senha.html">Esqueci a senha</a> <!-- Ligando essa tela com a de alterar senha -->
+                <a id="alterar_senha" href="tela_alterar_senha.html">Esqueci a senha</a> <!-- Ligando essa tela com a de alterar senha -->
 
                 <br><br>
 
-                <button type="submit">Logar</button>
+                <button id="button_logar" type="submit">Logar</button>
                 <!-- Botão que envia o formulário ao servidor. -->
-            </fieldset> <!-- Fechamento da tag fieldset -->
+            </div> <!-- Fechamento da tag fieldset -->
         </form> <!-- Fechamento da tag form -->
     </main> <!-- Fechamento da tag do main -->
     <script src="../js/validacao_login.js" defer></script> <!-- Importando o js -->
-    <p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
+   
 </body> <!-- Fechamento do corpo do site -->
 </html> <!-- Fechamento da tag do html -->

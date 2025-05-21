@@ -68,16 +68,6 @@
     max-width: 600px; /* Limita a largura máxima do elemento a 600px */
 }
 
-/* Estiliza o rodapé de direitos autorais */
-#rodape_diretos_autorais {
-   display: flex; /* Utiliza o modelo de layout flexível (Flexbox) */
-   justify-content: flex-end; /* Alinha o conteúdo à direita */
-   position: relative; /* Mantém a posição relativa ao elemento pai */
-   color: #ffffff; /* Define a cor do texto como branco */
-   bottom: 290px; /* Ajusta a posição vertical do elemento */
-   z-index: 2; /* Garante que o rodapé fique sobre outros elementos */
-}
-
 /* ======== Estilo padrão dos botões ======== */
 #button_sobre,
 #button_home,
@@ -133,7 +123,7 @@
     align-items: center;
     flex-wrap: wrap; /* Permite quebra de linha se necessário */
     gap: 10px; /* Espaço entre os botões */
-    margin-top: 0px; /* Sobe o grupo de botões */
+    margin-top: -20px; /* Sobe o grupo de botões */
 }
 
 /* ======== Container dos botões de login/cadastro ======== */
@@ -147,7 +137,7 @@
 }
 
 /* ======== Fundo translúcido atrás do menu ======== */
-#fundo_menu {
+.fundo_menu {
     background-color: rgba(238, 236, 236, 0.5); /* Fundo translúcido */
     width: 100%; /* Largura total */
     height: 142px; /* Altura fixa do fundo */

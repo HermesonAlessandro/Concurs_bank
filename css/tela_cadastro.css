@@ -1,0 +1,411 @@
+.corpo_site {
+    background: linear-gradient(#003366, #40E0D0); /* Fundo em gradiente do azul escuro ao turquesa */
+    max-width: 100%; /* Largura máxima de 100% da tela */
+    width: 90%; /* Largura padrão de 90% */
+    padding: 95.5px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* ======== Título da página ======== */
+#titulo {
+    font-size: 40px; /* Tamanho grande para o texto */
+    color: #ffffff; /* Cor branca */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 110px; /* Espaço acima do título */
+}
+
+/* ======== Fundo atrás do texto principal ======== */
+#fundo_texto {
+    width: 100%; /* Largura total */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 12px; /* Cantos arredondados */
+    margin: 40px auto; /* Espaço vertical e centralização horizontal */
+    padding: 20px; /* Espaço interno */
+}
+
+/* ======== Texto principal ======== */
+#texto {
+    font-size: 24px; /* Tamanho da fonte */
+    color: aliceblue; /* Cor clara agradável */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 90%; /* Limita a largura */
+}
+
+/* ======== Logo principal ======== */
+#logo {
+    width: 102px; /* Largura fixa */
+    max-width: 200px; /* Largura máxima permitida */
+    height: auto; /* Altura proporcional à largura */
+    margin-top: 0px; /* Sem espaço acima */
+    margin-left: 20px; /* Espaço à esquerda */
+    position: relative; /* Permite sobreposição com z-index */
+    z-index: 2; /* Fica acima de elementos com z-index menor */
+}
+
+/* ======== Estilo padrão dos botões ======== */
+#button_sobre,
+#button_home,
+#button_contatos,
+#button_entrar,
+#button_cadastro,
+#button_se_cadastrar {
+    color: white; /* Texto branco */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 25px; /* Espaço interno */
+    border: none; /* Sem borda */
+    transition: background-color 0.3s ease; /* Transição suave ao mudar de cor */
+    position: relative; /* Para sobreposição */
+    z-index: 2; /* Acima do fundo translúcido */
+}
+
+/* Botão cadastro com largura maior */
+#button_cadastro {
+    width: auto; /* Largura automática */
+    min-width: 140px; /* Largura mínima */
+}
+
+
+/* ======== Efeitos de hover e foco ======== */
+#button_sobre:hover,
+#button_home:hover,
+#button_contatos:hover,
+#button_entrar:hover,
+#button_cadastro:hover,
+#button_se_cadastrar:hover {
+    background-color: #005599; /* Azul mais claro no hover */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+}
+
+#button_sobre:focus,
+#button_home:focus,
+#button_contatos:focus,
+#button_entrar:focus,
+#button_cadastro:focus,
+#button_se_cadastrar:focus {
+    outline: 2px solid #ffffff; /* Contorno branco no foco */
+    background-color: #0077cc; /* Azul mais claro no foco */
+}
+.buttons_menu {
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebrar linha */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: -30px; /* Move para cima */
+}
+
+/* ======== Container dos botões de login/cadastro ======== */
+#button_entrar{
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 9px; /* Espaço entre os botões */
+    margin-top: -108px; /* Sobe o bloco */
+    margin-left: 1250px; /* Alinha mais à direita */
+}
+
+/* ======== Fundo translúcido atrás do menu ======== */
+#fundo_menu {
+    background-color: rgba(238, 236, 236, 0.5); /* Fundo cinza claro translúcido */
+    width: 100%; /* Largura total */
+    height: 142px; /* Altura fixa */
+    position: absolute; /* Fixa no topo */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1; /* Fica atrás dos botões */
+}
+.validacao_cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    color:#ffffff;
+    margin-top: -520px;
+    margin-left: 465px;
+    width: 300px;
+    max-width: 500px;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+}
+#fundo_cadastro{
+    background-color:#003366;
+    width: 320px;
+    margin-top: 120px;
+    margin-left: 450px;
+    border: solid #ffffff;
+    max-width: 500px;
+    height: 520px; 
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+
+}
+.validacao_cadastro label,input{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.validacao_cadastro input{
+    border: none;
+    border-radius: 10px;
+    margin: 3px;
+    text-align: center;
+    font-size: 20px;
+}
+#sexo{
+    display: flex;
+    margin-left: 70px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #40e0d056;
+}
+
+#texto_sexo{
+    display: flex;
+    margin-top: -20px;
+    margin-left: 0px;
+}
+#button_se_cadastrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 65px;
+    margin-top: -15px;
+}
+/* Responsividade para tablets e celulares */   
+@media (max-width: 768px) {
+    #fundo_menu {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .buttons_menu {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #button_entrar {
+
+        margin-top: 0px;
+        margin-right: 400px;
+    }
+
+    #logo {
+        margin: 10px auto;
+        display: block;
+    }
+
+    .corpo_site {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #fundo_cadastro {
+        width: 90%;
+        margin: 100px auto 0 auto;
+    }
+
+    .validacao_cadastro {
+        margin: -450px auto 0 auto;
+        width: 90%;
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .validacao_cadastro input {
+        font-size: 16px;
+    }
+
+    #sexo {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #texto_sexo {
+        margin-top: 10px;
+    }
+
+    #button_se_cadastrar {
+        margin: 20px auto 0 auto;
+    }
+
+    #rodape_direitos_autorais {
+        bottom: auto;
+        position: static;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+    /* Dispositivos muito pequenos: celulares menores que 480px */
+@media (max-width: 480px) {
+    #logo {
+        width: 70px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .buttons_menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #button_entrar {
+        margin: 10px auto;
+    }
+
+    #fundo_cadastro {
+        width: 90%;
+        margin: 100px auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .validacao_cadastro {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+
+    .validacao_cadastro input {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    #sexo {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #button_se_cadastrar {
+        margin: 20px auto 0 auto;
+    }
+
+    #rodape_direitos_autorais {
+        position: static;
+        margin-top: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* Dispositivos médios: celulares grandes e tablets (481px até 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .corpo_site {
+        padding: 30px 10px;
+        width: 100%;
+    }
+
+    #logo {
+        width: 90px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .buttons_menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #button_entrar {
+        margin: 15px auto;
+    }
+
+    #fundo_cadastro {
+        width: 85%;
+        margin: 100px auto;
+        height: auto;
+        padding: 25px;
+    }
+
+    .validacao_cadastro {
+        width: 90%;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    .validacao_cadastro input {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    #sexo {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #button_se_cadastrar {
+        margin: 25px auto 0 auto;
+    }
+}
+
+
+/* Dispositivos médios a grandes: tablets e notebooks pequenos (769px até 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .corpo_site {
+        width: 95%;
+        padding: 50px;
+    }
+
+    #fundo_cadastro {
+        width: 400px;
+        margin: 100px auto;
+        height: auto;
+    }
+
+    .validacao_cadastro {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 18px;
+    }
+
+    .validacao_cadastro input {
+        font-size: 18px;
+    }
+
+    #button_entrar {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .buttons_menu {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+/* Telas grandes: desktops */
+@media (min-width: 1025px) {
+    .corpo_site {
+        width: 90%;
+        padding: 100px 50px;
+    }
+
+    .buttons_menu {
+        flex-direction: row;
+    }
+
+    #button_entrar {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .validacao_cadastro {
+        margin-left: 465px;
+    }
+
+    #fundo_cadastro {
+        margin-left: 450px;
+    }
+}
+
+
