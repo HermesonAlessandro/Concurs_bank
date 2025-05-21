@@ -1,4 +1,5 @@
-    const questoes = [
+// Array contendo as questões do quiz
+const questoes = [
         {
             id: "questao01", 
             pergunta: "(CESPE - 2021) Qual comando SQL é utilizado para recuperar dados de uma tabela?",
@@ -200,48 +201,56 @@
         }
     ];
 
-    // Função para criar as questões dinamicamente
-    function criarQuestoes() {
-        const container = document.getElementById("quiz-container");
+// Função que cria dinamicamente as questões do quiz na página
+function criarQuestoes() {
+    const container = document.getElementById("quiz-container"); // Obtém o contêiner onde as questões serão inseridas
 
-        questoes.forEach((questao, index) => {
-            const div = document.createElement("div");
-            div.innerHTML = `
-                <h3>Questão ${index + 1}</h3>
-                <form id="${questao.id}">
-                    <p>${questao.pergunta}</p>
-                    ${Object.entries(questao.alternativas)
-                        .map(([key, value]) => `<label><input type="radio" name="${questao.id}" value="${key}"> ${key}) ${value}</label><br>`)
-                        .join("")
-                    }
-                    <br>
-                    <button type="submit">Resposta</button>
-                </form>
-                <p id="resultado${questao.id}"></p>
-            `;
-            container.appendChild(div);
+    // Percorre o array de questões e cria cada uma delas
+    questoes.forEach((questao, index) => {
+        const div = document.createElement("div"); // Cria um elemento <div> para cada questão
+        div.innerHTML = `
+            <h3>Questão ${index + 1}</h3> <!-- Exibe o número da questão -->
+            <form id="${questao.id}"> <!-- Cria um formulário identificável para cada questão -->
+                <p>${questao.pergunta}</p> <!-- Exibe a pergunta da questão -->
 
-            // Adicionando evento para validação
-            validarResposta(questao.id, questao.correta, questao.explicacoes);
-        });
-    }
+                <!-- Gera dinamicamente as alternativas da questão -->
+                ${Object.entries(questao.alternativas)
+                    .map(([key, value]) => `<label><input type="radio" name="${questao.id}" value="${key}"> ${key}) ${value}</label><br>`)
+                    .join("")
+                }
+                <br>
+                <button type="submit">Responder</button> <!-- Botão de envio da resposta -->
+            </form>
+            <p id="resultado${questao.id}"></p> <!-- Elemento onde será exibido o resultado da resposta -->
+        `;
+        container.appendChild(div); // Adiciona a questão ao contêiner principal
 
-    // Função genérica para validar respostas
-    function validarResposta(questaoId, respostaCorreta, explicacoes){
-        document.getElementById(questaoId).addEventListener("submit", function(event){
-            event.preventDefault();
-            const respostaSelecionada = document.querySelector(`input[name="${questaoId}"]:checked`);
-            const resultado = document.getElementById(`resultado${questaoId}`);
+        // Adiciona evento para validar resposta quando o usuário submeter o formulário
+        validarResposta(questao.id, questao.correta, questao.explicacoes);
+    });
+}
 
-            if(respostaSelecionada){
-                const valor = respostaSelecionada.value;
-                const correto = valor == respostaCorreta;
-                resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                    explicacoes[valor];
-            }else{
-                resultado.textContent = "Por favor, selecione uma alternativa.";
-            }
-        });
-    }
+// Função para validar respostas do usuário
+function validarResposta(questaoId, respostaCorreta, explicacoes){
+    document.getElementById(questaoId).addEventListener("submit", function(event){
+        event.preventDefault(); // Impede a recarga da página ao submeter o formulário
 
-    document.addEventListener("DOMContentLoaded", criarQuestoes);
+        // Obtém a alternativa selecionada pelo usuário
+        const respostaSelecionada = document.querySelector(`input[name="${questaoId}"]:checked`);
+        const resultado = document.getElementById(`resultado${questaoId}`); // Obtém o elemento onde será exibido o resultado
+
+        if(respostaSelecionada){
+            const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
+            const correto = valor == respostaCorreta; // Compara com a resposta correta
+
+            // Exibe a mensagem correspondente à resposta do usuário
+            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
+                explicacoes[valor]; // Mostra a explicação para cada resposta
+        } else {
+            resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
+        }
+    });
+}
+
+// Aguarda o carregamento completo da página antes de executar a função para criar as questões
+document.addEventListener("DOMContentLoaded", criarQuestoes);

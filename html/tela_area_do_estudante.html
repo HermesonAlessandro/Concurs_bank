@@ -1,40 +1,44 @@
-<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5, essencial para que os navegadores interpretem corretamente o código -->
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5, garantindo compatibilidade com navegadores modernos -->
 <html lang="pt-br"> <!-- Define o idioma principal da página como português do Brasil -->
-<head> <!-- Abertura da "cabeça" do site -->
-    <!-- Cabeçalho da página, onde metadados importantes são definidos -->
-    <meta charset="UTF-8"> <!-- Configuração de codificação de caracteres UTF-8, para suportar caracteres especiais -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração para tornar o site responsivo em dispositivos móveis -->
-    <link rel="stylesheet" href="../css/tela_area_do_estudante.css">
-    <title>Àrea do estudante</title> <!-- Título da página, visível na aba do navegador -->
-</head> <!-- Fechamento da "cabeça" do site -->
-<body class="corpo_site"> <!-- Início do corpo da página, onde o conteúdo principal será mostrado ao usuário -->
-    <header class="fundo_menu">
-    <!-- Exibição da logo do projeto -->
-    <a href="tela_inicial.html"><img id ="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a> 
-         <!-- Atributo 'src' especifica o caminho da imagem; 'alt' fornece uma descrição alternativa caso a imagem não carregue; 
-              'width' e 'height' definem o tamanho em pixels -->
-           
-    <!-- Criação de botões que ficarão disponíveis na Área do Estudante -->
-    
-    <div class="buttons_menu">
-    <a href="tela_inicial.html"><button id="button_home">Home</button></a> <!-- Botão que direciona à página inicial -->
-    <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a> <!-- Botão para acessar informações sobre o projeto e os motivos por trás de sua criação -->
-    <a href="tela_contato.html"><button id="button_contatos">Contatos</button></a> <!-- Botão para acessar os dados e meios de contato -->
-    
-    </div>
-    
-    
-    <div class="buttons_registro">
-    <a href="tela_login.html"><button id="button_entrar">Entrar</button></a> <!-- Botão para login de usuários -->
-    <a href="tela_cadastro.html"><button id="button_cadastro">Cadastra-se</button></a> <!-- Botão para cadastro de novos estudantes, permitindo acesso posterior ao site -->
-    </div>
-    </header>
+<head> <!-- Início da seção "head", onde são configuradas informações sobre a página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Configuração para tornar a página responsiva, adaptando-se a diferentes tamanhos de tela -->
+    <link rel="stylesheet" href="../css/tela_area_do_estudante.css"> <!-- Importa o arquivo de estilos CSS externo -->
+    <title>Área do Estudante</title> <!-- Define o título da página, exibido na aba do navegador -->
+</head> <!-- Fechamento da seção "head" -->
+<body class="corpo_site"> <!-- Início do corpo da página, onde o conteúdo visível será exibido -->
 
-            <!-- Botão que representa o acesso à área específica do estudante -->
+    <header class="fundo_menu"> <!-- Seção do cabeçalho da página, usada para navegação e identidade visual -->
+        
+        <!-- Logo do site, que funciona como um link para a página inicial -->
+        <a href="tela_inicial.html">
+            <img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50">
+        </a>
+        <!-- Atributo 'src' especifica o caminho da imagem; 'alt' fornece uma descrição alternativa caso a imagem não carregue; 
+             'width' e 'height' definem o tamanho em pixels -->
+
+        <!-- Área de botões do menu principal -->
+        <div class="buttons_menu">
+            <a href="tela_inicial.html"><button id="button_home">Home</button></a> <!-- Botão para acessar a página inicial -->
+            <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a> <!-- Botão para acessar informações sobre o projeto -->
+            <a href="tela_contato.html"><button id="button_contatos">Contatos</button></a> <!-- Botão para acessar os meios de contato -->
+        </div>
+
+        <!-- Área de botões para login e cadastro -->
+        <div class="buttons_registro">
+            <a href="tela_login.html"><button id="button_entrar">Entrar</button></a> <!-- Botão para login de usuários -->
+            <a href="tela_cadastro.html"><button id="button_cadastro">Cadastrar-se</button></a> <!-- Botão para cadastro de novos estudantes -->
+        </div>
+
+    </header> <!-- Fechamento do cabeçalho -->
+
+    <!-- Seção de imagens representando diferentes áreas de atuação do estudante -->
     <div class="tres_imagens">
-    <img id ="progamador" src="../img/Progamador.jpg" alt="Figura_do_Site" >
-    <img id ="tecnolaga" src="../img/Tecnolaga.jpg" alt="Figura_do_Site">
-    <img id ="Especialista" src="../img/Designer.jpg" alt="Figura_do_Site" width="300">
+        <img id="progamador" src="../img/Progamador.jpg" alt="Imagem de um programador"> <!-- Imagem ilustrativa -->
+        <img id="tecnolaga" src="../img/Tecnolaga.jpg" alt="Imagem de uma tecnóloga"> <!-- Imagem ilustrativa -->
+        <img id="Especialista" src="../img/Designer.jpg" alt="Imagem de um designer" width="300"> <!-- Imagem ilustrativa com largura específica -->
     </div>
+
 </body> <!-- Fechamento do corpo do site -->
-</html> <!-- Fechamento da tag HTML do site -->
+</html> <!-- Fim do documento HTML -->

@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- Declaração do tipo de documento, definindo que é HTML5. O atributo "lang" especifica o idioma da página como português do Brasil. -->
-
+<!-- Define que o documento usa HTML5 e especifica o idioma da página como português do Brasil. -->
 <head>
     <meta charset="UTF-8">
-    <!-- Define a codificação de caracteres como UTF-8, permitindo o uso de caracteres especiais e acentos corretamente. -->
-
+    <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a caracteres especiais e acentos. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configuração para que o layout da página se adapte a dispositivos móveis. -->
-
+    <!-- Configuração para que o layout da página seja responsivo, adaptando-se a diferentes dispositivos. -->
     <link rel="stylesheet" href="../css/tela_contato_card.css">
+    <!-- Importa o arquivo de estilos CSS externo para estilização da página. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <!-- Importa a biblioteca de ícones Font Awesome para exibir ícones sociais. -->
     <title>Contatos</title>
-    <!-- Define o título da aba do navegador. -->
+    <!-- Define o título da página, que será exibido na aba do navegador. -->
 </head>
-
 <body class="corpo_site">
+
     <nav class="fundo_menu">
-        <!-- Início da seção de navegação, usada para criar um menu de acesso a outras páginas do site. -->
+        <!-- Seção de navegação, usada para criar um menu de acesso a outras páginas do site. -->
 
-        <a href="../html/tela_inicial.html"><img id ="logo" src="../img/Logo(CB).png" alt="Logo" width="80" height="50"></a>
-        <!-- Exibe o logotipo do site. "src" aponta para o caminho da imagem, "alt" é um texto alternativo para acessibilidade. -->
+        <a href="../html/tela_inicial.html">
+            <img id="logo" src="../img/Logo(CB).png" alt="Logo" width="80" height="50">
+        </a>
+        <!-- Exibe o logotipo do site. "src" especifica o caminho da imagem, "alt" é um texto descritivo para acessibilidade. -->
+
         <div class="buttons_menu">
-        <a href="tela_inicial.html"><button id="button_home">Home</button></a>
-        <!-- Botão para navegação à página inicial. O link está configurado para abrir "tela_inicial.html". -->
+            <a href="tela_inicial.html"><button id="button_home">Home</button></a>
+            <!-- Botão para navegar para a página inicial. -->
+            
+            <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a>
+            <!-- Botão para acessar a página "Sobre nós". -->
+        </div>
 
-        <a href="tela_sobre_nos.html"><button id ="button_sobre">Sobre nós</button></a>
-        <!-- Botão para acessar a página "Sobre nós". -->
-          </div>
-          <div class="buttons_registro">
-        <a href="tela_login.html"><button id="button_entrar">Entrar</button></a>
-        <!-- Botão que leva o usuário à página de login. -->
+        <div class="buttons_registro">
+            <a href="tela_login.html"><button id="button_entrar">Entrar</button></a>
+            <!-- Botão que leva o usuário à página de login. -->
 
-        <a href="tela_cadastro.html"><button id="button_cadastro">Cadastra-se</button></a>
-        <!-- Botão para acessar a página de cadastro. -->
-          </div>
-        
-        <!-- Linha horizontal para separar o menu de navegação do conteúdo principal da página. -->
+            <a href="tela_cadastro.html"><button id="button_cadastro">Cadastrar-se</button></a>
+            <!-- Botão para acessar a página de cadastro. -->
+        </div>
     </nav>
 
     <h2 id="equipe">Equipe responsável</h2>
     <hr>
     <!-- Título da seção que apresenta os membros da equipe de desenvolvimento do projeto. -->
 
-    <!-- Adicionando a parte dos Cards-->
+    <!-- Exibição dos membros da equipe como cartões de perfil -->
     <div class="card">
-      <!--Fonte da imagem-->
       <img src="https://media.licdn.com/dms/image/v2/D5603AQFxOsyZUH1o0A/profile-displayphoto-shrink_800_800/B56ZU5glYjGQAc-/0/1740426599510?e=1751500800&v=beta&t=rYUPYmlvNN-xwjMLTCGLXTclbYNhNhpY2OAL2ZyPFRE" alt="Saul" style="width:100%">
-      <!--Nome-->
       <h1>Saul Assunção da Silva</h1>
-      <!--Funcao que teve no time -->
       <p class="title">Desenvolvedor</p>
-      <!--Links de contatos-->
       <a href="https://www.linkedin.com/in/saul-assun%C3%A7%C3%A3o-5bab12310?..." target="_blank"><i class="fa fa-linkedin"></i></a>
       <a href="mailto:saulassuncao8@gmail.com"><i class="fa fa-envelope"></i></a>
       <a href="https://github.com/saullsilva" target="_blank"><i class="fa fa-github"></i></a>
@@ -100,6 +96,5 @@
     </div>
     <br>
     
-
 </body>
 </html>

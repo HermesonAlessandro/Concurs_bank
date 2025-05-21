@@ -2,22 +2,18 @@
 .card {
   /* Adiciona uma sombra ao redor do card, criando um efeito visual de profundidade */
   box-shadow: 0 2px 4px 0 black;
-
   /* Define a largura máxima do card para 300px, evitando que fique muito grande */
   max-width: 300px;
-
   /* Centraliza o card automaticamente dentro do seu contêiner pai */
   margin: auto;
-
   /* Alinha o conteúdo (texto e elementos internos) ao centro */
   text-align: center;
-
   /* Arredonda as bordas do card em 3 pixels para um visual mais suave */
   border-radius: 3px;
-
   /*animacao com transicao do card */
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
   /*linkando a transicao quando usuario colocar o mouse em cima do card*/
 .card:hover {
   transform: scale(1.03);
@@ -27,7 +23,6 @@
 .title {
   /* Define a cor do texto como cinza */
   color: rgb(255, 255, 255);
-
   /* Ajusta o tamanho da fonte para 18px, tornando-o mais legível */
   font-size: 18px;
 }
@@ -36,21 +31,21 @@
 a {
   /* Define o tamanho da fonte dos links como 20px, tornando-os mais visíveis */
   font-size: 20px;
-
   /* Define a cor do texto do link como preto */
   color: black;
 }
+
+/* Estilização da seção da equipe */
 #equipe{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  font-family: monospace;
-  font-size:x-large;
+    display: flex; /* Utiliza flexbox para organizar o elemento */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    color: #ffffff; /* Define a cor do texto como branco */
+    font-family: monospace; /* Define uma fonte monoespaçada */
+    font-size: x-large; /* Define o tamanho da fonte como grande */
 }
 
 /* Define o estilo para os botões e links quando o usuário passa o mouse sobre eles */
-
 .corpo_site {
     background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro ao azul mais claro */
     max-width: 100%; /* Define a largura máxima como 100% da tela */

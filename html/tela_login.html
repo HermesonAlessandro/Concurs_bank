@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- Declaração do tipo de documento HTML5 e define o idioma principal como português do Brasil. -->
-
+<!-- Declaração do tipo de documento HTML5 e definição do idioma principal como português do Brasil. -->
 <head>
     <meta charset="UTF-8">
-    <!-- Define a codificação de caracteres como UTF-8 para suportar acentuação e caracteres especiais. -->
-
+    <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a acentuação e caracteres especiais. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configura o layout responsivo para se adaptar a diferentes tamanhos de tela. -->
+    <!-- Configura a visualização responsiva para adaptação a diferentes tamanhos de tela, melhorando a experiência em dispositivos móveis. -->
     <link rel="stylesheet" href="../css/tela_login.css">
+    <!-- Importa a folha de estilos CSS externa para estilização da página. -->
     <title>Login</title>
-    <!-- Define o título da aba do navegador. -->
+    <!-- Define o título da aba do navegador, que aparece na barra de título. -->
 </head>
 
 <body class="corpo_site">
-     
+    <!-- Define a classe do corpo da página, permitindo estilização via CSS. -->
+
     <header class="fundo_menu">
-        
         <!-- Cabeçalho da página, normalmente usado para elementos de navegação e identidade visual. -->
+
+        <a href="tela_inicial.html">
+            <img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50">
+        </a>
+        <!-- Exibe a imagem do logotipo. O atributo "alt" fornece um texto descritivo caso a imagem não carregue. -->
         
-        <a href="tela_inicial.html"><img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a>
-        <!-- Imagem do logotipo com dimensões definidas para controle do layout. O "alt" é um texto descritivo caso a imagem não carregue. -->
         <div class="buttons_menu">
-        <a href="tela_inicial.html"><button id="button_home">Home</button></a>
-        <!-- Botão para navegar para a página inicial. Utiliza a tag <a> para criar um link. -->
-        
-        <a href="tela_sobre_nos.html"><button id="button_sobre" >Sobre nós</button></a>
-        <!-- Botão que direciona para a página "Sobre nós". -->
+            <a href="tela_inicial.html"><button id="button_home">Home</button></a>
+            <!-- Botão de navegação para a página inicial. -->
 
-        <a href="tela_contato.html"><button  id="button_contatos" >Contato</button></a>
-        <!-- Botão para navegar para a página de contatos. Utiliza a tag <a> para criar um link. -->
-            </div>
-        <a href="tela_cadastro.html"><button  id="button_cadastro">Cadastra-se</button></a>
-        <!-- Botão para ir para a página de cadastro. -->
+            <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a>
+            <!-- Botão de navegação para a página "Sobre nós". -->
 
-        
-        <!-- Linha horizontal separando o cabeçalho do restante do conteúdo. -->
+            <a href="tela_contato.html"><button id="button_contatos">Contato</button></a>
+            <!-- Botão de navegação para a página de contatos. -->
+        </div>
+
+        <a href="tela_cadastro.html"><button id="button_cadastro">Cadastra-se</button></a>
+        <!-- Botão para redirecionamento à página de cadastro. -->
     </header>
 
     <main>
-        <!-- Elemento principal que contém o formulário de login. -->
+        <!-- Elemento principal contendo o formulário de login. -->
+
         <div id="fundo_login"></div>
+        <!-- Contêiner estilizado para a seção do login. -->
+
         <form class="validacao_login" method="post" action="../php/login.php">
-            <!-- Formulário configurado para enviar os dados usando o método POST. -->
+            <!-- Formulário para login, configurado para enviar dados usando o método POST ao servidor. -->
 
             <div>
-                <!-- Agrupamento de elementos do formulário para melhor organização e estilização. -->
+                <!-- Agrupamento de elementos do formulário para organização e estilização via CSS. -->
 
                 <legend id="titulo">Login</legend>
-                <!-- Título do grupo de campos, que aparece dentro da borda do fieldset. -->
+                <!-- Título do grupo de campos, exibido dentro da borda do fieldset. -->
+
                 <br>
+
                 <label id="texto_email" for="email">Email:</label>
-                <!-- Rótulo para o campo de email, indicando claramente sua função. -->
+                <!-- Rótulo indicando que o próximo campo deve receber um endereço de e-mail. -->
 
-                <input id="input_email" type="text" id="email" name="email">
-                <!-- Campo de entrada para email. O atributo "required" exige que o usuário preencha esse campo antes de enviar o formulário. -->
-
-                
+                <input id="input_email" type="text" name="email">
+                <!-- Campo de entrada para e-mail. O atributo "name" define o identificador para envio ao servidor. -->
 
                 <label id="texto_senha" for="senha">Senha:</label>
-                <!-- Rótulo para o campo de senha. -->
+                <!-- Rótulo indicando que o próximo campo deve receber uma senha. -->
 
-                <input id="input_senha" type="password" id="senha" name="senha">
-                <!-- Campo de entrada para senha, escondendo os caracteres digitados. -->
+                <input id="input_senha" type="password" name="senha">
+                <!-- Campo de entrada para senha. O tipo "password" oculta os caracteres digitados. -->
 
                 <br><br>
 
-                <a id="alterar_senha" href="tela_alterar_senha.html">Esqueci a senha</a> <!-- Ligando essa tela com a de alterar senha -->
+                <a id="alterar_senha" href="tela_alterar_senha.html">Esqueci a senha</a>
+                <!-- Link para redirecionar o usuário à página de recuperação de senha. -->
 
                 <br><br>
 
                 <button id="button_logar" type="submit">Logar</button>
-                <!-- Botão que envia o formulário ao servidor. -->
-            </div> <!-- Fechamento da tag fieldset -->
-        </form> <!-- Fechamento da tag form -->
-    </main> <!-- Fechamento da tag do main -->
-    <script src="../js/validacao_login.js" defer></script> <!-- Importando o js -->
-   
-</body> <!-- Fechamento do corpo do site -->
-</html> <!-- Fechamento da tag do html -->
+                <!-- Botão para envio do formulário ao servidor. -->
+            </div>
+        </form>
+    </main>
+
+    <script src="../js/validacao_login.js" defer></script>
+    <!-- Importa o script JavaScript externo responsável pela validação do formulário. O atributo "defer" garante que o script só será executado após o carregamento completo da página. -->
+
+</body>
+</html>

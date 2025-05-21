@@ -1,84 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <!-- Define que o documento é HTML5 e especifica o idioma da página como português do Brasil. -->
-
 <head>
     <meta charset="UTF-8">
-    <!-- Define a codificação de caracteres como UTF-8, permitindo o uso de acentos e caracteres especiais corretamente. -->
-
+    <!-- Define a codificação de caracteres como UTF-8, garantindo o uso correto de acentos e caracteres especiais. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configuração para que a página seja responsiva e adaptável a dispositivos móveis. -->
-
+    <!-- Configuração para que a página seja responsiva, adaptando-se a diferentes tamanhos de tela. -->
     <title>Alterar senha</title>
     <!-- Define o título da aba do navegador. -->
 </head>
-
 <body>
+    
     <header>
-        <!-- Início do cabeçalho, geralmente usado para elementos de identidade e navegação do site. -->
+        <!-- Cabeçalho da página contendo elementos de navegação e identidade visual. -->
 
-        <a href="../html/tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50"></a>
-        <!-- Exibe o logo da página. O atributo "src" aponta para a imagem e "alt" fornece um texto alternativo caso a imagem não seja carregada. -->
+        <a href="../html/tela_inicial.html">
+            <img src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50">
+        </a>
+        <!-- Exibe o logo do site, com um link para a página inicial. -->
 
-        <a href="tela_inicial.html"><button>Home</button></a>
-        <!-- Botão para redirecionar o usuário à página inicial. -->
-
-        <a href="tela_sobre_nos.html"><button>Sobre nós</button></a>
-        <!-- Botão para acessar a página "Sobre nós". -->
-
-        <a href="tela_contato.html"><button>Contato</button></a>
-        <!-- Botão para acessar a página de contato. -->
+        <!-- Botões de navegação para diferentes seções do site. -->
+        <nav>
+            <a href="tela_inicial.html"><button>Home</button></a>
+            <a href="tela_sobre_nos.html"><button>Sobre nós</button></a>
+            <a href="tela_contato.html"><button>Contato</button></a>
+        </nav>
 
         <hr>
-        <!-- Linha horizontal para separar visualmente o cabeçalho do restante do conteúdo. -->
+        <!-- Linha horizontal para separar visualmente o cabeçalho do conteúdo principal. -->
     </header>
 
     <main>
-        <!-- Seção principal da página onde está o formulário de alteração de senha. -->
+        <!-- Seção principal da página contendo o formulário para alteração de senha. -->
 
         <form id="validacao_alterar_senha" method="post" action="../php/alterar_senha.php">
-        <!-- Início do formulário. O método "post" envia os dados de forma segura ao servidor. -->
+            <!-- Formulário de alteração de senha. O método POST envia os dados de forma segura ao servidor. -->
 
             <fieldset>
-            <!-- Agrupa os campos do formulário dentro de uma caixa com borda. -->
+                <!-- Agrupamento dos campos do formulário dentro de uma caixa com borda. -->
 
                 <legend>Alterar senha</legend>
-                <!-- Define um título para o grupo de campos dentro do fieldset. -->
+                <!-- Título para o grupo de campos dentro do fieldset. -->
 
+                <!-- Campo para inserção do email. -->
                 <label for="email">Email:</label>
-                <!-- Rótulo para o campo de email, indicando sua função. -->
-
-                <input type="text" id="email" name="email">
-                <!-- Campo para inserir o email. O atributo "required" obriga o usuário a preenchê-lo. -->
-
-                <br><br>
-                <!-- Quebra de linha dupla para espaçamento visual entre os campos do formulário. -->
-
-                <label for="Novasenha">Nova senha:</label>
-                <!-- Rótulo indicando que esse campo é para digitar a nova senha. -->
-
-                <input type="password" id="novasenha" name="novasenha">
-                <!-- Campo para digitar a nova senha. O tipo "password" oculta os caracteres digitados por segurança. -->
-
+                <input type="text" id="email" name="email" required>
+                
                 <br><br>
 
-                <label for="ConfirmarSenha">Confirmar Senha:</label>
-                <!-- Rótulo indicando que esse campo é para confirmar a nova senha. -->
-
-                <input type="password" id="confirmarsenha" name="confirmarsenha">
-                <!-- Campo para reescrever a senha, garantindo que o usuário digitou corretamente. -->
-
+                <!-- Campo para inserção da nova senha. -->
+                <label for="novasenha">Nova senha:</label>
+                <input type="password" id="novasenha" name="novasenha" required>
+                
                 <br><br>
 
+                <!-- Campo para confirmação da nova senha. -->
+                <label for="confirmarsenha">Confirmar Senha:</label>
+                <input type="password" id="confirmarsenha" name="confirmarsenha" required>
+                
+                <br><br>
+
+                <!-- Botão para submeter o formulário e processar a alteração da senha. -->
                 <button type="submit">Alterar</button>
-                <!-- Botão para submeter o formulário e realizar a alteração da senha. -->
             </fieldset>
-            <!-- Fim do agrupamento dos campos do formulário. -->
         </form>
-        <!-- Fim do formulário. -->
     </main>
-    <!-- Fim da seção principal da página. -->
-<script src="../js/validacao_alterar_senha.js" defer></script> <!-- Importando o js -->    
-<p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
-</body> <!-- Fechamento do corpo do site -->
-</html> <!-- Fechamento da tag HTML -->
+
+    <footer>
+        <!-- Rodapé da página contendo direitos autorais. -->
+        <p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
+    </footer>
+
+    <!-- Importação do arquivo JavaScript para validação do formulário. O atributo "defer" garante que ele será carregado após o HTML. -->
+    <script src="../js/validacao_alterar_senha.js" defer></script>
+
+</body>
+</html>

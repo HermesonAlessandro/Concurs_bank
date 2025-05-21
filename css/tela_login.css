@@ -83,68 +83,84 @@
     right: 0px; /* Alinha à esquerda da tela */
     z-index: 1; /* Atrás dos botões e imagens */
 }
-.validacao_login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-    color:#ffffff;
-    margin-top: -350px;
-    margin-left: 460px;
-    width: 300px;
-    max-width: 500px;
-    font-size: 30px;
-    position: absolute;
-    z-index: 2;
-}
-#fundo_login{
-    background-color:#003366;
-    width: 420px;
-    margin-top: 100px;
-    margin-left: 450px;
-    border: solid #ffffff;
-    max-width: 500px;
-    height: 290px; 
-    border-radius: 20px;
-    position: relative;
-    z-index: 1;
 
+/* Estilização do contêiner de validação de login */
+.validacao_login{
+    display: flex; /* Define o modelo de layout flexbox */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+    color: #ffffff; /* Define a cor do texto como branco */
+    /* Posição do contêiner na tela */
+    margin-top: -350px; /* Ajusta a posição vertical */
+    margin-left: 460px; /* Ajusta a posição horizontal */
+    /* Dimensões do contêiner */
+    width: 300px; /* Define a largura fixa */
+    max-width: 500px; /* Define uma largura máxima */
+    font-size: 30px; /* Define o tamanho da fonte */
+    position: absolute; /* Define posição absoluta para sobrepor elementos */
+    z-index: 2; /* Define a camada superior para garantir que fique sobre outros elementos */
 }
+
+/* Estilização do fundo da tela de login */
+#fundo_login{
+    background-color: #003366; /* Define a cor de fundo */
+    width: 420px; /* Define a largura fixa */
+    /* Posição do contêiner */
+    margin-top: 100px; /* Ajusta a posição vertical */
+    margin-left: 450px; /* Ajusta a posição horizontal */
+    border: solid #ffffff; /* Adiciona uma borda branca */
+    max-width: 500px; /* Define uma largura máxima */
+    height: 290px; /* Define a altura fixa */
+    border-radius: 20px; /* Define cantos arredondados */
+    position: relative; /* Define a posição relativa */
+    z-index: 1; /* Define a camada inferior para ficar abaixo de elementos sobrepostos */
+}
+
+/* Estilização do título do formulário de login */
 #titulo {
-    font-size: 40px; /* Tamanho grande para o texto */
-    color: #ffffff; /* Cor branca */
-    display: flex;
+    font-size: 40px; /* Define um tamanho grande para o texto */
+    color: #ffffff; /* Define a cor do texto como branco */
+    display: flex; /* Utiliza flexbox para alinhar */
     text-align: center; /* Centraliza o texto */
-    margin-left: 170px;
+    margin-left: 170px; /* Ajusta a posição horizontal */
 }
+
+/* Estilização dos campos de entrada */
 .validacao_login input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-    margin-top: 10px;
-    border-radius: 12px;
-    border: none;
-    font-size: 20px;
+    display: flex; /* Usa flexbox para organizar os elementos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    margin-left: 100px; /* Ajusta a posição horizontal */
+    margin-top: 10px; /* Define um espaçamento superior */
+    border-radius: 12px; /* Define cantos arredondados */
+    border: none; /* Remove a borda padrão */
+    font-size: 20px; /* Define o tamanho da fonte */
 }
+
+/* Estilização dos rótulos "Email" e "Senha" */
 #texto_email, #texto_senha{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-top: 25px;
-    margin-left: 100px;
+    display: flex; /* Usa flexbox para organizar os elementos */
+    justify-content: center; /* Centraliza os textos horizontalmente */
+    align-items: center; /* Centraliza os textos verticalmente */
+    margin-top: 25px; /* Define um espaçamento superior */
+    margin-left: 100px; /* Ajusta a posição horizontal */
 }
+
+/* Estilização do link "Esqueci a senha" */
 #alterar_senha{
-    display: flex;
-    justify-content: center;
-    margin-top: -24px;
-    margin-left: -40px;
-    font-size: 15px;
-    color: #ffffff;
+    display: flex; /* Usa flexbox para organizar o elemento */
+    justify-content: center; /* Centraliza o link horizontalmente */
+    margin-top: -24px; /* Ajusta a posição vertical */
+    margin-left: -40px; /* Ajusta a posição horizontal */
+    font-size: 15px; /* Define o tamanho da fonte */
+    color: #ffffff; /* Define a cor do texto como branco */
 }
+
+/* Estilização do botão de login */
 #button_logar{
-    display: flex;
-    justify-content: center;
-    margin-top: -100px;
-    margin-left: 230px;
+    display: flex; /* Usa flexbox para organizar o botão */
+    justify-content: center; /* Centraliza o botão horizontalmente */
+    margin-top: -100px; /* Ajusta a posição vertical */
+    margin-left: 230px; /* Ajusta a posição horizontal */
 }

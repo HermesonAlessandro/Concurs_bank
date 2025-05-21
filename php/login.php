@@ -3,20 +3,24 @@ session_start(); // Inicia uma sessão PHP para armazenar informações do usuá
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Configura o MySQLi para exibir erros e usar exceções
 include_once "conexao.php"; // Inclui o arquivo de conexão com o banco de dados
 
+// Verifica se há erro na conexão e encerra a execução do script caso necessário
 if (!$mysqli) {
-    die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error); // Verifica se há erro na conexão e encerra a execução do script
+    die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error);
 }
 
-// Exibe o conteúdo da variável $_POST para fins de depuração
+// Exibe o conteúdo da variável $_POST para fins de depuração (remova em produção)
 var_dump($_POST);
 
-$input_email = $_POST['input_email']; // Obtém o e-mail enviado pelo formulário
-$input_senha = $_POST['input_senha']; // Obtém a senha enviada pelo formulário
-$input_email = filter_var($input_email, FILTER_SANITIZE_EMAIL); // Sanitiza o e-mail para evitar injeções maliciosas
+$email = $_POST['email']; // Obtém o e-mail enviado pelo formulário
+$senha = $_POST['senha']; // Obtém a senha enviada pelo formulário
 
-// Validação da senha no servidor
-if(strlen($input_senha) < 8 || !preg_match('/[A-Z]/', $input_senha) || !preg_match('/[a-z]/', $input_senha) || !preg_match('/[0-9]/', $input_senha) || !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $input_senha)){
-    echo "";
+// Sanitiza o e-mail para evitar injeções maliciosas
+$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+// Validação da senha no servidor: verifica comprimento e presença de caracteres especiais
+if(strlen($senha) < 8 || !preg_match('/[A-Z]/', $senha) || !preg_match('/[a-z]/', $senha) || 
+   !preg_match('/[0-9]/', $senha) || !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $senha)){
+    echo "<script>alert('Senha não atende aos requisitos mínimos.');</script>";
     exit();
 }
 
@@ -25,7 +29,7 @@ if (!isset($_SESSION['tentativas_login'])) {
     $_SESSION['tentativas_login'] = 0;
 }
 
-// Verifica se o usuário atingiu 3 tentativas antes de permitir nova tentativa
+// Verifica se o usuário atingiu o limite de 3 tentativas antes de permitir nova tentativa
 if ($_SESSION['tentativas_login'] >= 3) {
     $_SESSION['tentativas_login'] = 0; // Reseta a contagem após atingir 3 tentativas
     echo "<script>
@@ -39,22 +43,23 @@ if ($_SESSION['tentativas_login'] >= 3) {
 $sql = "SELECT senha FROM estudante WHERE email = ?";
 $stmt = $mysqli->prepare($sql);
 if (!$stmt) {
-    die("Erro ao preparar a consulta: " . $mysqli->error); // Se houver erro na preparação da consulta, encerra o script
+    die("Erro ao preparar a consulta: " . $mysqli->error);
 }
 
-$stmt->bind_param("s", $input_email); // Associa o parâmetro do e-mail à consulta SQL
+$stmt->bind_param("s", $email); // Associa o parâmetro do e-mail à consulta SQL
 $stmt->execute();
 $result = $stmt->get_result(); // Executa a consulta e obtém o resultado
 
-if ($result->num_rows > 0) { // Verifica se o usuário foi encontrado
+// Verifica se o usuário foi encontrado no banco de dados
+if ($result->num_rows > 0) {
     $usuario = $result->fetch_assoc(); // Obtém os dados do usuário
     
     // Verifica se a senha informada corresponde à armazenada no banco
-    if (password_verify($input_email, $usuario['senha'])) {
+    if (password_verify($senha, $usuario['senha'])) {
         $_SESSION['tentativas_login'] = 0; // Reseta tentativas ao acertar a senha
-        $_SESSION['email'] = $input_email; // Armazena o e-mail do usuário na sessão
+        $_SESSION['email'] = $email; // Armazena o e-mail do usuário na sessão
 
-        // Verifica se já existe uma sessão registrada para o usuário
+        // Consulta para verificar se já existe uma sessão registrada para o usuário
         $sql_verifica_sessao = "SELECT id FROM sessao WHERE email = ?";
         $stmt_verifica_sessao = $mysqli->prepare($sql_verifica_sessao);
         $stmt_verifica_sessao->bind_param("s", $email);
@@ -62,16 +67,16 @@ if ($result->num_rows > 0) { // Verifica se o usuário foi encontrado
         $resultado_sessao = $stmt_verifica_sessao->get_result();
 
         if($resultado_sessao->num_rows == 0){ // Se não houver sessão existente
-            $input_senha_hash = password_hash($input_senha, PASSWORD_DEFAULT); // Gera um hash da senha
-            $sql_log = "INSERT INTO sessao (email, senha) VALUES (?, ?)"; // Insere uma nova sessão no banco
+            $senha_hash = password_hash($senha, PASSWORD_DEFAULT); // Gera um hash seguro da senha
+            $sql_log = "INSERT INTO sessao (email, senha) VALUES (?, ?)"; // Insere nova sessão no banco
             $stmt_log = $mysqli->prepare($sql_log);
-            $stmt_log->bind_param("ss", $input_email, $input_senha_hash);
+            $stmt_log->bind_param("ss", $email, $senha_hash);
             $stmt_log->execute();
         } else { // Se já houver uma sessão, apenas atualiza a senha
-            $input_senha_hash = password_hash($input_senha, PASSWORD_DEFAULT);
+            $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
             $sql_update = "UPDATE sessao SET senha = ? WHERE email = ?";
             $stmt_update = $mysqli->prepare($sql_update);
-            $stmt_update->bind_param("ss", $input_senha_hash, $input_email);
+            $stmt_update->bind_param("ss", $senha_hash, $email);
             $stmt_update->execute();
         }
 
@@ -87,13 +92,14 @@ if ($result->num_rows > 0) { // Verifica se o usuário foi encontrado
         // Exibe alerta informando erro na senha e quantidade de tentativas restantes
         echo "<script>
                 alert('Senha incorreta! Você tem mais " . (3 - $_SESSION['tentativas_login']) . " tentativas restantes.');
-                history.back(); // Mantém na tela de login sem recarregar
+                history.back();
               </script>";
     }
 } else {
     echo "<script>alert('Usuário não encontrado!'); history.back();</script>"; // Exibe alerta caso o e-mail não seja encontrado
 }
 
-$stmt->close(); // Fecha a consulta preparada
-$mysqli->close(); // Fecha a conexão com o banco de dados
+// Fecha as consultas preparadas e a conexão com o banco de dados
+$stmt->close();
+$mysqli->close();
 ?>
