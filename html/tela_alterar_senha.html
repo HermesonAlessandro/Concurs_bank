@@ -7,68 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Configuração para que a página seja responsiva, adaptando-se a diferentes tamanhos de tela. -->
     <title>Alterar senha</title>
+    <link rel="stylesheet" href ="../css/tela_alterar_senha.css">
     <!-- Define o título da aba do navegador. -->
 </head>
-<body>
+<body class="corpo_site">
     
-    <header>
+    <header class="fundo_menu">
         <!-- Cabeçalho da página contendo elementos de navegação e identidade visual. -->
 
         <a href="../html/tela_inicial.html">
-            <img src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50">
+            <img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50">
         </a>
         <!-- Exibe o logo do site, com um link para a página inicial. -->
 
         <!-- Botões de navegação para diferentes seções do site. -->
-        <nav>
-            <a href="tela_inicial.html"><button>Home</button></a>
-            <a href="tela_sobre_nos.html"><button>Sobre nós</button></a>
-            <a href="tela_contato.html"><button>Contato</button></a>
+        <nav class="buttons_menu">
+            <a href="tela_inicial.html"><button id="button_home">Home</button></a>
+            <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a>
+            <a href="tela_contato.html"><button id="button_contatos">Contato</button></a>
         </nav>
 
-        <hr>
+        
         <!-- Linha horizontal para separar visualmente o cabeçalho do conteúdo principal. -->
     </header>
 
     <main>
         <!-- Seção principal da página contendo o formulário para alteração de senha. -->
-
+        <h1 id ="titulo">Alterar senha</h1>
+        <div id="fundo_login"></div>
+         
         <form id="validacao_alterar_senha" method="post" action="../php/alterar_senha.php">
             <!-- Formulário de alteração de senha. O método POST envia os dados de forma segura ao servidor. -->
-
-            <fieldset>
+           
+            <div>
                 <!-- Agrupamento dos campos do formulário dentro de uma caixa com borda. -->
 
-                <legend>Alterar senha</legend>
+                
                 <!-- Título para o grupo de campos dentro do fieldset. -->
 
                 <!-- Campo para inserção do email. -->
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required>
+                <label id="texto_email" for="email">Email:</label>
+                <input  type="text" id="email" name="email" required>
                 
-                <br><br>
+                <br>
 
                 <!-- Campo para inserção da nova senha. -->
-                <label for="novasenha">Nova senha:</label>
+                <label id="texto_senha" for="novasenha">Nova senha:</label>
                 <input type="password" id="novasenha" name="novasenha" required>
                 
-                <br><br>
+                <br>
 
                 <!-- Campo para confirmação da nova senha. -->
-                <label for="confirmarsenha">Confirmar Senha:</label>
-                <input type="password" id="confirmarsenha" name="confirmarsenha" required>
+                <label id="texto_confirmar_senha" for="confirmarsenha">Confirmar Senha:</label>
+                <input id="input_confirmar_senha" type="password" id="confirmarsenha" name="confirmarsenha" required>
                 
                 <br><br>
 
                 <!-- Botão para submeter o formulário e processar a alteração da senha. -->
-                <button type="submit">Alterar</button>
-            </fieldset>
+                <button id="button_alterar" type="submit">Alterar</button>
+                
+            </div>
         </form>
     </main>
 
     <footer>
         <!-- Rodapé da página contendo direitos autorais. -->
-        <p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
+
     </footer>
 
     <!-- Importação do arquivo JavaScript para validação do formulário. O atributo "defer" garante que ele será carregado após o HTML. -->

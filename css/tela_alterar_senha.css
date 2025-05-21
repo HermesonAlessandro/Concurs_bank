@@ -1,0 +1,167 @@
+.corpo_site {
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro ao azul mais claro */
+    max-width: 100%; /* Define a largura máxima como 100% da tela */
+    width: 90%; /* Define a largura padrão como 90% */
+    padding: 325px 20px; /* Adiciona espaçamento interno: 325px em cima/baixo, 20px nas laterais */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    /* ; <-- esta linha está sobrando e pode ser removida */
+}
+
+.fundo_menu {
+    background-color: rgba(238, 236, 236, 0.5); /* Fundo translúcido (cinza claro com 50% de opacidade) */
+    width: 100%; /* Largura total do contêiner */
+    height: 142px; /* Altura fixa */
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner pai */
+    top: 0; /* Alinha ao topo */
+    right: 0px; /* Alinha à direita */
+    z-index: 1; /* Fica atrás dos botões/imagens com z-index maior */
+}
+
+#logo {
+    width: 102px; /* Largura fixa */
+    max-width: 200px; /* Largura máxima */
+    height: auto; /* Mantém proporção da imagem */
+    margin-top: 0px; /* Sem margem superior */
+    margin-left: 20px; /* Espaço à esquerda */
+    position: relative; /* Permite uso de z-index */
+    z-index: 2; /* Sobrepõe o fundo com z-index menor */
+}
+
+/* ======== Estilo padrão dos botões ======== */
+#button_sobre,
+#button_home,
+#button_contatos,
+#button_alterar {
+    color: white; /* Texto branco */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 20px; /* Cantos arredondados */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 25px; /* Espaço interno: 10px vertical, 25px horizontal */
+    border: none; /* Remove borda padrão */
+    transition: background-color 0.3s ease; /* Suaviza a troca de cor */
+    position: relative; /* Permite usar z-index */
+    z-index: 2; /* Garante visibilidade sobre fundo translúcido */
+}
+
+/* Botão de cadastro com largura mínima */
+#button_cadastro {
+    width: auto; /* Tamanho conforme o conteúdo */
+    min-width: 140px; /* Largura mínima garantida */
+}
+
+/* ======== Efeitos de hover e foco ======== */
+#button_sobre:hover,
+#button_home:hover,
+#button_contatos:hover,
+#button_alterar:hover {
+    background-color: #005599; /* Fundo azul mais claro ao passar o mouse */
+    cursor: pointer; /* Ícone de ponteiro (mão) */
+}
+
+#button_sobre:focus,
+#button_home:focus,
+#button_contatos:focus,
+#button_alterar:focus {
+    outline: 2px solid #ffffff; /* Contorno branco ao focar (acessibilidade) */
+    background-color: #0077cc; /* Cor mais clara ainda no foco */
+}
+
+/* Contêiner dos botões no menu */
+.buttons_menu {
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    flex-wrap: wrap; /* Permite que quebrem linha */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: -30px; /* Sobe os botões */
+}
+
+/* Validação da alteração de senha */
+#validacao_alterar_senha {
+    display: flex; /* Flexbox para alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    color: #ffffff; /* Texto branco */
+    width: 300px; /* Largura fixa */
+    max-width: 500px; /* Largura máxima */
+    font-size: 20px; /* Tamanho do texto */
+    position: absolute; /* Posicionamento absoluto na tela */
+    margin-top: -125px; /* Sobe o bloco */
+    margin-left: 400px; /* Move à direita */
+    z-index: 2; /* Fica acima do fundo */
+}
+
+/* Estilo dos campos de entrada dentro de validação de senha */
+#validacao_alterar_senha input {
+    display: flex; /* Flexbox para alinhamento interno */
+    justify-content: center; /* Centraliza horizontalmente (não afeta input diretamente) */
+    align-items: center; /* Centraliza verticalmente (também pouco efeito no input) */
+    margin-left: 100px; /* Espaço à esquerda */
+    margin-top: 0px; /* Sem margem superior */
+    border-radius: 12px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    font-size: 20px; /* Tamanho do texto */
+}
+
+/* Fundo do card de login */
+#fundo_login {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 490px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    background-color: #003366; /* Fundo azul escuro */
+    position: absolute; /* Posicionamento livre */
+    margin-top: -60px; /* Sobe um pouco */
+    margin-left: 350px; /* Move para a direita */
+    border: solid #ffffff; /* Borda branca */
+    border-radius: 20px; /* Cantos arredondados */
+    transform: translateX(-50%, -50%); /* Deslocamento horizontal (não afeta porque só tem X) */
+    z-index: 1; /* Atrás dos textos e botões */
+}
+
+/* Texto "Email" */
+#texto_email {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 90px; /* Espaço acima */
+    margin-left: 100px; /* Espaço à esquerda */
+}
+
+/* Texto "Senha" */
+#texto_senha {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    margin-top: 0px; /* Sem margem superior */
+    margin-left: 100px; /* Espaço à esquerda */
+}
+
+/* Título da tela */
+#titulo {
+    font-size: 30px; /* Tamanho grande da fonte */
+    color: #ffffff; /* Texto branco */
+    display: flex; /* Flexbox */
+    text-align: center; /* Centraliza o texto */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    margin-top: -100px; /* Sobe o título */
+    padding: 40px; /* Espaço interno */
+    font-family: 'Times New Roman', Times, serif; /* Fonte serifada clássica */
+    margin-left: 470px; /* Move para a direita */
+    position: relative; /* Permite uso de z-index */
+    z-index: 2; /* Fica sobreposto a elementos com z-index menor */
+}
+
+/* Texto "Confirmar Senha" */
+#texto_confirmar_senha {
+    margin-left: 140px; /* Espaço à esquerda */
+}
+
+/* Botão de alterar senha */
+#button_alterar {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: -10px; /* Sobe o botão */
+    margin-left: 170px; /* Move para a direita */
+}

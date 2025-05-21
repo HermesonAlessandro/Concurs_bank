@@ -4,34 +4,37 @@
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a acentos e caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!-- Configuração para tornar a página responsiva e se adaptar a diferentes tamanhos de tela -->
-
+    <link rel="stylesheet" href="../css/tela_assuntos.css">
     <title>Assuntos</title> <!-- Define o título da página, exibido na aba do navegador -->
 </head>
-<body> <!-- Início do corpo do documento, onde o conteúdo visível será exibido -->
+<body class="corpo_site"> <!-- Início do corpo do documento, onde o conteúdo visível será exibido -->
     
-    <nav> <!-- Seção de navegação, usada para criar um menu de acesso a outras páginas do site -->
+    <header class="fundo_menu"> <!-- Seção de navegação, usada para criar um menu de acesso a outras páginas do site -->
         
         <!-- Logo do site, que funciona como um link para a página inicial -->
         <a href="../html/tela_inicial.html">
-            <img src="../img/Logo(CB).png" alt="Logo do site" width="80px" height="50px">
+            <img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80px" height="50px">
         </a>
 
         <!-- Área de botões do menu principal -->
-        <a href="tela_inicial.html"><button>Home</button></a> <!-- Botão para acessar a página inicial -->
-        <a href="tela_sobre_nos.html"><button>Sobre nós</button></a> <!-- Botão para acessar a página "Sobre nós" -->
-        <a href="tela_contato.html"><button>Contato</button></a> <!-- Botão para acessar a página de contatos -->
-        <a href="tela_login.html"><button>Entrar</button></a> <!-- Botão para acessar a página de login -->
-        <a href="tela_cadastro.html"><button>Cadastrar-se</button></a> <!-- Botão para acessar a página de cadastro -->
-        <a href="tela_alterar_senha.html"><button>Alterar senha</button></a> <!-- Botão para acessar a página de alteração de senha -->
-        <button>Perfil</button> <!-- Botão para acessar o perfil do usuário -->
-        
-        <hr> <!-- Linha horizontal para separar o menu de navegação do conteúdo principal da página -->
-    </nav>
+        <div class="buttons_menu">
+        <a href="tela_inicial.html"><button id="button_home">Home</button></a> <!-- Botão para acessar a página inicial -->
+        <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a> <!-- Botão para acessar a página "Sobre nós" -->
+        <a href="tela_contato.html"><button id="button_contatos">Contato</button></a> <!-- Botão para acessar a página de contatos -->
+        </div>
+        <div class="buttons_registro">
+        <a href="tela_login.html"><button id="button_entrar">Entrar</button></a> <!-- Botão para acessar a página de login -->
+        <a href="tela_cadastro.html"><button id="button_cadastro">Cadastrar-se</button></a> <!-- Botão para acessar a página de cadastro -->
+        <a href="tela_alterar_senha.html"><button id="button_alterar" >Alterar senha</button></a> <!-- Botão para acessar a página de alteração de senha -->
+        <button id="button_perfil">Perfil</button> <!-- Botão para acessar o perfil do usuário -->
+        </div>
+         <!-- Linha horizontal para separar o menu de navegação do conteúdo principal da página -->
+    </header>
 
-    <h2>Qual é o Assunto?</h2> <!-- Título principal da página -->
+    <h2 id="qual_assunto">Qual é o Assunto?</h2> <!-- Título principal da página -->
 
     <!-- Formulário contendo botões para escolha de diferentes assuntos relacionados a tecnologia -->
-    <form method="post"> <!-- Formulário configurado para envio via método POST -->
+    <form class="buttons_assunto" method="post"> <!-- Formulário configurado para envio via método POST -->
         <p><button type="submit" name="assunto" value="banco">Banco de dados</button></p>
         <p><button type="submit" name="assunto" value="redes">Redes de computadores</button></p>
         <p><button type="submit" name="assunto" value="seguranca">Segurança da informação</button></p>
@@ -45,7 +48,7 @@
     </form>
 
     <!-- Rodapé da página, contendo os direitos autorais -->
-    <p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
+    
 
 </body> <!-- Fim do corpo do documento -->
 </html> <!-- Fim do documento HTML -->

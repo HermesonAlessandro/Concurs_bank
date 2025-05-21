@@ -168,10 +168,11 @@
 /* Estilização do campo de seleção de sexo */
 #sexo{
     display: flex; /* Usa flexbox para organizar o elemento */
-    margin-left: 70px; /* Ajusta a posição horizontal */
-    font-size: 20px; /* Define o tamanho da fonte */
+    margin-left: 80px; /* Ajusta a posição horizontal */
+    font-size: 15px; /* Define o tamanho da fonte */
+    border-radius: 30px;
     color: #ffffff; /* Define a cor do texto como branco */
-    padding: 10px; /* Adiciona espaçamento interno */
+    padding: 5px; /* Adiciona espaçamento interno */
     background-color: #40e0d056; /* Define a cor de fundo com transparência */
 }
 

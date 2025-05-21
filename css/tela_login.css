@@ -93,7 +93,7 @@
     color: #ffffff; /* Define a cor do texto como branco */
     /* Posição do contêiner na tela */
     margin-top: -350px; /* Ajusta a posição vertical */
-    margin-left: 460px; /* Ajusta a posição horizontal */
+    margin-left: 420px; /* Ajusta a posição horizontal */
     /* Dimensões do contêiner */
     width: 300px; /* Define a largura fixa */
     max-width: 500px; /* Define uma largura máxima */
@@ -108,7 +108,7 @@
     width: 420px; /* Define a largura fixa */
     /* Posição do contêiner */
     margin-top: 100px; /* Ajusta a posição vertical */
-    margin-left: 450px; /* Ajusta a posição horizontal */
+    margin-left: 410px; /* Ajusta a posição horizontal */
     border: solid #ffffff; /* Adiciona uma borda branca */
     max-width: 500px; /* Define uma largura máxima */
     height: 290px; /* Define a altura fixa */
