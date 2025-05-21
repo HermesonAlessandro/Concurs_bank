@@ -16,30 +16,32 @@
     <!-- Define o título da aba do navegador. -->
 </head>
 
-<body>
-    <nav>
+<body class="corpo_site">
+    <nav class="fundo_menu">
         <!-- Início da seção de navegação, usada para criar um menu de acesso a outras páginas do site. -->
 
-        <a href="../html/tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo" width="80" height="50"></a>
+        <a href="../html/tela_inicial.html"><img id ="logo" src="../img/Logo(CB).png" alt="Logo" width="80" height="50"></a>
         <!-- Exibe o logotipo do site. "src" aponta para o caminho da imagem, "alt" é um texto alternativo para acessibilidade. -->
-        
-        <a href="tela_inicial.html"><button>Home</button></a>
+        <div class="buttons_menu">
+        <a href="tela_inicial.html"><button id="button_home">Home</button></a>
         <!-- Botão para navegação à página inicial. O link está configurado para abrir "tela_inicial.html". -->
 
-        <a href="tela_sobre_nos.html"><button>Sobre nós</button></a>
+        <a href="tela_sobre_nos.html"><button id ="button_sobre">Sobre nós</button></a>
         <!-- Botão para acessar a página "Sobre nós". -->
-
-        <a href="tela_login.html"><button>Entrar</button></a>
+          </div>
+          <div class="buttons_registro">
+        <a href="tela_login.html"><button id="button_entrar">Entrar</button></a>
         <!-- Botão que leva o usuário à página de login. -->
 
-        <a href="tela_cadastro.html"><button>Cadastra-se</button></a>
+        <a href="tela_cadastro.html"><button id="button_cadastro">Cadastra-se</button></a>
         <!-- Botão para acessar a página de cadastro. -->
-
-        <hr>
+          </div>
+        
         <!-- Linha horizontal para separar o menu de navegação do conteúdo principal da página. -->
     </nav>
 
-    <h2>Equipe responsável</h2>
+    <h2 id="equipe">Equipe responsável</h2>
+    <hr>
     <!-- Título da seção que apresenta os membros da equipe de desenvolvimento do projeto. -->
 
     <!-- Adicionando a parte dos Cards-->
@@ -98,6 +100,6 @@
     </div>
     <br>
     
-<p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
+
 </body>
 </html>

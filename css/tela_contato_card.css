@@ -26,7 +26,7 @@
 /* Define o estilo da classe "title", que normalmente se refere ao cargo do membro */
 .title {
   /* Define a cor do texto como cinza */
-  color: grey;
+  color: rgb(255, 255, 255);
 
   /* Ajusta o tamanho da fonte para 18px, tornando-o mais legível */
   font-size: 18px;
@@ -40,9 +40,101 @@ a {
   /* Define a cor do texto do link como preto */
   color: black;
 }
+#equipe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: monospace;
+  font-size:x-large;
+}
 
 /* Define o estilo para os botões e links quando o usuário passa o mouse sobre eles */
-button:hover, a:hover {
-  /* Reduz a opacidade para 70%, criando um efeito visual de "fade" quando o usuário interage */
-  opacity: 0.5;
+
+.corpo_site {
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro ao azul mais claro */
+    max-width: 100%; /* Define a largura máxima como 100% da tela */
+    width: 90%; /* Define a largura padrão como 90% */
+    padding: 255px 20px; /* Adiciona espaçamento interno: 255px em cima/baixo, 20px nas laterais */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+.fundo_menu {
+    background-color: rgba(238, 236, 236, 0.5); /* Fundo translúcido */
+    width: 100%; /* Largura total */
+    height: 142px; /* Altura fixa do fundo */
+    position: absolute; /* Posicionamento absoluto no topo */
+    top: 0; /* Alinha ao topo da tela */
+    right: 0px; /* Alinha à esquerda da tela */
+    z-index: 1; /* Atrás dos botões e imagens */
+}.buttons_menu {
+    display: flex; /* Usa flexbox para organizar os botões */
+    justify-content: center; /* Centraliza os botões */
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: -32px; /* Sobe o grupo de botões */
+}
+.buttons_registro {
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 9px; /* Espaço entre os botões */
+    margin-top: -108px; /* Sobe os botões */
+    margin-left: 80%; /* Empurra os botões para a direita */
+}
+#button_sobre,
+#button_home,
+#button_contatos,
+#button_entrar,
+#button_cadastro {
+    color: white; /* Cor do texto branca */
+    background-color: #003366; /* Fundo azul escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho do texto dos botões */
+    padding: 10px 25px; /* Espaço interno vertical e horizontal */
+    border: none; /* Remove a borda padrão */
+    transition: background-color 0.3s ease; /* Suaviza a mudança de cor ao passar o mouse */
+    position: relative; /* Necessário para sobreposição */
+    z-index: 2; /* Garante que o botão fique acima do fundo translúcido */
+}
+
+/* Estilo adicional específico para o botão "Área do Estudante" */
+
+
+/* Botão cadastro com largura maior */
+#button_cadastro {
+    width: auto; /* Largura automática com base no conteúdo */
+    min-width: 140px; /* Garante uma largura mínima */
+   
+}
+
+/* ======== Efeitos de hover e foco ======== */
+#button_sobre:hover,
+#button_home:hover,
+#button_contatos:hover,
+#button_entrar:hover,
+#button_cadastro:hover,
+#button_area_estudante:hover {
+    background-color: #005599; /* Cor azul mais clara ao passar o mouse */
+    cursor: pointer; /* Cursor tipo ponteiro */
+}
+
+#button_sobre:focus,
+#button_home:focus,
+#button_contatos:focus,
+#button_entrar:focus,
+#button_cadastro:focus,
+#button_area_estudante:focus
+{
+    outline: 2px solid #ffffff; /* Borda branca de foco (acessibilidade) */
+    background-color: #0077cc; /* Cor azul ainda mais clara quando focado */
+}
+#logo {
+    width: 102px; /* Largura fixa da imagem */
+    max-width: 200px; /* Define uma largura máxima */
+    height: auto; /* Altura proporcional à largura */
+    margin-top: 0px; /* Sem margem superior */
+    margin-left: 20px; /* Margem esquerda de 20px */
+    position: relative; /* Permite uso de z-index */
+    z-index: 2; /* Fica acima de elementos com z-index menor */
 }
