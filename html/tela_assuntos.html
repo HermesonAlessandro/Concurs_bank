@@ -1,92 +1,39 @@
 <!DOCTYPE html>
-<!-- Declara o tipo do documento como HTML5 -->
-
 <html lang="pt-br">
-<!-- Define o idioma principal da página como português do Brasil -->
-
 <head>
     <meta charset="UTF-8">
-    <!-- Define a codificação de caracteres como UTF-8, suportando acentuação e caracteres especiais -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Torna a página responsiva, ajustando seu layout ao tamanho da tela do dispositivo -->
-
     <title>Assuntos</title>
-    <!-- Define o título que aparece na aba do navegador -->
 </head>
 
 <body>
-    <!-- Início do corpo do conteúdo da página -->
-
     <nav>
-        <!-- Seção de navegação principal do site -->
-
         <a href="../html/tela_inicial.html"><img src="../img/Logo(CB).png" alt="Logo do site" width="80px" height="50px"></a>
-        <!-- Exibe o logotipo do site com largura de 80px e altura de 50px -->
-
         <a href="tela_inicial.html"><button>Home</button></a>
-        <!-- Botão que redireciona para a página inicial -->
-
         <a href="tela_sobre_nos.html"><button>Sobre nós</button></a>
-        <!-- Botão que redireciona para a página 'Sobre nós' -->
-
         <a href="tela_contato.html"><button>Contato</button></a>
-        <!-- Botão que redireciona para a página de contato -->
-
         <a href="tela_login.html"><button>Entrar</button></a>
-        <!-- Botão que redireciona para a página de login -->
-
         <a href="tela_cadastro.html"><button>Cadastra-se</button></a>
-        <!-- Botão que redireciona para a página de cadastro -->
-
         <a href="tela_alterar_senha.html"><button>Alterar senha</button></a>
-        <!-- Botão que redireciona para a página de alteração de senha -->
-
         <button>Perfil</button>
-        <!-- Botão que representa o perfil do usuário (sem redirecionamento definido ainda) -->
-
         <hr>
-        <!-- Linha horizontal para separar o menu de navegação do restante do conteúdo -->
     </nav>
 
     <h2>Qual é Assunto?</h2>
-    <!-- Título principal da seção de escolha de assuntos -->
 
-    <form action="" method="GET">
-        <!-- Início de um formulário que usará o método GET para enviar os dados selecionados -->
-
-        <p><button type="submit" name="assunto" value="bd">Banco de dados</button></p>
-        <!-- Botão que envia o valor "bd" representando o assunto Banco de Dados -->
-
-        <p><button type="submit" name="assunto" value="redes">Redes de computadores</button></p>
-        <!-- Botão que envia o valor "redes" para Redes de Computadores -->
-
+    <form method="post">
+        <a href="../html/q_banco_de_dados.html"><button>Banco de dados</button></a>
+        <a href="../html/q_banco_de_dados.html"><p><button type="submit" name="assunto" value="redes">Redes de computadores</button></p></a>
         <p><button type="submit" name="assunto" value="seguranca">Segurança da informação</button></p>
-        <!-- Botão para Segurança da Informação -->
-
         <p><button type="submit" name="assunto" value="desenvolvimento">Desenvolvimento de software</button></p>
-        <!-- Botão para Desenvolvimento de Software -->
-
         <p><button type="submit" name="assunto" value="so">Sistemas operacionais</button></p>
-        <!-- Botão para Sistemas Operacionais -->
-
         <p><button type="submit" name="assunto" value="governanca">Governança de TI</button></p>
-        <!-- Botão para Governança de Tecnologia da Informação -->
-
         <p><button type="submit" name="assunto" value="ia">IA e big data</button></p>
-        <!-- Botão para Inteligência Artificial e Big Data -->
-
         <p><button type="submit" name="assunto" value="nuvem">Computação em nuvem</button></p>
-        <!-- Botão para Computação em Nuvem -->
-
         <p><button type="submit" name="assunto" value="office">Pacote office</button></p>
-        <!-- Botão para assuntos sobre o Pacote Office -->
-
-        <p><button type="submit" name="assunto" value="iot">Internet da coisas</button></p>
-        <!-- Botão para Internet das Coisas (nota: correção sugerida "das coisas") -->
-
+        <p><button type="submit" name="assunto" value="iot">Internet das coisas</button></p>
     </form>
     
-<p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
-</body> <!-- Fechamento do corpo -->
-</html> <!-- Fechamento da tag do html -->
+    <p id="rodape_diretos_autorais">&copy; 2025 - Concurs Bank</p>
+</body>
+</html>
