@@ -1,263 +1,58 @@
-.corpo_site {
-    background: linear-gradient(#003366, #40E0D0); /* Fundo em gradiente do azul escuro ao turquesa */
-    max-width: 100%; /* Largura máxima de 100% da tela */
-    width: 90%; /* Largura padrão de 90% */
-    padding: 95.5px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
-    margin: 0 auto; /* Centraliza horizontalmente */
-}
 
-/* ======== Título da página ======== */
-#titulo {
-    font-size: 40px; /* Tamanho grande para o texto */
-    color: #ffffff; /* Cor branca */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 110px; /* Espaço acima do título */
+/* Estilizando a navbar */
+nav{
+    background-color: #034281;
+    padding: 1rem auto;
+    color: white;
+} 
+/* Estilizando o rodapé */
+.nav-link {
+    color: white;
+    text-decoration: none;
 }
-
-/* ======== Fundo atrás do texto principal ======== */
-#fundo_texto {
-    width: 100%; /* Largura total */
-    background-color: #003366; /* Fundo azul escuro */
-    border-radius: 12px; /* Cantos arredondados */
-    margin: 40px auto; /* Espaço vertical e centralização horizontal */
-    padding: 20px; /* Espaço interno */
-}
-
-/* ======== Texto principal ======== */
-#texto {
-    font-size: 24px; /* Tamanho da fonte */
-    color: aliceblue; /* Cor clara agradável */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    max-width: 90%; /* Limita a largura */
-}
-
-/* ======== Logo principal ======== */
-#logo {
-    width: 102px; /* Largura fixa */
-    max-width: 200px; /* Largura máxima permitida */
-    height: auto; /* Altura proporcional à largura */
-    margin-top: 0px; /* Sem espaço acima */
-    margin-left: 20px; /* Espaço à esquerda */
-    position: relative; /* Permite sobreposição com z-index */
-    z-index: 2; /* Fica acima de elementos com z-index menor */
-}
-
-/* ======== Estilo padrão dos botões ======== */
-#button_sobre,
-#button_home,
-#button_contatos,
-#button_entrar,
-#button_cadastro,
-#button_se_cadastrar {
-    color: white; /* Texto branco */
-    background-color: #003366; /* Fundo azul escuro */
-    border-radius: 20px; /* Bordas arredondadas */
-    font-size: 18px; /* Tamanho da fonte */
-    padding: 10px 25px; /* Espaço interno */
-    border: none; /* Sem borda */
-    transition: background-color 0.3s ease; /* Transição suave ao mudar de cor */
-    position: relative; /* Para sobreposição */
-    z-index: 2; /* Acima do fundo translúcido */
-}
-
-/* Botão cadastro com largura maior */
-#button_cadastro {
-    width: auto; /* Largura automática */
-    min-width: 140px; /* Largura mínima */
-}
-
-
-/* ======== Efeitos de hover e foco ======== */
-#button_sobre:hover,
-#button_home:hover,
-#button_contatos:hover,
-#button_entrar:hover,
-#button_cadastro:hover,
-#button_se_cadastrar:hover {
-    background-color: #005599; /* Azul mais claro no hover */
-    cursor: pointer; /* Muda o cursor para mãozinha */
-}
-
-#button_sobre:focus,
-#button_home:focus,
-#button_contatos:focus,
-#button_entrar:focus,
-#button_cadastro:focus,
-#button_se_cadastrar:focus {
-    outline: 2px solid #ffffff; /* Contorno branco no foco */
-    background-color: #0077cc; /* Azul mais claro no foco */
-}
-.buttons_menu {
-    display: flex; /* Layout flexível */
-    justify-content: center; /* Centraliza os botões */
-    flex-wrap: wrap; /* Permite quebrar linha */
-    gap: 10px; /* Espaço entre os botões */
-    margin-top: -30px; /* Move para cima */
-}
-
-/* ======== Container dos botões de login/cadastro ======== */
-#button_entrar{
-    display: flex; /* Layout flexível */
-    justify-content: center; /* Centraliza os botões */
-    flex-wrap: wrap; /* Permite quebra de linha */
-    gap: 9px; /* Espaço entre os botões */
-    margin-top: -108px; /* Sobe o bloco */
-    margin-left: 1250px; /* Alinha mais à direita */
-}
-
-/* ======== Fundo translúcido atrás do menu ======== */
-#fundo_menu {
-    background-color: rgba(238, 236, 236, 0.5); /* Fundo cinza claro translúcido */
-    width: 100%; /* Largura total */
-    height: 142px; /* Altura fixa */
-    position: absolute; /* Fixa no topo */
-    top: 0; /* Alinha ao topo */
-    left: 0; /* Alinha à esquerda */
-    z-index: 1; /* Fica atrás dos botões */
-}
-
-/* Estilização do contêiner de validação do cadastro */
-.validacao_cadastro{
-    display: flex; /* Usa flexbox para organizar os elementos */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
-    flex-wrap: wrap; /* Permite que os elementos quebrem linha se necessário */
-    color: #ffffff; /* Define a cor do texto como branco */
-    /* Posição do contêiner na tela */
-    margin-top: -520px; /* Ajusta a posição vertical */
-    margin-left: 465px; /* Ajusta a posição horizontal */
-    /* Dimensões do contêiner */
-    width: 300px; /* Define uma largura fixa */
-    max-width: 500px; /* Define uma largura máxima */
-    font-size: 20px; /* Define o tamanho da fonte */
-    position: absolute; /* Define posição absoluta para sobrepor elementos */
-    z-index: 2; /* Define uma camada superior para ficar acima de outros elementos */
-}
-
-/* Estilização do fundo da tela de cadastro */
-#fundo_cadastro{
-    background-color: #003366; /* Define a cor de fundo */
-    width: 320px; /* Define a largura fixa */
-    /* Posição do contêiner */
-    margin-top: 120px; /* Ajusta a posição vertical */
-    margin-left: 450px; /* Ajusta a posição horizontal */
-    border: solid #ffffff; /* Adiciona uma borda branca */
-    max-width: 500px; /* Define uma largura máxima */
-    height: 520px; /* Define a altura fixa */
-    border-radius: 20px; /* Define cantos arredondados */
-    position: relative; /* Define a posição relativa */
-    z-index: 1; /* Define a camada inferior para ficar abaixo de elementos sobrepostos */
-}
-
-/* Estilização dos rótulos e campos de entrada */
-.validacao_cadastro label, .validacao_cadastro input{
-    display: flex; /* Usa flexbox para organizar os elementos */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    gap: 10px; /* Adiciona um espaçamento entre os elementos */
-}
-
-/* Estilização dos campos de entrada */
-.validacao_cadastro input{
-    border: none; /* Remove a borda padrão */
-    border-radius: 10px; /* Define cantos arredondados */
-    margin: 3px; /* Adiciona um espaçamento externo */
-    text-align: center; /* Centraliza o texto dentro do campo de entrada */
-    font-size: 20px; /* Define o tamanho da fonte */
-}
-
-/* Estilização do campo de seleção de sexo */
-#sexo{
-    display: flex; /* Usa flexbox para organizar o elemento */
-    margin-left: 80px; /* Ajusta a posição horizontal */
-    font-size: 15px; /* Define o tamanho da fonte */
-    border-radius: 30px;
-    color: #ffffff; /* Define a cor do texto como branco */
-    padding: 5px; /* Adiciona espaçamento interno */
-    background-color: #40e0d056; /* Define a cor de fundo com transparência */
-}
-
-/* Estilização do texto relacionado ao sexo */
-#texto_sexo{
-    display: flex; /* Usa flexbox para organizar o elemento */
-    margin-top: -20px; /* Ajusta a posição vertical */
-    margin-left: 0px; /* Ajusta a posição horizontal */
-}
-
-/* Estilização do botão para se cadastrar */
-#button_se_cadastrar{
-    display: flex; /* Usa flexbox para organizar o elemento */
-    justify-content: center; /* Centraliza o botão horizontalmente */
-    align-items: center; /* Centraliza o botão verticalmente */
-    margin-left: 65px; /* Ajusta a posição horizontal */
-    margin-top: -15px; /* Ajusta a posição vertical */
-}
-
-/* Responsividade para diferentes tamanhos de tela */
-@media (max-width: 768px) {
-    #fundo_cadastro {
-        width: 90%;
-        margin: 100px auto 0 auto;
+/* alterando o estilo do corpo*/
+ body {
+        background: linear-gradient(#003366, #40E0D0);
     }
-    .validacao_cadastro {
-        margin: -450px auto 0 auto;
-        width: 90%;
-        font-size: 16px;
-        margin-left: 0;
-    }
-    .validacao_cadastro input {
-        font-size: 16px;
-    }
-    #sexo {
-        margin-left: 0;
-        width: 100%;
-    }
-    #button_se_cadastrar {
-        margin: 20px auto 0 auto;
-    }
-}
 
-/* Responsividade para celulares menores que 480px */
-@media (max-width: 480px) {
-    .validacao_cadastro {
-        width: 90%;
-        font-size: 14px;
-        margin: 0 auto;
+.form-container {
+    max-width: 400px;
+    margin-top: 200px auto;
+    margin: 200px auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .validacao_cadastro input {
-        font-size: 16px;
-        width: 100%;
-    }
-    #sexo {
-        margin-left: 0;
-        width: 100%;
-    }
-    #button_se_cadastrar {
-        margin: 20px auto 0 auto;
-    }
-}
 
-/* Responsividade para tablets e notebooks pequenos (769px até 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    #fundo_cadastro {
-        width: 400px;
-        margin: 100px auto;
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+    display: flex;
     }
-    .validacao_cadastro {
-        width: 90%;
-        font-size: 18px;
-        margin: 0 auto;
-    }
-    .validacao_cadastro input {
-        font-size: 18px;
-    }
-}
 
-/* Telas grandes: desktops */
-@media (min-width: 1025px) {
-    .validacao_cadastro {
-        margin-left: 465px;
+.btn-primary {
+    background-color: #003366;
+    border-color: #003366;
     }
-    #fundo_cadastro {
-        margin-left: 450px;
+
+.btn-primary:hover {
+    transition: background-color 0.3s ease;
+    background-color: #005599;
+    }
+
+.forgot-password {
+    text-align: center;
+    margin-top: 1rem;
+    }
+
+@media (min-width: 576px) {
+    .form-container {
+        max-width: 500px;
+    }
+    nav{
+        background-color: #034281;
+        padding: 1rem;
+        color: white;
     }
 }
