@@ -1,87 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- Declaração do tipo de documento HTML5 e definição do idioma principal como português do Brasil. -->
 <head>
     <meta charset="UTF-8">
-    <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a acentuação e caracteres especiais. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configura a visualização responsiva para adaptação a diferentes tamanhos de tela, melhorando a experiência em dispositivos móveis. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tela de Login</title>
+  <!--adicionando o bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/tela_login.css">
-    <!-- Importa a folha de estilos CSS externa para estilização da página. -->
-    <title>Login</title>
-    <!-- Define o título da aba do navegador, que aparece na barra de título. -->
 </head>
+<body>
 
-<body class="corpo_site">
-    <!-- Define a classe do corpo da página, permitindo estilização via CSS. -->
-
-    <header class="fundo_menu">
-        <!-- Cabeçalho da página, normalmente usado para elementos de navegação e identidade visual. -->
-
+<header class="header-bg fixed-top shadow gap-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <!--logo-->
         <a href="tela_inicial.html">
-            <img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50">
+            <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 50px;">
         </a>
-        <!-- Exibe a imagem do logotipo. O atributo "alt" fornece um texto descritivo caso a imagem não carregue. -->
-        
-        <div class="buttons_menu">
-            <a href="tela_inicial.html"><button id="button_home">Home</button></a>
-            <!-- Botão de navegação para a página inicial. -->
+    <div class="d-flex flex-wrap gap-2">
+        <a href="tela_inicial.html" class="btn btn-primary">Home</a>
+        <a href="tela_sobre_nos.html" class="btn btn-primary">Sobre nós</a>
+        <a href="tela_contato.html" class="btn btn-primary">Contatos</a>
+    </div>
 
-            <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a>
-            <!-- Botão de navegação para a página "Sobre nós". -->
+  <!--somente o botao do cadastro-->
+    <div class="d-flex flex-wrap gap-2">
+        <a href="tela_cadastro.html" class="btn btn-light text-primary">Cadastrar-se</a>
+    </div>
 
-            <a href="tela_contato.html"><button id="button_contatos">Contato</button></a>
-            <!-- Botão de navegação para a página de contatos. -->
-        </div>
-
-        <a href="tela_cadastro.html"><button id="button_cadastro">Cadastra-se</button></a>
-        <!-- Botão para redirecionamento à página de cadastro. -->
+    </div>
     </header>
 
-    <main>
-        <!-- Elemento principal contendo o formulário de login. -->
+  <!--container login-->
+  <div class="container">
+  <div class="form-container">
+    <h2 class="text-center text-primary mb-4 flex-wrap">Login</h2>
+  <form method="post" action="../php/login.php">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu email" required>
+        </div>
+        <div class="mb-3">
+          <label for="senha" class="form-label">Senha</label>
+          <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+        <div class="forgot-password mt-3">
+          <a href="tela_alterar_senha.html">Esqueci a senha</a>
+        </div>
+      </form>
+    </div>
+  </div>
 
-        <div id="fundo_login"></div>
-        <!-- Contêiner estilizado para a seção do login. -->
-
-        <form class="validacao_login" method="post" action="../php/login.php">
-            <!-- Formulário para login, configurado para enviar dados usando o método POST ao servidor. -->
-
-            <div>
-                <!-- Agrupamento de elementos do formulário para organização e estilização via CSS. -->
-
-                <legend id="titulo">Login</legend>
-                <!-- Título do grupo de campos, exibido dentro da borda do fieldset. -->
-
-                <br>
-
-                <label id="texto_email" for="email">Email:</label>
-                <!-- Rótulo indicando que o próximo campo deve receber um endereço de e-mail. -->
-
-                <input id="input_email" type="text" name="email">
-                <!-- Campo de entrada para e-mail. O atributo "name" define o identificador para envio ao servidor. -->
-
-                <label id="texto_senha" for="senha">Senha:</label>
-                <!-- Rótulo indicando que o próximo campo deve receber uma senha. -->
-
-                <input id="input_senha" type="password" name="senha">
-                <!-- Campo de entrada para senha. O tipo "password" oculta os caracteres digitados. -->
-
-                <br><br>
-
-                <a id="alterar_senha" href="tela_alterar_senha.html">Esqueci a senha</a>
-                <!-- Link para redirecionar o usuário à página de recuperação de senha. -->
-
-                <br><br>
-
-                <button id="button_logar" type="submit">Logar</button>
-                <!-- Botão para envio do formulário ao servidor. -->
-            </div>
-        </form>
-    </main>
-
-    <script src="../js/validacao_login.js" defer></script>
-    <!-- Importa o script JavaScript externo responsável pela validação do formulário. O atributo "defer" garante que o script só será executado após o carregamento completo da página. -->
-
+  <script src="../js/validacao_login.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
