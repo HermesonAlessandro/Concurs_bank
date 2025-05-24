@@ -1,35 +1,40 @@
+/* Define a fonte padrão da página e adiciona um espaçamento externo */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: Arial, sans-serif; /* Usa uma fonte legível e amplamente suportada */
+    margin: 20px; /* Adiciona espaçamento ao redor do conteúdo */
 }
 
+/* Define um contêiner flexível para alinhar elementos dentro dele */
 .container {
-    display: flex;
-    align-items: center; /* Mantém a imagem e o link alinhados */
+    display: flex; /* Organiza os elementos em uma única linha */
+    align-items: center; /* Alinha verticalmente os elementos (imagem e link) */
 }
 
+/* Estiliza o logotipo do site e define sua posição na página */
 .logo {
-    position: absolute;
-    left: 20px; /* Move para a esquerda */
-    top: 20px;  /* Mantém no topo */
-    height: 120px;
+    position: absolute; /* Permite posicionamento livre na página */
+    left: 20px; /* Move a logo para o lado esquerdo */
+    top: 20px;  /* Mantém a logo no topo */
+    height: 120px; /* Define a altura da logo */
 }
 
+/* Estiliza o link para voltar, posicionando abaixo da logo */
 .voltar {
-    position: absolute;
-    left: 20px; /* Alinha à esquerda */
-    top: 160px; /* Posiciona abaixo da logo */
-    font-size: 16px;
+    position: absolute; /* Permite que fique fixo na tela */
+    left: 20px; /* Mantém o link alinhado à esquerda */
+    top: 160px; /* Posiciona o link logo abaixo da logo */
+    font-size: 16px; /* Define o tamanho da fonte do link */
 }
 
+/* Estiliza o contêiner do perfil do usuário */
 .perfil-container {
-    margin-top: 100px; /* Empurra o painel para baixo */
-    width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    text-align: left;
+    margin-top: 100px; /* Empurra o painel de perfil para baixo */
+    width: 600px; /* Define a largura fixa do contêiner */
+    padding: 20px; /* Adiciona espaçamento interno ao contêiner */
+    border: 1px solid #ccc; /* Adiciona uma borda sutil ao redor do perfil */
+    border-radius: 10px; /* Suaviza os cantos com bordas arredondadas */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para destaque */
+    text-align: left; /* Mantém o texto alinhado à esquerda */
     margin-left: auto;
-    margin-right: auto; /* Centraliza na página */
+    margin-right: auto; /* Centraliza o perfil na página */
 }
