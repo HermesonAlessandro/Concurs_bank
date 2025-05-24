@@ -1,58 +1,67 @@
-
-/* Estilizando a navbar */
-nav{
-    background-color: #034281;
-    padding: 1rem auto;
-    color: white;
-} 
-/* Estilizando o rodapé */
-.nav-link {
-    color: white;
-    text-decoration: none;
+/* Estilizando a navbar (barra de navegação) */
+nav {
+    background-color: #034281; /* Define a cor de fundo da navbar */
+    padding: 1rem auto; /* Define espaçamento interno (correção: 'auto' não tem efeito aqui) */
+    color: white; /* Define a cor do texto dentro da navbar */
 }
-/* alterando o estilo do corpo*/
- body {
-        background: linear-gradient(#003366, #40E0D0);
-    }
 
+/* Estilizando os links da navbar */
+.nav-link {
+    color: white; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+/* Alterando o estilo do corpo da página */
+body {
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo degradê */
+}
+
+/* Estilizando o contêiner do formulário */
 .form-container {
-    max-width: 400px;
-    margin-top: 200px auto;
-    margin: 200px auto;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
+    max-width: 400px; /* Define a largura máxima do contêiner */
+    margin-top: 200px auto; /* O 'auto' após '200px' não tem efeito aqui */
+    margin: 200px auto; /* Centraliza vertical e horizontalmente */
+    padding: 2rem; /* Adiciona espaçamento interno */
+    background-color: white; /* Define a cor de fundo */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar profundidade */
+}
 
+/* Ajustando o tamanho do logo na navbar */
 .navbar-logo img {
-    height: 40px;
-    margin-right: 10px;
-    display: flex;
-    }
+    height: 40px; /* Define a altura da imagem */
+    margin-right: 10px; /* Adiciona margem à direita */
+    display: flex; /* Exibe a imagem de forma flexível */
+}
 
+/* Estilizando os botões primários */
 .btn-primary {
-    background-color: #003366;
-    border-color: #003366;
-    }
+    background-color: #003366; /* Define a cor de fundo do botão */
+    border-color: #003366; /* Define a cor da borda */
+}
 
+/* Estilizando a aparência do botão primário ao passar o mouse */
 .btn-primary:hover {
-    transition: background-color 0.3s ease;
-    background-color: #005599;
-    }
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+    background-color: #005599; /* Altera a cor do botão ao passar o mouse */
+}
 
+/* Estilizando o link "Esqueci a senha" */
 .forgot-password {
-    text-align: center;
-    margin-top: 1rem;
-    }
+    text-align: center; /* Centraliza o texto */
+    margin-top: 1rem; /* Adiciona espaçamento superior */
+}
 
+/* Estilos responsivos para telas maiores */
 @media (min-width: 576px) {
     .form-container {
-        max-width: 500px;
+        max-width: 500px; /* Ajusta a largura máxima do contêiner para telas maiores */
     }
-    nav{
-        background-color: #034281;
-        padding: 1rem;
-        color: white;
+
+    /* Ajustando a navbar para telas maiores */
+    nav {
+        background-color: #034281; /* Mantém a cor de fundo */
+        padding: 1rem; /* Ajusta o espaçamento interno */
+        color: white; /* Mantém a cor do texto */
     }
 }

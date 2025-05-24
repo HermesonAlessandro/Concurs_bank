@@ -1,59 +1,67 @@
-
-/*fazendo a parte da narvbar(cor) */
-nav{
-    background-color: #034281;
-    padding: 1rem auto;
-    color: white;
+/* Estilizando a navbar (barra de navegação) */
+nav {
+    background-color: #034281; /* Define a cor de fundo da navbar */
+    padding: 1rem auto; /* Adiciona espaçamento interno */
+    color: white; /* Define a cor do texto */
 } 
+
+/* Estilizando os links da navbar */
 .nav-link {
-    color: white;
-    text-decoration: none;
+    color: white; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
-/*mudando o fundo do corpo do site*/
- body {
-        background: linear-gradient(#003366, #40E0D0);
-    }
 
-/* mudando a caixa de login */
+/* Alterando o fundo do corpo do site */
+body {
+    background: linear-gradient(#003366, #40E0D0); /* Adiciona um fundo degradê */
+}
 
+/* Estilizando o container do formulário de login */
 .form-container {
-    max-width: 400px;
-    margin-top: 200px auto;
-    margin: 200px auto;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-/* mudando o tom*/
+    max-width: 400px; /* Define a largura máxima do container */
+    margin-top: 200px auto; /* Define a margem superior (corrigindo redundância) */
+    margin: 200px auto; /* Centraliza o container verticalmente */
+    padding: 2rem; /* Adiciona espaçamento interno */
+    background-color: white; /* Define a cor de fundo */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+}
+
+/* Ajustando o tamanho do logo na navbar */
 .navbar-logo img {
-    height: 40px;
-    margin-right: 10px;
-    display: flex;
-    }
+    height: 40px; /* Define a altura da imagem */
+    margin-right: 10px; /* Adiciona margem à direita */
+    display: flex; /* Define a exibição como flexível */
+}
 
+/* Estilizando os botões primários */
 .btn-primary {
-    background-color: #003366;
-    border-color: #003366;
-    }
+    background-color: #003366; /* Define a cor de fundo */
+    border-color: #003366; /* Define a cor da borda */
+}
 
+/* Alterando a cor do botão primário ao passar o mouse */
 .btn-primary:hover {
-    transition: background-color 0.3s ease;
-    background-color: #005599;
-    }
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+    background-color: #005599; /* Define a nova cor de fundo ao passar o mouse */
+}
 
+/* Estilizando o link "Esqueci a senha" */
 .forgot-password {
-    text-align: center;
-    margin-top: 1rem;
-    }
+    text-align: center; /* Centraliza o texto */
+    margin-top: 1rem; /* Adiciona espaçamento superior */
+}
 
+/* Estilos responsivos para telas maiores */
 @media (min-width: 576px) {
     .form-container {
-        max-width: 500px;
+        max-width: 500px; /* Ajusta a largura máxima do container */
     }
-    nav{
-        background-color: #034281;
-        padding: 1rem;
-        color: white;
+
+    /* Ajustando a navbar para telas maiores */
+    nav {
+        background-color: #034281; /* Mantém a cor da navbar */
+        padding: 1rem; /* Ajusta o espaçamento interno */
+        color: white; /* Mantém a cor do texto */
     }
 }

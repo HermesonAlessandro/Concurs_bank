@@ -13,7 +13,7 @@ var_dump($_POST);
 
 // Obtém os dados enviados pelo formulário via método POST
 $cpf = $_POST['cpf']; // CPF do usuário
-$nome_completo = $_POST['nome_completo']; // Nome completo do usuário
+$nome = $_POST['nome']; // Nome completo do usuário
 $idade = $_POST['idade']; // Idade do usuário
 $sexo = $_POST['sexo']; // Sexo do usuário
 $email = $_POST['email']; // E-mail do usuário
@@ -57,7 +57,7 @@ if(!$stmt){
 }
 
 // Associa os valores das variáveis aos parâmetros da consulta SQL
-$stmt->bind_param("ssisss", $cpf, $nome_completo, $idade, $sexo, $email, $senha_hash);
+$stmt->bind_param("ssisss", $cpf, $nome, $idade, $sexo, $email, $senha_hash);
 
 // Executa a consulta SQL para inserir os dados no banco de dados
 if($stmt->execute()){

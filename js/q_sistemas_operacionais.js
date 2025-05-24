@@ -168,8 +168,7 @@ const questoes = [
                 B: "A CPU superaquece",
                 C: "Processos ficam esperando indefinidamente recursos ocupados",
                 D: "Processos ficam esperando indefinidamente recursos ocupados",
-                E: " A memória RAM chega a 100%
-"
+                E: "A memória RAM chega a 100%"
             },
             correta: "C",
             explicacoes:{
