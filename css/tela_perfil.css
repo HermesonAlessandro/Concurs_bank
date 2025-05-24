@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Mantém a imagem e o link alinhados */
+}
+
+.logo {
+    position: absolute;
+    left: 20px; /* Move para a esquerda */
+    top: 20px;  /* Mantém no topo */
+    height: 120px;
+}
+
+.voltar {
+    position: absolute;
+    left: 20px; /* Alinha à esquerda */
+    top: 160px; /* Posiciona abaixo da logo */
+    font-size: 16px;
+}
+
+.perfil-container {
+    margin-top: 100px; /* Empurra o painel para baixo */
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto; /* Centraliza na página */
+}

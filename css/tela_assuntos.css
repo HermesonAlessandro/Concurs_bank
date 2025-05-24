@@ -19,8 +19,7 @@
 #button_sobre,
 #button_home,
 #button_contatos,
-#button_entrar,
-#button_cadastro,
+#button_sair,
 #button_alterar,
 #button_perfil,
 .buttons_assunto button {
@@ -35,7 +34,7 @@
     z-index: 2; /* Garante que os botões fiquem acima do fundo translúcido */
 }
 
-#button_cadastro {
+#button_sair {
     width: auto; /* Largura baseada no conteúdo interno */
     min-width: 140px; /* Define uma largura mínima de 140px */
 }
@@ -43,8 +42,7 @@
 #button_sobre:hover,
 #button_home:hover,
 #button_contatos:hover,
-#button_entrar:hover,
-#button_cadastro:hover,
+#button_sair:hover,
 #button_area_estudante:hover,
 #button_alterar:hover,
 #button_perfil:hover,
@@ -56,8 +54,7 @@
 #button_sobre:focus,
 #button_home:focus,
 #button_contatos:focus,
-#button_entrar:focus,
-#button_cadastro:focus,
+#button_sair:focus,
 #button_area_estudante:focus,
 #button_alterar:focus,
 #button_perfil:focus,
