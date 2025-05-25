@@ -201,94 +201,115 @@ const questoes = [
         }
     ];
 
-// Função que cria dinamicamente as questões do quiz na página
+// Função responsável por criar dinamicamente as questões do quiz na página
 function criarQuestoes() {
-    const container = document.getElementById("quiz-container"); // Obtém o contêiner onde as questões serão inseridas
+    const container = document.getElementById("quiz-container"); // Obtém o elemento onde as questões serão adicionadas
 
-    // Percorre o array de questões e cria cada uma delas
+    // Percorre o array de questões e cria os elementos HTML para cada uma delas
     questoes.forEach((questao, index) => {
-        const div = document.createElement("div"); // Cria um elemento <div> para cada questão
+        const div = document.createElement("div"); // Cria um elemento <div> para estruturar a questão
         div.innerHTML = `
             <h3>Questão ${index + 1}</h3> <!-- Exibe o número da questão -->
             <form id="${questao.id}"> <!-- Cria um formulário identificável para cada questão -->
                 <p>${questao.pergunta}</p> <!-- Exibe a pergunta da questão -->
 
-                <!-- Gera dinamicamente as alternativas da questão -->
+                <!-- Gera dinamicamente as alternativas disponíveis -->
                 ${Object.entries(questao.alternativas)
                     .map(([key, value]) => `<label><input type="radio" name="${questao.id}" value="${key}"> ${key}) ${value}</label><br>`)
-                    .join("")
+                    .join("") 
                 }
                 <br>
-                <button type="submit">Responder</button> <!-- Botão de envio da resposta -->
-                <button type="button" class="limpar-btn" data-questao="${questao.id}">Limpar</button> <!-- Botão de limpar seleção -->
+                <button type="submit">Responder</button> <!-- Botão para enviar a resposta -->
+                <button type="button" class="limpar-btn" data-questao="${questao.id}">Limpar</button> <!-- Botão para limpar a seleção -->
             </form>
-            <p id="resultado${questao.id}"></p> <!-- Elemento onde será exibido o resultado da resposta -->
+            <p id="resultado${questao.id}"></p> <!-- Local onde será exibido o resultado da resposta -->
         `;
         container.appendChild(div); // Adiciona a questão ao contêiner principal
 
-        // Adiciona evento para validar resposta quando o usuário submeter o formulário
+        // Adiciona evento de validação da resposta ao submeter o formulário
         validarResposta(questao.id, questao.correta, questao.explicacoes);
     });
 
     // Adiciona funcionalidade ao botão de limpar seleção
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
-            const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
-
-            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
-            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
+            const questaoId = this.getAttribute("data-questao"); // Obtém o identificador da questão
+            document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o resultado da resposta
         });
     });
 
-    // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    // Criação do botão para finalizar o quiz
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalização
     botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
-    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
+    botaoFinalizar.style.display = "block"; // Exibe o botão como bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na página
 
+    // Evento de clique para coletar respostas e enviar ao PHP
     botaoFinalizar.addEventListener("click", function () {
-        alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
+        let respostas = {}; // Armazena as respostas selecionadas pelo usuário
+
+        // Percorre todas as questões e registra as respostas do usuário
+        questoes.forEach(questao => {
+            const respostaSelecionada = document.querySelector(`input[name="${questao.id}"]:checked`);
+            respostas[questao.id] = respostaSelecionada ? respostaSelecionada.value : null; // Selecione a alternativa escolhida ou defina como null
+        });
+
+        // Criação de um formulário invisível para envio das respostas ao PHP
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = "../php/resultado.php";
+
+        // Adiciona cada resposta como um campo oculto dentro do formulário
+        Object.entries(respostas).forEach(([key, value]) => {
+            const input = document.createElement("input");
+            input.type = "hidden";
+            input.name = key;
+            input.value = value;
+            form.appendChild(input);
+        });
+
+        document.body.appendChild(form); // Adiciona o formulário ao corpo da página
+        form.submit(); // Envia o formulário para o servidor
     });
 
-    container.appendChild(botaoFinalizar); // Adiciona o botão ao contêiner do quiz
+    container.appendChild(botaoFinalizar); // Adiciona o botão de finalização ao contêiner principal
 }
 
-// Função para validar respostas do usuário
+// Função para validar a resposta do usuário ao submeter o formulário
 function validarResposta(questaoId, respostaCorreta, explicacoes) {
     document.getElementById(questaoId).addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede a recarga da página ao submeter o formulário
+        event.preventDefault(); // Impede a recarga da página ao enviar o formulário
 
-        // Obtém a alternativa selecionada pelo usuário
+        // Obtém a alternativa escolhida pelo usuário
         const respostaSelecionada = document.querySelector(`input[name="${questaoId}"]:checked`);
-        const resultado = document.getElementById(`resultado${questaoId}`); // Obtém o elemento onde será exibido o resultado
+        const resultado = document.getElementById(`resultado${questaoId}`); // Elemento onde será exibido o resultado da resposta
 
         if (respostaSelecionada) {
-            const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
-            const correto = valor == respostaCorreta; // Compara com a resposta correta
+            const valor = respostaSelecionada.value; // Obtém o valor da alternativa escolhida
+            const correto = valor == respostaCorreta; // Verifica se a resposta está correta
 
-            // Exibe mensagem de acerto ou erro
+            // Exibe mensagem de acerto ou erro ao usuário
             resultado.innerHTML = correto 
                 ? "<strong>Resposta correta!</strong><br>" 
                 : "<strong>Resposta errada.</strong><br>";
 
-            // Exibe todas as alternativas e destaca a correta
+            // Exibe todas as alternativas, destacando a correta
             Object.entries(explicacoes).forEach(([key, value]) => {
                 resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
             });
 
-            // Bloqueia a mudança da resposta desabilitando os inputs
+            // Desativa os botões de resposta para impedir mudanças após submissão
             document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
                 input.disabled = true;
             });
 
-            // Desabilita o botão de responder para impedir múltiplas submissões
+            // Desativa o botão de envio para evitar múltiplas submissões
             document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
-            resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
+            resultado.textContent = "Por favor, selecione uma alternativa."; // Mensagem de aviso se nenhuma opção for selecionada
         }
     });
 }
 
-// Aguarda o carregamento completo da página antes de executar a função para criar as questões
+// Aguarda o carregamento completo da página antes de criar as questões
 document.addEventListener("DOMContentLoaded", criarQuestoes);
