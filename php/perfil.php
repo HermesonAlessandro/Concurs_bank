@@ -27,11 +27,11 @@ if($resultado->num_rows > 0){
     die("Erro: Usuário não encontrado."); // Encerra a execução se o e-mail não estiver cadastrado
 }
 
-// Normaliza o valor do sexo removendo espaços e convertendo para minúsculas
-$sexo = trim(strtolower($usuario['sexo']));
+// Normaliza o valor do sexo removendo espaços e convertendo para a primeira letra para maiúscula
+$sexo = ucfirst(trim(strtolower($usuario['sexo'])));
 
 // Define a imagem do perfil com base no sexo do usuário
-$imagem_perfil = ($sexo == "masculino") ? "../img/silhueta_masculina.jpg" : "../img/silhueta_feminina.jpg";
+$imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg" : "../img/silhueta_feminina.jpg";
 ?>
 
 <!-- Estrutura do HTML -->

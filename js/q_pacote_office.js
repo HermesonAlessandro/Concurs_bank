@@ -214,6 +214,7 @@ function criarQuestoes() {
                 }
                 <br>
                 <button type="submit">Responder</button> <!-- Botão de envio da resposta -->
+                <button type="button" class="limpar-btn" data-questao="${questao.id}">Limpar</button> <!-- Botão de limpar seleção -->
             </form>
             <p id="resultado${questao.id}"></p> <!-- Elemento onde será exibido o resultado da resposta -->
         `;
@@ -222,18 +223,41 @@ function criarQuestoes() {
         // Adiciona evento para validar resposta quando o usuário submeter o formulário
         validarResposta(questao.id, questao.correta, questao.explicacoes);
     });
+
+    // Adiciona funcionalidade ao botão de limpar seleção
+    document.querySelectorAll(".limpar-btn").forEach(botao => {
+        botao.addEventListener("click", function () {
+            const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.checked = false; // Desmarca todas as opções
+            });
+            document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+        });
+    });
+
+    // Criando e adicionando o botão de finalizar ao final das questões
+    const botaoFinalizar = document.createElement("button");
+    botaoFinalizar.textContent = "Finalizar";
+    botaoFinalizar.style.display = "block";
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+
+    botaoFinalizar.addEventListener("click", function () {
+        alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
+    });
+
+    container.appendChild(botaoFinalizar); // Adiciona o botão ao contêiner do quiz
 }
 
 // Função para validar respostas do usuário
-function validarResposta(questaoId, respostaCorreta, explicacoes){
-    document.getElementById(questaoId).addEventListener("submit", function(event){
+function validarResposta(questaoId, respostaCorreta, explicacoes) {
+    document.getElementById(questaoId).addEventListener("submit", function (event) {
         event.preventDefault(); // Impede a recarga da página ao submeter o formulário
 
         // Obtém a alternativa selecionada pelo usuário
         const respostaSelecionada = document.querySelector(`input[name="${questaoId}"]:checked`);
         const resultado = document.getElementById(`resultado${questaoId}`); // Obtém o elemento onde será exibido o resultado
 
-        if(respostaSelecionada){
+        if (respostaSelecionada) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 

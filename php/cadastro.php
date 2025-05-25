@@ -15,7 +15,7 @@ var_dump($_POST);
 $cpf = $_POST['cpf']; // CPF do usuário
 $nome = $_POST['nome']; // Nome completo do usuário
 $idade = $_POST['idade']; // Idade do usuário
-$sexo = $_POST['sexo']; // Sexo do usuário
+$sexo = ucfirst(strtolower($_POST['sexo'])); // Sexo do usuário com a primeira letra maiúscula
 $email = $_POST['email']; // E-mail do usuário
 $senha = $_POST['senha']; // Senha do usuário
 

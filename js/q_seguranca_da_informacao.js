@@ -201,45 +201,69 @@ const questoes = [
         }
     ];
 
-// Função para criar as questões dinamicamente e adicioná-las ao HTML
+// Função que cria dinamicamente as questões do quiz na página
 function criarQuestoes() {
-    const container = document.getElementById("quiz-container"); // Obtém o elemento onde as questões serão exibidas
+    const container = document.getElementById("quiz-container"); // Obtém o contêiner onde as questões serão inseridas
 
+    // Percorre o array de questões e cria cada uma delas
     questoes.forEach((questao, index) => {
-        const div = document.createElement("div"); // Cria um novo elemento <div> para cada questão
+        const div = document.createElement("div"); // Cria um elemento <div> para cada questão
         div.innerHTML = `
             <h3>Questão ${index + 1}</h3> <!-- Exibe o número da questão -->
             <form id="${questao.id}"> <!-- Cria um formulário identificável para cada questão -->
                 <p>${questao.pergunta}</p> <!-- Exibe a pergunta da questão -->
 
-                <!-- Gera as alternativas dinamicamente e cria botões de rádio para seleção -->
+                <!-- Gera dinamicamente as alternativas da questão -->
                 ${Object.entries(questao.alternativas)
                     .map(([key, value]) => `<label><input type="radio" name="${questao.id}" value="${key}"> ${key}) ${value}</label><br>`)
                     .join("")
                 }
                 <br>
-                <button type="submit">Resposta</button> <!-- Botão para enviar a resposta -->
+                <button type="submit">Responder</button> <!-- Botão de envio da resposta -->
+                <button type="button" class="limpar-btn" data-questao="${questao.id}">Limpar</button> <!-- Botão de limpar seleção -->
             </form>
-            <p id="resultado${questao.id}"></p> <!-- Elemento onde o resultado será exibido -->
+            <p id="resultado${questao.id}"></p> <!-- Elemento onde será exibido o resultado da resposta -->
         `;
-        
         container.appendChild(div); // Adiciona a questão ao contêiner principal
 
-        // Adiciona evento para validar a resposta quando o usuário submeter o formulário
+        // Adiciona evento para validar resposta quando o usuário submeter o formulário
         validarResposta(questao.id, questao.correta, questao.explicacoes);
     });
+
+    // Adiciona funcionalidade ao botão de limpar seleção
+    document.querySelectorAll(".limpar-btn").forEach(botao => {
+        botao.addEventListener("click", function () {
+            const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.checked = false; // Desmarca todas as opções
+            });
+            document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+        });
+    });
+
+    // Criando e adicionando o botão de finalizar ao final das questões
+    const botaoFinalizar = document.createElement("button");
+    botaoFinalizar.textContent = "Finalizar";
+    botaoFinalizar.style.display = "block";
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+
+    botaoFinalizar.addEventListener("click", function () {
+        alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
+    });
+
+    container.appendChild(botaoFinalizar); // Adiciona o botão ao contêiner do quiz
 }
 
-// Função para validar respostas dos usuários
-function validarResposta(questaoId, respostaCorreta, explicacoes){
-    document.getElementById(questaoId).addEventListener("submit", function(event){
-        event.preventDefault(); // Impede o recarregamento da página ao submeter o formulário
+// Função para validar respostas do usuário
+function validarResposta(questaoId, respostaCorreta, explicacoes) {
+    document.getElementById(questaoId).addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede a recarga da página ao submeter o formulário
 
         // Obtém a alternativa selecionada pelo usuário
         const respostaSelecionada = document.querySelector(`input[name="${questaoId}"]:checked`);
-        const resultado = document.getElementById(`resultado${questaoId}`); // Obtém o elemento onde o resultado será exibido
+        const resultado = document.getElementById(`resultado${questaoId}`); // Obtém o elemento onde será exibido o resultado
 
-        if(respostaSelecionada){
+        if (respostaSelecionada) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
