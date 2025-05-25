@@ -1,8 +1,6 @@
 <?php
 session_start(); // Inicia uma sessão PHP para armazenar informações do usuário
-
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Configura o MySQLi para exibir erros e usar exceções
-
 include_once "conexao.php"; // Inclui o arquivo de conexão com o banco de dados
 
 // Verifica se há erro na conexão e encerra a execução do script caso necessário

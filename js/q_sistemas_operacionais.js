@@ -12,7 +12,7 @@ const questoes = [
             },
             correta: "A",
             explicacoes:{
-                A: "O SO fornece uma interface entre hardware e usuário, além de gerenciar  recursos como memória, CPU e E/S. As demais estão incorretas pelos motivos descritos",
+                A: "O SO fornece uma interface entre hardware e usuário, além de gerenciar  recursos como memória, CPU e E/S. As demais estão incorretas pelos motivos descritos.",
                 B: "Um sistema operacional realmente faz isso, então essa alternativa está incorreta.",
                 C: "Todos os sistemas operacionais modernos possuem essa função básica.",
                 D: "Essa função é independente do número de usuários.",
@@ -53,10 +53,10 @@ const questoes = [
             correta: "B",
             explicacoes:{
                 A: "Pelo contrário, a memória virtual usa o disco como extensão da RAM.",
-                B: "Memória virtual permite que processos maiores que a RAM sejam executados, usando parte do disco como extensão",
+                B: "Memória virtual permite que processos maiores que a RAM sejam executados, usando parte do disco como extensão.",
                 C: "Está presente em vários tipos de SOs, especialmente os de propósito geral.",
                 D: "Cache é memória rápida entre o processador e a RAM. Memória virtual é outra coisa.",
-                E: "Ela complementa, não substitui a RAM"
+                E: "Ela complementa, não substitui a RAM."
             }
         },
 
@@ -73,10 +73,10 @@ const questoes = [
             correta: "A",
             explicacoes:{
                 A: "A paginação divide a memória em blocos fixos chamados páginas. As demais técnicas têm outros propósitos.",
-                B: "Divide a memória com base em lógica do programa, com blocos variáveis",
+                B: "Divide a memória com base em lógica do programa, com blocos variáveis.",
                 C: "Move processos entre memória e disco, não divide a memória em blocos.",
-                D: "Refere-se à execução de múltiplos processos, não à divisão de memória",
-                E: "Relaciona-se com armazenamento temporário de dados, não com divisão da RAM"
+                D: "Refere-se à execução de múltiplos processos, não à divisão de memória.",
+                E: "Relaciona-se com armazenamento temporário de dados, não com divisão da RAM."
             }
         },
 
@@ -94,7 +94,7 @@ const questoes = [
             explicacoes:{
                 A: "Sistema de arquivos padrão do Windows.",
                 B: "Sistema antigo usado em dispositivos removíveis e Windows.",
-                C: " O ext4 é um sistema de arquivos padrão no Linux. As demais são de Windows ou MacOS",
+                C: " O ext4 é um sistema de arquivos padrão no Linux. As demais são de Windows ou MacOS.",
                 D: "Usado por sistemas macOS antigos.",
                 E: "Sistema de arquivos usado por versões modernas do macOS."
             }
@@ -112,11 +112,11 @@ const questoes = [
             },
             correta: "B",
             explicacoes:{
-                A: "Isso seria feito com useradd, usermod, entre outros",
+                A: "Isso seria feito com useradd, usermod, entre outros.",
                 B: "chmod altera permissões de arquivos e diretórios no Linux.",
-                C: "Isso é feito com ps, top, etc",
-                D: "Comandos como top ou htop são usados para isso",
-                E: " Usam-se apt, yum, dnf etc., dependendo da distribuição"
+                C: "Isso é feito com ps, top, etc.",
+                D: "Comandos como top ou htop são usados para isso.",
+                E: " Usam-se apt, yum, dnf etc., dependendo da distribuição."
             }
         },
 
@@ -132,7 +132,7 @@ const questoes = [
             },
             correta: "C",
             explicacoes:{
-                A: "Serve para visualizar e encerrar processos",
+                A: "Serve para visualizar e encerrar processos.",
                 B: "Gerencia conexões de rede.",
                 C: "A Restauração do Sistema permite criar pontos para reverter alterações no Windows.",
                 D: "Serve para particionar e formatar discos.",
@@ -155,7 +155,7 @@ const questoes = [
                 A: "Relacionado ao paralelismo dentro da CPU.",
                 B: "Refere-se à execução simultânea de múltiplas threads.",
                 C: "Refere-se à presença de múltiplos programas na memória, não à alternância de execução.",
-                D: "A multitarefa permite alternar rapidamente entre processos, simulando execução simultânea",
+                D: "A multitarefa permite alternar rapidamente entre processos, simulando execução simultânea.",
                 E: "Técnica de troca de processos entre memória e disco."
             }
         },
@@ -192,10 +192,10 @@ const questoes = [
             },
             correta: "C",
             explicacoes:{
-                A: "Isso é o estado Bloqueado",
-                B: "sso é o estado Executando",
-                C: "O estado Pronto indica que o processo está pronto para ser executado, aguardando o processador",
-                D: "Isso é o estado Finalizado",
+                A: "Isso é o estado Bloqueado.",
+                B: "sso é o estado Executando.",
+                C: "O estado Pronto indica que o processo está pronto para ser executado, aguardando o processador.",
+                D: "Isso é o estado Finalizado.",
                 E: "Não é um estado padrão no ciclo de vida."
             }
         }
@@ -234,18 +234,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -267,9 +267,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }

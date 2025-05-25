@@ -44,11 +44,11 @@ const questoes = [
             id: "questao03", 
             pergunta: "(CESPE/2025) Em uma organização, o plano diretor de tecnologia da informação e comunicação (PDTIC) deve estar alinhado ao:",
             alternativas:{
-                A: "processo de resposta a incidente.",
-                B: "plano estratégico de TI.",
-                C: "ciclo PDCA (plan-do-check-act).",
-                D: "método 5W2H.",
-                E: "modelo de acessibilidade em governo eletrônico."
+                A: "processo de resposta a incidente",
+                B: "plano estratégico de TI",
+                C: "ciclo PDCA (plan-do-check-act)",
+                D: "método 5W2H",
+                E: "modelo de acessibilidade em governo eletrônico"
             },
             correta: "B",
             explicacoes:{
@@ -84,10 +84,10 @@ const questoes = [
             id: "questao05", 
             pergunta: "A governança da informação envolve a gestão e proteção dos dados e das informações dentro de uma organização. Assinale a alternativa que apresenta uma prática recomendada na governança da informação.",
             alternativas:{
-                A: "Armazenar todos os dados sem critérios definidos, garantindo que todas as informações estejam disponíveis para os funcionários em qualquer momento.",
-                B: "Permitir que os dados sejam compartilhados livremente entre departamentos sem quaisquer restrições, para promover uma maior colaboração.",
-                C: "Estabelecer políticas claras de acesso e controle, garantindo que apenas usuários autorizados possam acessar dados sensíveis e críticos para a organização.",
-                D: "Eliminar completamente a análise e o monitoramento de dados em tempo real, já que a análise de dados deve ser feita apenas periodicamente."
+                A: "Armazenar todos os dados sem critérios definidos, garantindo que todas as informações estejam disponíveis para os funcionários em qualquer momento",
+                B: "Permitir que os dados sejam compartilhados livremente entre departamentos sem quaisquer restrições, para promover uma maior colaboração",
+                C: "Estabelecer políticas claras de acesso e controle, garantindo que apenas usuários autorizados possam acessar dados sensíveis e críticos para a organização",
+                D: "Eliminar completamente a análise e o monitoramento de dados em tempo real, já que a análise de dados deve ser feita apenas periodicamente"
                 
             },
             correta: "C",
@@ -104,11 +104,11 @@ const questoes = [
             id: "questao06", 
             pergunta: "Assinale a alternativa que corresponde a um processo do estágio de Desenho de Serviço da ITIL v.3.",
             alternativas:{
-                A: "Gerenciamento do Relacionamento com o Negócio.",
-                B: "Gerenciamento de Mudanças.",
-                C: "Gerenciamento da Liberação e Distribuição.",
-                D: "Gerenciamento do Catálogo de Serviços.",
-                E: "Gerenciamento de Eventos."
+                A: "Gerenciamento do Relacionamento com o Negócio",
+                B: "Gerenciamento de Mudanças",
+                C: "Gerenciamento da Liberação e Distribuição",
+                D: "Gerenciamento do Catálogo de Serviços",
+                E: "Gerenciamento de Eventos"
             },
             correta: "D",
             explicacoes:{
@@ -144,11 +144,11 @@ const questoes = [
             id: "questao08", 
             pergunta: "(FADESP/2025) Considerando o COBIT 2019, é correto afirmar que são processos do domínio Entregar, Servir e Suportar (DSS):",
             alternativas:{
-                A: "Sistema de Controle Interno Gerenciado, Garantia Gerenciada e Monitoração do Desempenho e da Conformidade Gerenciado.",
-                B: "Estratégia Gerenciada, Recursos Humanos Gerenciados e Qualidade Gerenciada.",
+                A: "Sistema de Controle Interno Gerenciado, Garantia Gerenciada e Monitoração do Desempenho e da Conformidade Gerenciado",
+                B: "Estratégia Gerenciada, Recursos Humanos Gerenciados e Qualidade Gerenciada",
                 C: "Definição de Requisitos Gerenciada, Definição de Requisitos Gerenciada e Projetos Gerenciados",
-                D: "Problemas Gerenciados, Serviços de Segurança Gerenciados e Continuidade Gerenciada.",
-                E: "Inovação Gerenciada, Construção de Soluções Gerenciadas e Dados Gerenciados."
+                D: "Problemas Gerenciados, Serviços de Segurança Gerenciados e Continuidade Gerenciada",
+                E: "Inovação Gerenciada, Construção de Soluções Gerenciadas e Dados Gerenciados"
             },
             correta: "D",
             explicacoes:{
@@ -164,11 +164,11 @@ const questoes = [
             id: "questao09", 
             pergunta: "(FCC/2025) Uma Analista de uma Prefeitura Municipal constatou que o órgão necessitava assegurar a continuidade dos serviços durante e após um evento disruptivo e que isso deveria ser assegurado por meio da aplicação de práticas de Gerenciamento de Continuidade do Serviço (Service Continuity Management) do ITIL V4, cuja relação com os SLAs estabelecidos são: ",
             alternativas:{
-                A: "monitorar e revisar o desempenho do serviço em relação aos SLAs acordados, manter um catálogo de serviços atualizado, incluindo as definições de SLAs, e estabelecer SLAs claros, mensuráveis e alinhados às necessidades de negócio.",
-                B: "garantir que os tempos de resposta e resolução definidos nos SLAs sejam cumpridos; e priorizar incidentes com base nos acordos estabelecidos com o cliente, como tempo de resolução critica versus não crítica.",
-                C: "monitorar e garantir que os serviços estejam disponíveis conforme definido nos SLAs, como uma disponibilidade de 99,9% durante horário comercial, e realizar análises para identificar áreas de melhoria relacionadas à disponibilidade.",
-                D: "definir e implementar SLAs em situações de contingência, como tempos de recuperação após falhas e níveis mínimos de serviço; e planejar estratégias para manter os compromissos estabelecidos nos SLAs mesmo em situações adversas.",
-                E: "monitorar os níveis de desempenho estabelecidos nos SLAs, como tempo de resposta máximo para transações ou acessos a sistemas, e prever demandas futuras e ajustar recursos para cumprir os SLAs acordados."
+                A: "monitorar e revisar o desempenho do serviço em relação aos SLAs acordados, manter um catálogo de serviços atualizado, incluindo as definições de SLAs, e estabelecer SLAs claros, mensuráveis e alinhados às necessidades de negócio",
+                B: "garantir que os tempos de resposta e resolução definidos nos SLAs sejam cumpridos; e priorizar incidentes com base nos acordos estabelecidos com o cliente, como tempo de resolução critica versus não crítica",
+                C: "monitorar e garantir que os serviços estejam disponíveis conforme definido nos SLAs, como uma disponibilidade de 99,9% durante horário comercial, e realizar análises para identificar áreas de melhoria relacionadas à disponibilidade",
+                D: "definir e implementar SLAs em situações de contingência, como tempos de recuperação após falhas e níveis mínimos de serviço; e planejar estratégias para manter os compromissos estabelecidos nos SLAs mesmo em situações adversas",
+                E: "monitorar os níveis de desempenho estabelecidos nos SLAs, como tempo de resposta máximo para transações ou acessos a sistemas, e prever demandas futuras e ajustar recursos para cumprir os SLAs acordados"
             },
             correta: "D",
             explicacoes:{
@@ -185,16 +185,16 @@ const questoes = [
             pergunta: "(FADESP/2025) No contexto da governança de TI, é correto afirmar que:",
             alternativas:{
                 A: "o escopo do framework COBIT é menor do que o escopo do framework ITIL",
-                B: "o escopo do framework COBIT abrange toda a organização e o escopo do framework ITIL concentra-se nas atividades operacionais do departamento de TI.",
+                B: "o escopo do framework COBIT abrange toda a organização e o escopo do framework ITIL concentra-se nas atividades operacionais do departamento de TI",
                 C: "o framework ITIL define os objetivos estratégicos e as responsabilidades da alta gerência",
-                D: "não distinguir a governança de gestão é um princípio do framework COBIT.",
-                E: "aplicar um modelo único integrado é um princípio do framework ITIL."
+                D: "não distinguir a governança de gestão é um princípio do framework COBIT",
+                E: "aplicar um modelo único integrado é um princípio do framework ITIL"
             },
             correta: "B",
             explicacoes:{
                 A: "Inverso: o COBIT tem escopo mais amplo, não menor.",
                 B: "O COBIT é um framework de governança e gestão corporativa de TI, com foco estratégico e organizacional. Já o ITIL é voltado à gestão de serviços de TI, com ênfase em operações e entrega de serviços.",
-                C: "Isso é atribuição do COBIT, não do ITIL",
+                C: "Isso é atribuição do COBIT, não do ITIL.",
                 D: "COBIT distingue claramente governança e gestão.",
                 E: "'Modelo único integrado' é um princípio do COBIT, não do ITIL."
             }
@@ -234,18 +234,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -267,9 +267,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }

@@ -94,7 +94,7 @@ const questoes = [
                 B: "Facilita a padronização do layout, mas não oferece recursos específicos para lidar com tabelas complexas.",
                 C: "O recurso de inserir tabelas com fórmulas no Microsoft Word permite a criação e manipulação de dados organizados em colunas e linhas, facilitando cálculos automáticos como soma, média e outras funções básicas. É ideal para o cenário descrito, em que Ricardo precisa lidar com uma tabela complexa dentro do relatório.",
                 D: "Serve para criar diagramas e representações visuais de processos ou hierarquias, não para manipular dados em tabela.",
-                E: "É usado para estilizar texto decorativo, sem nenhuma funcionalidade de manipulação de dados.    "
+                E: "É usado para estilizar texto decorativo, sem nenhuma funcionalidade de manipulação de dados."
             }
         },
 
@@ -113,7 +113,7 @@ const questoes = [
                 A: "O Excel oferece os recursos de gráficos e minigráficos para criar representações visuais dos dados. Esses elementos ajudam Pedro a visualizar rapidamente as tendências, variações e comparações nas despesas mensais, tornando a análise muito mais eficiente e intuitiva.",
                 B: "É usado para aplicar efeitos decorativos ao texto, sem utilidade para análise ou visualização de dados numéricos.",
                 C: "É indicado para representar fluxos, hierarquias e processos, não para resumir dados financeiros.",
-                D: "Refere-se a imagens e ilustrações decorativas, não úteis para análises numéricas",
+                D: "Refere-se a imagens e ilustrações decorativas, não úteis para análises numéricas.",
                 E: "Estão relacionados ao layout do documento, não à criação de resumos visuais de dados."
             }
         },
@@ -228,18 +228,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -261,9 +261,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }

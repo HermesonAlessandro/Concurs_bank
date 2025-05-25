@@ -13,10 +13,10 @@ const questoes = [
             correta: "C",
             explicacoes:{
                 A: "HTTP é protocolo para transferência de páginas web.",
-                B: "FTP é usado para transferência de arquivos",
+                B: "FTP é usado para transferência de arquivos.",
                 C: "DNS (Domain Name System) é o protocolo responsável por traduzir nomes de domínio em endereços IP.",
-                D: "SMTP é usado para envio de e-mails",
-                E: "DHCP é usado para atribuição automática de endereços IP"
+                D: "SMTP é usado para envio de e-mails.",
+                E: "DHCP é usado para atribuição automática de endereços IP."
             }
         },
 
@@ -32,11 +32,11 @@ const questoes = [
             },
             correta: "C",
             explicacoes:{
-                A: "Envio de e-mails é função do SMTP",
-                B: "TCP opera na camada de transporte, não na física",
+                A: "Envio de e-mails é função do SMTP.",
+                B: "TCP opera na camada de transporte, não na física.",
                 C: "O TCP garante que os dados cheguem corretamente e em ordem, com controle de erros e fluxo.",
-                D: "Tradução de endereços IP é função do DNS",
-                E: "Atribuição dinâmica é função do DHCP"
+                D: "Tradução de endereços IP é função do DNS.",
+                E: "Atribuição dinâmica é função do DHCP."
             }
         },
 
@@ -52,9 +52,9 @@ const questoes = [
             },
             correta: "D",
             explicacoes:{
-                A: ": As faixas  b) e c) estão corretas isoladamente",
-                B: ": As faixas a) e c) estão corretas isoladamente",
-                C: ": As faixas a) e  b)  estão corretas isoladamente",
+                A: ": As faixas  b) e c) estão corretas isoladamente.",
+                B: ": As faixas a) e c) estão corretas isoladamente.",
+                C: ": As faixas a) e  b)  estão corretas isoladamente.",
                 D: "Todas as faixas mencionadas são endereços privados conforme RFC 1918, usados em redes internas.",
                 E: "Errada porque as faixas privadas existem e são essas."
             }
@@ -72,11 +72,11 @@ const questoes = [
             },
             correta: "C",
             explicacoes:{
-                A: " Física trata da transmissão de bits físicos.",
-                B: " Enlace trata da comunicação entre dispositivos na mesma rede.",
-                C: " A comutação de pacotes, ou roteamento, ocorre na camada de Rede (Camada 3 do modelo OSI).",
-                D: " Transporte cuida da confiabilidade entre sistemas finais.",
-                E: " Aplicação trata da interface com o usuário final."
+                A: "Física trata da transmissão de bits físicos.",
+                B: "Enlace trata da comunicação entre dispositivos na mesma rede.",
+                C: "A comutação de pacotes, ou roteamento, ocorre na camada de Rede (Camada 3 do modelo OSI).",
+                D: "Transporte cuida da confiabilidade entre sistemas finais.",
+                E: "Aplicação trata da interface com o usuário final."
             }
         },
 
@@ -92,11 +92,11 @@ const questoes = [
             },
             correta: "A",
             explicacoes:{
-                A: "DHCP (Dynamic Host Configuration Protocol) facilita a configuração automática de endereços IP e outras configurações de rede",
-                B: "Controle de fluxo é função do TCP",
-                C: "Resolução de nomes é função do DNS",
-                D: "Garantia de entrega também é função do TCP",
-                E: "Gerenciamento do acesso ao meio é função da camada de enlace"
+                A: "DHCP (Dynamic Host Configuration Protocol) facilita a configuração automática de endereços IP e outras configurações de rede.",
+                B: "Controle de fluxo é função do TCP.",
+                C: "Resolução de nomes é função do DNS.",
+                D: "Garantia de entrega também é função do TCP.",
+                E: "Gerenciamento do acesso ao meio é função da camada de enlace."
             }
         },
 
@@ -112,7 +112,7 @@ const questoes = [
             },
             correta: "B",
             explicacoes:{
-                A: "Hub retransmite o sinal para todas as portas, aumentando colisões",
+                A: "Hub retransmite o sinal para todas as portas, aumentando colisões.",
                 B: "O switch cria domínios de colisão separados para cada porta, segmentando o tráfego e melhorando o desempenho da rede.",
                 C: "Repetidor apenas amplifica o sinal, não segmenta.",
                 D: "Roteador conecta redes diferentes, não é foco para segmentar colisões internas.",
@@ -133,10 +133,10 @@ const questoes = [
             correta: "B",
             explicacoes:{
                 A: "Transferência de arquivos é função do FTP.",
-                B: "ICMP (Internet Control Message Protocol) é usado para enviar mensagens de erro e controle entre dispositivos de rede, como no comando ping",
+                B: "ICMP (Internet Control Message Protocol) é usado para enviar mensagens de erro e controle entre dispositivos de rede, como no comando ping.",
                 C: "Controle de acesso é camada de enlace.",
-                D: "Criptografia é feita por protocolos como SSL/TLS",
-                E: " Atribuição de IP é função do DHCP"
+                D: "Criptografia é feita por protocolos como SSL/TLS.",
+                E: " Atribuição de IP é função do DHCP."
             }
         },
 
@@ -152,11 +152,11 @@ const questoes = [
             },
             correta: "C",
             explicacoes:{
-                A: "255.0.0.0 é máscara classe A",
-                B: "255.255.0.0 é máscara classe B",
-                C: "A máscara padrão da classe C divide os primeiros três octetos para rede e o último para hosts",
-                D: "255.255.255.255 é máscara para endereço único (host)",
-                E: "0.0.0.0 é endereço default, não máscara"
+                A: "255.0.0.0 é máscara classe A.",
+                B: "255.255.0.0 é máscara classe B.",
+                C: "A máscara padrão da classe C divide os primeiros três octetos para rede e o último para hosts.",
+                D: "255.255.255.255 é máscara para endereço único (host).",
+                E: "0.0.0.0 é endereço default, não máscara."
             }
         },
 
@@ -192,11 +192,11 @@ const questoes = [
             },
             correta: "C",
             explicacoes:{
-                A: "Firewall não aumenta velocidade, apenas protege",
-                B: "Conversão de sinais é função do modem",
+                A: "Firewall não aumenta velocidade, apenas protege.",
+                B: "Conversão de sinais é função do modem.",
                 C: "Firewall é um sistema que protege a rede, filtrando o tráfego conforme regras definidas.",
-                D: "Gerenciamento de IP dinâmicos é função do DHCP",
-                E: "Roteamento é função do roteador"
+                D: "Gerenciamento de IP dinâmicos é função do DHCP.",
+                E: "Roteamento é função do roteador."
             }
         }
     ];
@@ -234,18 +234,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -267,9 +267,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }

@@ -24,16 +24,16 @@ const questoes = [
             id: "questao02", 
             pergunta: "(FGV/2025) Elton é um técnico de informática recém-contratado pela Prefeitura, o qual precisa usar serviços de armazenamento e recuperação de qualquer quantidade de dados em nuvem. Assinale a opção que indica os serviços que podem ser usados a qualquer momento e de qualquer lugar na web.",
             alternativas:{
-                A: "s3 e dropbox.",
-                B: "pass e icloud.",
-                C: "saas e github.",
-                D: "b64 e onedrive.",
-                E: "iass e google drive."
+                A: "s3 e dropbox",
+                B: "pass e icloud",
+                C: "saas e github",
+                D: "b64 e onedrive",
+                E: "iass e google drive"
             },
             correta: "A",
             explicacoes:{
                 A: "Tanto o Amazon S3 (Simple Storage Service) quanto o Dropbox são serviços de armazenamento de dados em nuvem que permitem o armazenamento e a recuperação de qualquer quantidade de dados a qualquer momento e de qualquer lugar com acesso à internet O S3 é um serviço altamente escalável e durável geralmente usado para armazenamento de objetos enquanto o Dropbox é popular para sincronização de arquivos e compartilhamento entre usuários.",
-                B: "PaaS (Platform as a Service) é um modelo de serviço de nuvem que fornece uma plataforma para desenvolvimento, execução e gerenciamento de aplicativos. O iCloud é um serviço de armazenamento e sincronização da Apple focado principalmente em seus dispositivos",
+                B: "PaaS (Platform as a Service) é um modelo de serviço de nuvem que fornece uma plataforma para desenvolvimento, execução e gerenciamento de aplicativos. O iCloud é um serviço de armazenamento e sincronização da Apple focado principalmente em seus dispositivos.",
                 C: "SaaS (Software as a Service) é um modelo de serviço de nuvem que fornece aplicativos de software pela internet O GitHub é uma plataforma de hospedagem de código para controle de versão usando Git.",
                 D: "B64 (Base64) é um esquema de codificação para representar dados binários em formato de texto O OneDrive é um serviço de armazenamento em nuvem da Microsoft.",
                 E: "IaaS (Infrastructure as a Service) é um modelo de serviço de nuvem que fornece recursos de computação virtualizados pela internet O Google Drive é um serviço de armazenamento e sincronização de arquivos do Google."
@@ -44,10 +44,10 @@ const questoes = [
             id: "questao03", 
             pergunta: "(IGEDUC/2025) Uma empresa optou por implementar o armazenamento dos seus arquivos estratégicos em serviços de cloud storage (armazenamento em nuvem). Durante uma reunião com a equipe de TI e gestores, foi discutido um dos principais benefícios dessa tecnologia, destacando corretamente que ela possibilita:",
             alternativas:{
-                A: "Acessar, editar e compartilhar documentos simultaneamente entre diversos usuários autorizados, em tempo real e a partir de múltiplos dispositivos conectados à internet.",
-                B: "Gerar automaticamente cópias físicas em papel sempre que documentos forem salvos digitalmente na nuvem.",
-                C: "Garantir proteção integral automática dos arquivos armazenados, eliminando totalmente a necessidade de antivírus ou firewall.",
-                D: "Editar documentos exclusivamente nos computadores cadastrados previamente pela equipe técnica da empresa."
+                A: "Acessar, editar e compartilhar documentos simultaneamente entre diversos usuários autorizados, em tempo real e a partir de múltiplos dispositivos conectados à internet",
+                B: "Gerar automaticamente cópias físicas em papel sempre que documentos forem salvos digitalmente na nuvem",
+                C: "Garantir proteção integral automática dos arquivos armazenados, eliminando totalmente a necessidade de antivírus ou firewall",
+                D: "Editar documentos exclusivamente nos computadores cadastrados previamente pela equipe técnica da empresa"
                 
             },
             correta: "A",
@@ -64,10 +64,10 @@ const questoes = [
             id: "questao04", 
             pergunta: "(IGEDUC/2025) Uma funcionária precisa realizar uma cópia de segurança (backup) dos arquivos importantes da empresa na nuvem (cloud storage). Entre as ferramentas abaixo, qual é indicada especificamente para essa atividade?",
             alternativas:{
-                A: "Google Drive.",
-                B: "Windows Defender.",
-                C: "Mozilla Thunderbird.",
-                D: "Microsoft Edge."
+                A: "Google Drive",
+                B: "Windows Defender",
+                C: "Mozilla Thunderbird",
+                D: "Microsoft Edge"
                 
             },
             correta: "A",
@@ -104,10 +104,10 @@ const questoes = [
             id: "questao06", 
             pergunta: "(IDCAP/2025) Um profissional está utilizando serviços de armazenamento em nuvem para compartilhar documentos e colaborar com sua equipe de forma eficiente. Ele precisa configurar permissões de acesso e escolher o melhor serviço para sincronizar automaticamente os arquivos entre dispositivos. Considerando as funcionalidades do Google Drive e OneDrive, assinale a alternativa correta.",
             alternativas:{
-                A: "O Google Drive oferece armazenamento ilimitado gratuito para qualquer tipo de conta, independentemente do espaço ocupado pelos arquivos.",
-                B: "O Google Drive permite configurar permissões específicas, como visualização, edição ou comentários, para usuários com quem os arquivos foram compartilhados.",
-                C: "O OneDrive não permite sincronizar arquivos automaticamente entre dispositivos, exigindo o upload manual em cada alteração.",
-                D: "O OneDrive exige que os arquivos estejam sempre conectados à internet para serem acessados, mesmo que estejam marcados para uso offline."
+                A: "O Google Drive oferece armazenamento ilimitado gratuito para qualquer tipo de conta, independentemente do espaço ocupado pelos arquivos",
+                B: "O Google Drive permite configurar permissões específicas, como visualização, edição ou comentários, para usuários com quem os arquivos foram compartilhados",
+                C: "O OneDrive não permite sincronizar arquivos automaticamente entre dispositivos, exigindo o upload manual em cada alteração",
+                D: "O OneDrive exige que os arquivos estejam sempre conectados à internet para serem acessados, mesmo que estejam marcados para uso offline"
                 
             },
             correta: "B",
@@ -124,11 +124,11 @@ const questoes = [
             id: "questao07", 
             pergunta: "(AEVSF/2025) Qual das seguintes opções descreve um benefício da compactação de arquivos no contexto do armazenamento em nuvem?",
             alternativas:{
-                A: "A compactação de arquivos permite acessar os arquivos de qualquer dispositivo.",
-                B: "A compactação de arquivos facilita o acesso aos arquivos ocultos.",
-                C: "A compactação de arquivos reduz o tempo de upload e download de arquivos na nuvem.",
-                D: "A compactação de arquivos protege os arquivos contra perda de dados na nuvem.",
-                E: "A compactação de arquivos permite editar os arquivos diretamente na nuvem."
+                A: "A compactação de arquivos permite acessar os arquivos de qualquer dispositivo",
+                B: "A compactação de arquivos facilita o acesso aos arquivos ocultos",
+                C: "A compactação de arquivos reduz o tempo de upload e download de arquivos na nuvem",
+                D: "A compactação de arquivos protege os arquivos contra perda de dados na nuvem",
+                E: "A compactação de arquivos permite editar os arquivos diretamente na nuvem"
             },
             correta: "C",
             explicacoes:{
@@ -144,11 +144,11 @@ const questoes = [
             id: "questao08", 
             pergunta: "(FUNDATEC/2025)Fazer backup é importante para evitar a perda de arquivos do computador. Há diversas formas de realizar backup de arquivos de um computador, sendo uma delas por meio dos serviços de armazenamento em nuvem. Assinale a alternativa que apresenta apenas serviços de armazenamento em nuvem.",
             alternativas:{
-                A: "Amazon iBox, Google OneDrive e Microsoft BoxDrive.",
-                B: "Amazon OneDrive, Apple iDrive e Google BoxDrive.",
-                C: "Amazon BoxDrive, Apple OneDrive e Google iDrive.",
-                D: "Apple Drive, Google CloudDrive e Microsoft Drive.",
-                E: "Apple iCloud, Google Drive e Microsoft OneDrive."
+                A: "Amazon iBox, Google OneDrive e Microsoft BoxDrive",
+                B: "Amazon OneDrive, Apple iDrive e Google BoxDrive",
+                C: "Amazon BoxDrive, Apple OneDrive e Google iDrive",
+                D: "Apple Drive, Google CloudDrive e Microsoft Drive",
+                E: "Apple iCloud, Google Drive e Microsoft OneDrive"
             },
             correta: "E",
             explicacoes:{
@@ -184,11 +184,11 @@ const questoes = [
             id: "questao10", 
             pergunta: "(FCC/2023) Um Técnico criou um arquivo no Google Drive chamado tribunal.txt. Em seguida, clicou na opção para compartilhar o arquivo e uma janela de configurações de compartilhamento foi aberta. Nessa janela, ao clicar no simbolo da engrenagem é possível:",
             alternativas:{
-                A: "gerar e copiar link para compartilhamento.",
-                B: "definir se os editores podem alterar permissões e compartilhar.",
-                C: "Adicionar as permissões de leitura, escrita e gravação.",
-                D: "transferir a propriedade do arquivo..",
-                E: "remover acesso ao arquivo de usuários de fora do Tribunal."
+                A: "gerar e copiar link para compartilhamento",
+                B: "definir se os editores podem alterar permissões e compartilhar",
+                C: "Adicionar as permissões de leitura, escrita e gravação",
+                D: "transferir a propriedade do arquivo",
+                E: "remover acesso ao arquivo de usuários de fora do Tribunal"
             },
             correta: "B",
             explicacoes:{
@@ -234,18 +234,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -267,9 +267,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }

@@ -173,7 +173,7 @@ const questoes = [
                 A: "A blockchain não tem tamanho fixo, ela cresce continuamente conforme novos blocos são adicionados. Além disso, cada bloco contém o hash do bloco anterior, e não do próximo.",
                 B: "A blockchain é uma base de dados descentralizada, exatamente para eliminar a necessidade de um único ponto de controle.",
                 C: "Se uma entidade controlar mais de 50% da rede, ela pode sim reverter transações recentes e realizar gastos duplos, contrariando o que a alternativa afirma.",
-                D: "A blockchain foi criada originalmente para permitir o funcionamento do Bitcoin sem a necessidade de um terceiro confiável (como bancos ou servidores centrais). A tecnologia resolve o chamado problema do gasto duplo, que consiste na possibilidade de um ativo digital ser copiado e gasto mais de uma vez. Com a blockchain, cada transação é registrada de forma imutável, distribuída e transparente, impedindo que a mesma moeda seja usada mais de uma vez. Assim, ela garante escassez digital, o que é essencial para qualquer moeda ou ativo digital",
+                D: "A blockchain foi criada originalmente para permitir o funcionamento do Bitcoin sem a necessidade de um terceiro confiável (como bancos ou servidores centrais). A tecnologia resolve o chamado problema do gasto duplo, que consiste na possibilidade de um ativo digital ser copiado e gasto mais de uma vez. Com a blockchain, cada transação é registrada de forma imutável, distribuída e transparente, impedindo que a mesma moeda seja usada mais de uma vez. Assim, ela garante escassez digital, o que é essencial para qualquer moeda ou ativo digital.",
                 E: "Isso é incorreto. A blockchain já tem diversas aplicações fora do setor financeiro, como na logística, saúde, propriedade intelectual, cadeias de suprimento, entre outras."
             }
         },
@@ -230,18 +230,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -263,9 +263,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }

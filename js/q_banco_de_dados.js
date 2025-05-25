@@ -32,8 +32,8 @@ const questoes = [
             },
             correta: "C",
             explicacoes:{
-                A: "'A chave primária não pode ter valores duplicados.",
-                B: "'Índices melhoram performance, mas não são a chave primária em si.",
+                A: "A chave primária não pode ter valores duplicados.",
+                B: "Índices melhoram performance, mas não são a chave primária em si.",
                 C: "A chave primária identifica unicamente cada registro e não pode ter valores nulos.",
                 D: "Aceitar valores nulos não é permitido em chave primária.",
                 E: "Chave primária é uma coluna, não um conjunto de tabelas."
@@ -92,7 +92,7 @@ const questoes = [
             },
             correta: "A",
             explicacoes:{
-                A: "'ALTER TABLE' é usado para modificar a estrutura da tabela, como adicionar ou remover colunas.",
+                A: "ALTER TABLE é usado para modificar a estrutura da tabela, como adicionar ou remover colunas.",
                 B: "UPDATE altera dados dentro da tabela, não sua estrutura.",
                 C: "Não existe comando 'MODIFY TABLE'.",
                 D: "Não existe comando 'CHANGE TABLE'.",
@@ -112,11 +112,11 @@ const questoes = [
             },
             correta: "A",
             explicacoes:{
-                A: "'CREATE TABLE' cria uma nova tabela no banco de dados.",
+                A: "CREATE TABLE cria uma nova tabela no banco de dados.",
                 B: "INSERT insere dados, não cria tabela.",
                 C: "UPDATE altera dados, não cria tabela.",
                 D: "DELETE remove registros, não cria tabela.",
-                E: "'DROP TABLE' exclui uma tabela, não cria."
+                E: "DROP TABLE exclui uma tabela, não cria."
             }
         },
 
@@ -234,18 +234,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -267,9 +267,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }

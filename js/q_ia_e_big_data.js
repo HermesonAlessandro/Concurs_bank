@@ -154,8 +154,8 @@ const questoes = [
             explicacoes:{
                 A: "O “volume” refere-se à diversidade de fontes de dados utilizadas no Big Data. Incorreta. O 'volume' refere-se à enorme quantidade de dados gerados e processados no Big Data. A diversidade de fontes de dados está relacionada à 'variedade'.",
                 B: "A “veracidade” refere-se à necessidade de adaptar sistemas para processar dados provenientes de fontes variadas. Incorreta. A 'veracidade' se refere à confiabilidade e qualidade dos dados, incluindo a necessidade de lidar com inconsistências e incertezas. A adaptação de sistemas para diferentes fontes está ligada à 'variedade'.",
-                C: "A 'variedade' está associada à dificuldade em lidar com o grande volume de dados gerados em um curto período. Incorreta. A 'variedade' se refere aos diferentes tipos de dados (estruturados, não estruturados, semiestruturados) e suas diversas fontes. A velocidade com que os dados são gerados está associada à 'velocidade'",
-                D: "Os 5Vs de Big Data são: volume, variedade, validade, valor e verificação. Incorreta. Os 5Vs mais comumente aceitos são: Volume, Velocidade, Variedade, Veracidade e Valor. 'Validade' e 'verificação' podem ser aspectos importantes, mas não são os 5Vs fundamentais",
+                C: "A 'variedade' está associada à dificuldade em lidar com o grande volume de dados gerados em um curto período. Incorreta. A 'variedade' se refere aos diferentes tipos de dados (estruturados, não estruturados, semiestruturados) e suas diversas fontes. A velocidade com que os dados são gerados está associada à 'velocidade.'",
+                D: "Os 5Vs de Big Data são: volume, variedade, validade, valor e verificação. Incorreta. Os 5Vs mais comumente aceitos são: Volume, Velocidade, Variedade, Veracidade e Valor. 'Validade' e 'verificação' podem ser aspectos importantes, mas não são os 5Vs fundamentais.",
                 E: "O 'valor' (Value) é um dos 5Vs do Big Data e se refere à capacidade de transformar o grande volume e variedade de dados em insights acionáveis e benefícios tangíveis para a organização, como melhor tomada de decisão, otimização de processos ou identificação de novas oportunidades."
             }
         },
@@ -192,8 +192,7 @@ const questoes = [
                 A: "As SVMs geralmente se beneficiam do pré-processamento de dados como escalonamento de features para um melhor desempenho e convergência Portanto essa afirmação é incorreta.",
                 B: "O objetivo principal do SVM é maximizar a margem entre as classes o que contribui para uma melhor generalização A minimização da margem levaria a um classificador menos robusto.",
                 C: "Embora as SVMs possam criar fronteiras de decisão complexas o objetivo é encontrar um equilíbrio entre a complexidade do modelo e a capacidade de generalização Um aumento excessivo na especialização pode levar ao overfitting.",
-                D: "As funções kernel utilizadas em SVM permitem que o algoritmo trabalhe em um espaço de características de maior dimensão onde os dados que não são linearmente separáveis em sua dimensão original podem se tornar linearmente separáveis essa é uma das principais vantagens das SVMs",
-                E: ""
+                D: "As funções kernel utilizadas em SVM permitem que o algoritmo trabalhe em um espaço de características de maior dimensão onde os dados que não são linearmente separáveis em sua dimensão original podem se tornar linearmente separáveis essa é uma das principais vantagens das SVMs."
             }
         }
     ];
@@ -231,18 +230,18 @@ function criarQuestoes() {
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
             const questaoId = this.getAttribute("data-questao"); // Obtém o id da questão
-            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
-                input.checked = false; // Desmarca todas as opções
-            });
             document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o texto do resultado
+
+            // Desabilita o botão "Responder" após a seleção para impedir novas tentativas
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         });
     });
 
     // Criando e adicionando o botão de finalizar ao final das questões
-    const botaoFinalizar = document.createElement("button");
-    botaoFinalizar.textContent = "Finalizar";
-    botaoFinalizar.style.display = "block";
-    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão
+    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalizar
+    botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
+    botaoFinalizar.style.display = "block"; // Ajusta a exibição do botão para ser visível como um bloco
+    botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na tela
 
     botaoFinalizar.addEventListener("click", function () {
         alert("Questões finalizadas!"); // Exibe um alerta ao finalizar
@@ -264,9 +263,23 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             const valor = respostaSelecionada.value; // Obtém o valor da alternativa selecionada
             const correto = valor == respostaCorreta; // Compara com a resposta correta
 
-            // Exibe a mensagem correspondente à resposta do usuário
-            resultado.innerHTML = (correto ? "<strong>Resposta correta!</strong><br>" : "<strong>Resposta errada.</strong><br>") +
-                explicacoes[valor]; // Mostra a explicação para cada resposta
+            // Exibe mensagem de acerto ou erro
+            resultado.innerHTML = correto 
+                ? "<strong>Resposta correta!</strong><br>" 
+                : "<strong>Resposta errada.</strong><br>";
+
+            // Exibe todas as alternativas e destaca a correta
+            Object.entries(explicacoes).forEach(([key, value]) => {
+                resultado.innerHTML += `${key}) ${value} ${key == respostaCorreta ? "(Correta)" : ""} <br>`;
+            });
+
+            // Bloqueia a mudança da resposta desabilitando os inputs
+            document.querySelectorAll(`input[name="${questaoId}"]`).forEach(input => {
+                input.disabled = true;
+            });
+
+            // Desabilita o botão de responder para impedir múltiplas submissões
+            document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             resultado.textContent = "Por favor, selecione uma alternativa."; // Exibe um aviso se nenhuma alternativa for escolhida
         }
