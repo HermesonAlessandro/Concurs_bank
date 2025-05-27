@@ -1,7 +1,7 @@
 // Array contendo as questões do quiz
 const questoes = [
         {
-            id: "questao1", 
+            id: "questao01", 
             pergunta: "(CESPE - 2020) Qual dos protocolos abaixo é utilizado para a resolução de nomes de domínios para endereços IP na Internet?",
             alternativas:{
                 A: "HTTP",
@@ -21,7 +21,7 @@ const questoes = [
         },
 
         {
-            id: "questao2", 
+            id: "questao02", 
             pergunta: "(FCC - 2019) Qual é a função do protocolo TCP na comunicação em redes?",
             alternativas:{
                 A: "Envio de e-mails",
@@ -41,7 +41,7 @@ const questoes = [
         },
 
         {
-            id: "questao3", 
+            id: "questao03", 
             pergunta: "(CESPE - 2018) Assinale a alternativa que indica corretamente a faixa de endereços IPv4 reservada para redes privadas, conforme as normas da IETF",
             alternativas:{
                 A: "10.0.0.0 a 10.255.255.255",
@@ -61,7 +61,7 @@ const questoes = [
         },
 
         {
-            id: "questao4", 
+            id: "questao04", 
             pergunta: "(FGV - 2021) No modelo OSI, em qual camada ocorre a comutação de pacotes?",
             alternativas:{
                 A: "Física",
@@ -81,7 +81,7 @@ const questoes = [
         },
 
         {
-            id: "questao5", 
+            id: "questao05", 
             pergunta: "Qual a função do protocolo DHCP em uma rede TCP/IP?",
             alternativas:{
                 A: " Atribuir automaticamente endereços IP aos dispositivos da rede",
@@ -101,7 +101,7 @@ const questoes = [
         },
 
         {
-            id: "questao6", 
+            id: "questao06", 
             pergunta: "(FCC - 2017) Em uma rede local, qual dispositivo é responsável por segmentar o tráfego, enviando dados apenas para a máquina de destino, reduzindo colisões e aumentando a eficiência da rede?",
             alternativas:{
                 A: "Hub",
@@ -121,7 +121,7 @@ const questoes = [
         },
 
         {
-            id: "questao7", 
+            id: "questao07", 
             pergunta: "(CESPE - 2020) Em redes TCP/IP, o protocolo ICMP é utilizado para:",
             alternativas:{
                 A: "Transferência de arquivos.",
@@ -141,7 +141,7 @@ const questoes = [
         },
 
         {
-            id: "questao8", 
+            id: "questao08", 
             pergunta: "FGV - 2018) Qual a máscara de sub-rede padrão para um endereço IP Classe C?",
             alternativas:{
                 A: "255.0.0.0",
@@ -161,7 +161,7 @@ const questoes = [
         },
 
         {
-            id: "questao9", 
+            id: "questao09", 
             pergunta: "CESPE - 2017) No modelo TCP/IP, qual das camadas abaixo é equivalente à camada de enlace do modelo OSI?",
             alternativas:{
                 A: " Rede",
@@ -203,11 +203,21 @@ const questoes = [
 
 // Função responsável por criar dinamicamente as questões do quiz na página
 function criarQuestoes() {
-    const container = document.getElementById("quiz-container"); // Obtém o elemento onde as questões serão adicionadas
+    // Obtém o elemento onde as questões serão adicionadas dinamicamente
+    const container = document.getElementById("quiz-container");
+
+    // Recupera o tema do quiz a partir de um atributo ou variável global, garantindo que um tema padrão seja usado caso nenhum seja definido
+    const temaAtual = document.getElementById("quiz-container").getAttribute("data-tema") || "Redes de computadores"; 
+
+    // Exibe no console o tema carregado para fins de depuração
+    console.log("Tema carregado:", temaAtual);
 
     // Percorre o array de questões e cria os elementos HTML para cada uma delas
     questoes.forEach((questao, index) => {
-        const div = document.createElement("div"); // Cria um elemento <div> para estruturar a questão
+        // Cria um elemento <div> para estruturar a questão
+        const div = document.createElement("div"); 
+
+        // Define o conteúdo interno do <div> com a estrutura da questão
         div.innerHTML = `
             <h3>Questão ${index + 1}</h3> <!-- Exibe o número da questão -->
             <form id="${questao.id}"> <!-- Cria um formulário identificável para cada questão -->
@@ -224,7 +234,9 @@ function criarQuestoes() {
             </form>
             <p id="resultado${questao.id}"></p> <!-- Local onde será exibido o resultado da resposta -->
         `;
-        container.appendChild(div); // Adiciona a questão ao contêiner principal
+
+        // Adiciona o elemento criado ao contêiner principal
+        container.appendChild(div); 
 
         // Adiciona evento de validação da resposta ao submeter o formulário
         validarResposta(questao.id, questao.correta, questao.explicacoes);
@@ -233,31 +245,38 @@ function criarQuestoes() {
     // Adiciona funcionalidade ao botão de limpar seleção
     document.querySelectorAll(".limpar-btn").forEach(botao => {
         botao.addEventListener("click", function () {
-            const questaoId = this.getAttribute("data-questao"); // Obtém o identificador da questão
-            document.getElementById(`resultado${questaoId}`).textContent = ""; // Limpa o resultado da resposta
+            // Obtém o identificador da questão correspondente ao botão pressionado
+            const questaoId = this.getAttribute("data-questao");
+
+            // Limpa o resultado da resposta exibido na página
+            document.getElementById(`resultado${questaoId}`).textContent = ""; 
         });
     });
 
     // Criação do botão para finalizar o quiz
-    const botaoFinalizar = document.createElement("button"); // Cria um botão de finalização
+    const botaoFinalizar = document.createElement("button"); 
     botaoFinalizar.textContent = "Finalizar"; // Define o texto do botão
     botaoFinalizar.style.display = "block"; // Exibe o botão como bloco
     botaoFinalizar.style.margin = "20px auto"; // Centraliza o botão na página
 
     // Evento de clique para coletar respostas e enviar ao PHP
     botaoFinalizar.addEventListener("click", function () {
-        let respostas = {}; // Armazena as respostas selecionadas pelo usuário
+        let respostas = {}; // Inicializa um objeto para armazenar as respostas selecionadas pelo usuário
 
         // Percorre todas as questões e registra as respostas do usuário
         questoes.forEach(questao => {
+            // Obtém a alternativa escolhida pelo usuário para cada questão
             const respostaSelecionada = document.querySelector(`input[name="${questao.id}"]:checked`);
-            respostas[questao.id] = respostaSelecionada ? respostaSelecionada.value : null; // Selecione a alternativa escolhida ou defina como null
+            respostas[questao.id] = respostaSelecionada ? respostaSelecionada.value : null; // Registra a alternativa escolhida ou define como null caso não tenha sido selecionada
         });
+
+        // Exibe no console as respostas coletadas antes de serem enviadas ao servidor (debugging)
+        console.log("Respostas coletadas:", respostas);
 
         // Criação de um formulário invisível para envio das respostas ao PHP
         const form = document.createElement("form");
-        form.method = "POST";
-        form.action = "../php/resultado.php";
+        form.method = "POST"; // Define o método de envio como POST
+        form.action = "../php/resultado.php"; // Define o script PHP que processará os resultados
 
         // Adiciona cada resposta como um campo oculto dentro do formulário
         Object.entries(respostas).forEach(([key, value]) => {
@@ -268,15 +287,28 @@ function criarQuestoes() {
             form.appendChild(input);
         });
 
-        document.body.appendChild(form); // Adiciona o formulário ao corpo da página
-        form.submit(); // Envia o formulário para o servidor
+        // Adiciona o tema ao envio para garantir que o PHP o receba corretamente
+        const inputTema = document.createElement("input");
+        inputTema.type = "hidden";
+        inputTema.name = "tema";
+        inputTema.value = temaAtual;
+        form.appendChild(inputTema);
+
+        // Exibe no console o tema enviado para depuração
+        console.log("Tema enviado:", temaAtual);
+
+        // Adiciona o formulário ao corpo da página e submete os dados ao servidor
+        document.body.appendChild(form);
+        form.submit();
     });
 
-    container.appendChild(botaoFinalizar); // Adiciona o botão de finalização ao contêiner principal
+    // Adiciona o botão de finalização ao contêiner principal
+    container.appendChild(botaoFinalizar);
 }
 
 // Função para validar a resposta do usuário ao submeter o formulário
 function validarResposta(questaoId, respostaCorreta, explicacoes) {
+    // Adiciona um evento de submissão ao formulário da questão
     document.getElementById(questaoId).addEventListener("submit", function (event) {
         event.preventDefault(); // Impede a recarga da página ao enviar o formulário
 
@@ -306,7 +338,8 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             // Desativa o botão de envio para evitar múltiplas submissões
             document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
-            resultado.textContent = "Por favor, selecione uma alternativa."; // Mensagem de aviso se nenhuma opção for selecionada
+            // Exibe mensagem de aviso caso nenhuma alternativa tenha sido selecionada
+            resultado.textContent = "Por favor, selecione uma alternativa."; 
         }
     });
 }
