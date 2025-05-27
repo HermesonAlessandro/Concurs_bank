@@ -3,8 +3,9 @@
     background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
     text-align: center; /* Centraliza o texto dentro do contêiner */
     width: 81.7%;
-    padding:29px; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
+    padding:1rem auto; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
     margin: auto; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
+    min-height: 100vh;
 }
 
 /* Estilização do rodapé de direitos autorais */
@@ -53,9 +54,4 @@
         padding: 15px; /* Reduz o padding */
         font-size: 16px; /* Reduz o tamanho da fonte */
     }
-}
-
-/* =================== Media query duplicada e vazia - pode remover =================== */
-@media (min-width: 308px) {
-    /* estilos */
 }
