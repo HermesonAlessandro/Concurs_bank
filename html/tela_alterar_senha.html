@@ -8,72 +8,58 @@
     <!-- Configuração para que a página seja responsiva, adaptando-se a diferentes tamanhos de tela. -->
     <title>Alterar senha</title>
     <link rel="stylesheet" href ="../css/tela_alterar_senha.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">  
+
     <!-- Define o título da aba do navegador. -->
 </head>
 <body class="corpo_site">
     
-    <header class="fundo_menu">
-        <!-- Cabeçalho da página contendo elementos de navegação e identidade visual. -->
+    <header class="header-bg fixed-top shadow gap-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
 
-        <a href="../html/tela_inicial.html">
-            <img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80" height="50">
+        <!-- Logo do site que direciona para a tela inicial -->
+        <a href="tela_inicial.html">
+            <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 120px;">
         </a>
-        <!-- Exibe o logo do site, com um link para a página inicial. -->
 
-        <!-- Botões de navegação para diferentes seções do site. -->
-        <nav class="buttons_menu">
-            <a href="tela_inicial.html"><button id="button_home">Home</button></a>
-            <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a>
-            <a href="tela_contato.html"><button id="button_contatos">Contato</button></a>
-        </nav>
+        <!-- Menu de navegação com botões -->
+        <div class="d-flex flex-wrap gap-2">
+            <a href="tela_inicial.html" class="btn btn-primary">Home</a>
+            <a href="tela_sobre_nos.html" class="btn btn-primary">Sobre nós</a>
+            <a href="tela_contato.html" class="btn btn-primary">Contatos</a>
+        </div>
 
+        <!-- Botão para cadastro -->
+        <div class="d-flex flex-wrap gap-2">
+            <a href="tela_login.html" class="btn btn-dark text-primary">Login</a>
+            <a href="tela_cadastro.html" class="btn btn-light text-primary">Cadastrar-se</a>
+        </div>
+    </div>
+</header>
+
+    <div class="container">
+    <div class="form-container">
+        <h2 class="text-center text-primary mb-4 flex-wrap">Alterar Senha</h2>
         
-        <!-- Linha horizontal para separar visualmente o cabeçalho do conteúdo principal. -->
-    </header>
-
-    <main>
-        <!-- Seção principal da página contendo o formulário para alteração de senha. -->
-        <h1 id ="titulo">Alterar senha</h1>
-        <div id="fundo_login"></div>
-         
-        <form id="validacao_alterar_senha" method="post" action="../php/alterar_senha.php">
-            <!-- Formulário de alteração de senha. O método POST envia os dados de forma segura ao servidor. -->
-           
-            <div>
-                <!-- Agrupamento dos campos do formulário dentro de uma caixa com borda. -->
-
-                
-                <!-- Título para o grupo de campos dentro do fieldset. -->
-
-                <!-- Campo para inserção do email. -->
-                <label id="texto_email" for="email">Email:</label>
-                <input  type="text" id="email" name="email">
-                
-                <br>
-
-                <!-- Campo para inserção da nova senha. -->
-                <label id="texto_senha" for="novasenha">Nova senha:</label>
-                <input type="password" id="novasenha" name="novasenha">
-                
-                <br>
-
-                <!-- Campo para confirmação da nova senha. -->
-                <label id="texto_confirmar_senha" for="confirmarsenha">Confirmar Senha:</label>
-                <input type="password" id="confirmarsenha" name="confirmarsenha">
-                
-                <br><br>
-
-                <!-- Botão para submeter o formulário e processar a alteração da senha. -->
-                <button id="button_alterar" type="submit">Alterar</button>
-                
+        <!-- Formulário de login que envia dados via método POST -->
+        <form id="validacao_login" method="post" action="../php/login.php">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label> <!-- Campo para inserção do email -->
+                <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu email">
             </div>
+            <div class="mb-3">
+                <label for="nova-senha" class="form-label">Nova senha</label> <!-- Campo para inserção da senha -->
+                <input type="password" name="nova-senha" id="nova-senha" class="form-control" placeholder="Digite a sua nova senha">
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Confirmar senha</label> <!-- Campo para inserção da senha -->
+                <input type="password" name="senha" id="senha" class="form-control" placeholder="Confirme sua senha">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Alterar</button> <!-- Botão de submissão do formulário -->
         </form>
-    </main>
+    </div>
+</div>
 
-    <footer>
-        <!-- Rodapé da página contendo direitos autorais. -->
-
-    </footer>
 
     <!-- Importação do arquivo JavaScript para validação do formulário. O atributo "defer" garante que ele será carregado após o HTML. -->
     <script src="../js/validacao_alterar_senha.js" defer></script>
