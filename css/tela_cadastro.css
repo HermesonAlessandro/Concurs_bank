@@ -65,3 +65,25 @@ body {
         color: white; /* Mantém a cor do texto */
     }
 }
+
+#navbar{
+    transition: 0.3s;
+}
+
+main {
+    padding-top: 160px;
+}
+
+/* cor dos botoes do header */
+.header-bg .btn-primary {
+    background-color: #003366;
+    border-color: #003366;
+    color: #fff;
+}
+
+/* Alterando a cor dos botões do header ao passar o mouse */
+.header-bg .btn-primary:hover {
+    background-color: #005599;
+    border-color: #005599;
+    color: #fff;
+}
