@@ -5,7 +5,10 @@
     width: 90%; /* Largura padrão de 90% */
     padding: 91.5px 20px; /* Espaço interno: 66px em cima/baixo, 20px nos lados */
     margin: 0 auto; /* Centraliza horizontalmente */
+    min-height: 100vh;
+    padding-top: 170px; /* Adiciona espaço para o header fixo */
 }
+
 
 /* ======== Título da página ======== */
 #titulo {
@@ -22,6 +25,8 @@
     border-radius: 12px; /* Cantos arredondados */
     margin: 40px auto; /* Espaço vertical e centralização horizontal */
     padding: 20px; /* Espaço interno */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }
 
 /* ======== Texto principal ======== */
@@ -30,6 +35,7 @@
     color: aliceblue; /* Cor clara agradável */
     margin: 0 auto; /* Centraliza horizontalmente */
     max-width: 90%; /* Limita a largura */
+    text-align: center; /* Centraliza o texto */
 }
 
 /* ======== Logo principal ======== */
@@ -199,4 +205,19 @@
    bottom: 520px; /* Move o elemento 520 pixels para cima */
    z-index: 2; /* Define a ordem de empilhamento do elemento */
 }
+}
+
+.header-bg .btn-primary {
+    background-color: #003366;
+    border-color: #003366;
+}
+
+/* Alterando a cor dos botões do header ao passar o mouse */
+.header-bg .btn-primary:hover {
+    background-color: #005599;
+    border-color: #005599;
+}
+
+#navbar{
+    transition: 0.3s;
 }
