@@ -273,6 +273,12 @@ function criarQuestoes() {
         // Exibe no console as respostas coletadas antes de serem enviadas ao servidor (debugging)
         console.log("Respostas coletadas:", respostas);
 
+        // Verifica se todas as questões foram respondidas antes de prosseguir
+        if(Object.values(respostas).includes(null)){
+            alert("Por favor, responda todas as questões antes de finalizar.");
+            return;
+        }
+
         // Criação de um formulário invisível para envio das respostas ao PHP
         const form = document.createElement("form");
         form.method = "POST"; // Define o método de envio como POST

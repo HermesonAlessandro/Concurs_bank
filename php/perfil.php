@@ -29,7 +29,8 @@ if($resultado->num_rows > 0){
 $sexo = ucfirst(trim(strtolower($usuario['sexo'])));
 
 // Define a imagem do perfil com base no sexo do usuário
-$imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg" : "../img/silhueta_feminina.jpg";
+$imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg":
+                 (($sexo == "Feminino") ? "../img/silhueta_feminina.jpg": "../img/silhueta_outro.jpg")
 ?>
 
 <!-- Estrutura do HTML -->

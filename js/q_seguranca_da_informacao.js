@@ -207,7 +207,7 @@ function criarQuestoes() {
     const container = document.getElementById("quiz-container");
 
     // Recupera o tema do quiz a partir de um atributo ou variável global, garantindo que um tema padrão seja usado caso nenhum seja definido
-    const temaAtual = document.getElementById("quiz-container").getAttribute("data-tema") || "Segurança da informação"; 
+    const temaAtual = document.getElementById("quiz-container").getAttribute("data-tema") || "Banco de dados"; 
 
     // Exibe no console o tema carregado para fins de depuração
     console.log("Tema carregado:", temaAtual);
@@ -272,6 +272,12 @@ function criarQuestoes() {
 
         // Exibe no console as respostas coletadas antes de serem enviadas ao servidor (debugging)
         console.log("Respostas coletadas:", respostas);
+
+        // Verifica se todas as questões foram respondidas antes de prosseguir
+        if(Object.values(respostas).includes(null)){
+            alert("Por favor, responda todas as questões antes de finalizar.");
+            return;
+        }
 
         // Criação de um formulário invisível para envio das respostas ao PHP
         const form = document.createElement("form");

@@ -26,9 +26,6 @@ if(strlen($senha) < 8 || !preg_match('/[A-Z]/', $senha) || !preg_match('/[a-z]/'
     exit(); // Encerra a execução do script
 }
 
-// Criptografa a senha antes de armazená-la no banco de dados
-$senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-
 // Primeiro, verifica se o CPF já está cadastrado no banco de dados
 $sql_verifica = "SELECT cpf FROM estudante WHERE cpf = ?";
 $stmt_verifica = $mysqli->prepare($sql_verifica); // Prepara a consulta para evitar SQL Injection
@@ -44,6 +41,37 @@ if($resultado_verifica->num_rows > 0){
           </script>";
     exit(); // Encerra o script
 }
+
+// Verifica se o e-mail já está cadastrado
+$sql_verifica_email = "SELECT email FROM estudante WHERE email = ?";
+$stmt_verifica_email = $mysqli->prepare($sql_verifica_email);
+$stmt_verifica_email->bind_param("s", $email);
+$stmt_verifica_email->execute();
+$resultado_verifica_email = $stmt_verifica_email->get_result();
+
+if($resultado_verifica_email->num_rows > 0){
+    echo "<script>
+            alert('E-mail já cadastrado! Por favor, use um e-mail diferente.');
+            window.history.back();
+          </script>";
+    exit();
+}
+
+// Verifica se a senha já foi usada anteriormente
+$sql_verifica_senha = "SELECT senha FROM estudante";
+$stmt_verifica_senha = $mysqli->prepare($sql_verifica_senha);
+$stmt_verifica_senha->execute();
+$resultado_verifica_senha = $stmt_verifica_senha->get_result();
+
+while($linha = $resultado_verifica_senha->fetch_assoc()){
+    if(password_verify($senha, $linha['senha'])){
+        echo "<script>alert('Esta senha já foi utilizada! Escolha uma senha diferente.'); window.history.back();</script>";
+        exit();
+    }
+}
+
+// Criptografa a senha antes de armazená-la no banco de dados
+$senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
 // Cria a instrução SQL para inserir um novo estudante na tabela 'estudante'
 $sql = "INSERT INTO estudante (cpf, nome_completo, idade, sexo, email, senha) VALUES (?, ?, ?, ?, ?, ?)";
