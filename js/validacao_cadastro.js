@@ -28,8 +28,8 @@ document.querySelector('#validacao_cadastro').addEventListener('submit', functio
         return; // Interrompe o processamento do formulário
     }
     
-    // Validação da idade: deve ser um número inteiro maior que 1
-    if (!/^\d+$/.test(idade) || parseInt(idade) < 1) { // Confere se é um número inteiro e maior que 1
+    // Validação da idade: deve ser um número inteiro maior ou igual a 18
+    if (!/^\d+$/.test(idade) || parseInt(idade) < 18) { // Confere se é um número inteiro e maior ou igual a 18
         alert('Idade deve ser um número maior que 1');
         return; // Interrompe o processamento do formulário
     }

@@ -57,19 +57,6 @@ if($resultado_verifica_email->num_rows > 0){
     exit();
 }
 
-// Verifica se a senha já foi usada anteriormente
-$sql_verifica_senha = "SELECT senha FROM estudante";
-$stmt_verifica_senha = $mysqli->prepare($sql_verifica_senha);
-$stmt_verifica_senha->execute();
-$resultado_verifica_senha = $stmt_verifica_senha->get_result();
-
-while($linha = $resultado_verifica_senha->fetch_assoc()){
-    if(password_verify($senha, $linha['senha'])){
-        echo "<script>alert('Esta senha já foi utilizada! Escolha uma senha diferente.'); window.history.back();</script>";
-        exit();
-    }
-}
-
 // Criptografa a senha antes de armazená-la no banco de dados
 $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 

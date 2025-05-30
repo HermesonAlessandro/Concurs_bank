@@ -34,20 +34,6 @@ if($novasenha !== $confirmarsenha){
     exit(); // Encerra a execução do script
 }
 
-// Criptografa a senha temporariamente para verificação
-$senha_hask_check = password_hash($novasenha, PASSWORD_DEFAULT);
-
-// Recupera todas as senhas armazenadas para comparar
-$sql_check_senha = "SELECT senha FROM estudante";
-$result_check = $mysqli->query($sql_check_senha);
-
-while($row = $result_check->fetch_assoc()){
-    if(password_verify($novasenha, $row['senha'])){
-        echo "<script>alert('Esta senha já está em uso por outro usuário! Escolha uma diferente.'); history.back();</script>";
-        exit();
-    }
-}
-
 // Criptografa a nova senha para armazenamento seguro no banco de dados
 $senha_hash = password_hash($novasenha, PASSWORD_DEFAULT);
 
