@@ -133,3 +133,33 @@ a {
     position: relative; /* Permite uso de z-index */
     z-index: 2; /* Fica acima de elementos com z-index menor */
 }
+
+.header-bg .btn-primary {
+    background-color: #003366;
+    border-color: #003366;
+    color: white;
+}
+
+/* Alterando a cor dos botões do header ao passar o mouse */
+.header-bg .btn-primary:hover {
+    background-color: #005599;
+    border-color: #005599;
+}
+
+
+#navbar{
+    transition: 0.3s;
+}
+
+.card .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.card .social-links a {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: black;
+}
