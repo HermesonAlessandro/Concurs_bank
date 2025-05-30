@@ -7,31 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título da página, exibido na aba do navegador -->
     <title>Internet das coisas (IoT) e blockchain</title>
+    <link rel="stylesheet" href="../css/tela_q_internet_das_coisas.css">
 </head>
 <body>
 
     <!-- Barra de navegação contendo a logo e botões para acessar diferentes partes do site -->
-    <nav>
+    <nav class="header">
+        
         <!-- Exibe a imagem da logo do site -->
-        <img src="../img/Logo(CB).png" alt="Logo do site" width="80px" height="50px">
+        <img  src="../img/Logo(CB).png" alt="Logo do site" width="80px" height="50px">
         
         <!-- Botões de navegação para facilitar o acesso às páginas principais -->
-        <button>Home</button>
-        <button>Sobre nós</button>
-        <button>Contato</button>
-        <button>Entrar</button>
-        <button>Cadastrar-se</button>
+        <button class="button_home">Home</button>
+        <button class="button_sobre">Sobre nós</button>
+        <button class="button_contato">Contato</button>
+        <button class="button_entrar">Entrar</button>
+        <button class="button_cadastro">Cadastrar-se</button>
         
         <!-- Linha horizontal para separar a barra de navegação do restante do conteúdo -->
         <hr>
     </nav>
-
+    
     <!-- Contêiner onde as questões do quiz serão exibidas -->
+    <div class="quiz-wrapper">
+    <div id="fundo_questoes"></div>
     <div id="quiz-container">
         <h2>Internet das coisas (IoT) e blockchain - Questões</h2>
     </div>
+</div>
 
     <!-- Importação do arquivo JavaScript que gerencia as perguntas do quiz -->
+    
     <script src="../js/q_internet_das_coisas_e_blockchain.js" defer></script>
     
 </body>
