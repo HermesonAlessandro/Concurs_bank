@@ -208,16 +208,16 @@
 }
 
 .header-bg .btn-primary {
-    background-color: #003366;
-    border-color: #003366;
+    background-color: #003366; /* Define a cor de fundo do botão primário */
+    border-color: #003366; /* Define a cor da borda do botão primário */
 }
 
 /* Alterando a cor dos botões do header ao passar o mouse */
 .header-bg .btn-primary:hover {
-    background-color: #005599;
-    border-color: #005599;
+    background-color: #005599; /* Define a cor de fundo do botão primário */
+    border-color: #005599; /* Define a cor da borda do botão primário */
 }
 
 #navbar{
-    transition: 0.3s;
+    transition: 0.3s;  /* A duração da transição é de 0.3 segundos */
 }

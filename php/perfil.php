@@ -27,10 +27,6 @@ if($resultado->num_rows > 0){
 
 // Normaliza o valor do sexo removendo espaços e convertendo para a primeira letra para maiúscula
 $sexo = ucfirst(trim(strtolower($usuario['sexo'])));
-
-// Define a imagem do perfil com base no sexo do usuário
-$imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg":
-                 (($sexo == "Feminino") ? "../img/silhueta_feminina.jpg": "../img/silhueta_outro.jpg")
 ?>
 
 <!-- Estrutura do HTML -->
@@ -60,9 +56,6 @@ $imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg":
 
     <div class="perfil-container">
         <h2>Perfil do Usuário</h2>
-
-        <!-- Exibe a imagem do perfil do usuário com base no sexo -->
-        <img src="<?php echo htmlspecialchars($imagem_perfil); ?>" alt="Imagem do perfil" style="height: 150px;">
 
         <!-- Exibe as informações do usuário recuperadas do banco de dados -->
         <div class="info-usuario">

@@ -1,73 +1,96 @@
-body{
-    background: linear-gradient(#003366, #3672e0); /* Aplica um gradiente de azul escuro para ciano como fundo */
-    padding-top: 170px;
-    width: 81.7%;
-    padding:1rem auto; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
-    margin: auto; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
-    min-height: 100vh;
-    color: #fff;
-    position: relative;
-    z-index: 2;
+/* Configurações gerais para o corpo da página */
+body {
+    background: linear-gradient(#003366, #3672e0); /* Aplica um fundo gradiente azul escuro para azul claro */
+    padding-top: 170px; /* Espaçamento superior de 170px, útil para acomodar uma barra fixa */
+    width: 81.7%; /* Define a largura do corpo como 81.7% do tamanho da tela */
+    padding: 1rem auto; /* Define o espaçamento interno, mas 'auto' não é válido para padding */
+    margin: auto; /* Centraliza o conteúdo horizontalmente */
+    min-height: 100vh; /* Garante que o corpo tenha no mínimo a altura total da tela */
+    color: #fff; /* Define a cor do texto como branco */
+    position: relative; /* Define a posição como relativa para posicionamentos internos */
+    z-index: 2; /* Define a ordem de empilhamento para sobrepor outros elementos */
 }
-nav{
-    position: relative;
-    z-index: 2;
+
+/* Configurações gerais para a barra de navegação */
+nav {
+    position: relative; /* Mantém a posição relativa para ajustes internos */
+    z-index: 2; /* Garante que a barra de navegação fique acima de elementos de fundo */
 }
- .nav-link {
-    color: white; /* Define a cor do texto dos links */
+
+/* Configuração para links dentro da navegação */
+.nav-link {
+    color: white; /* Define a cor do texto dos links como branco */
     text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
+
+/* Wrapper do Quiz */
 .quiz-wrapper {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 900px; /* Altura mínima para acomodar #fundo_questoes */
+    position: relative; /* Mantém o posicionamento relativo para ajustes internos */
+    width: 100%; /* Define a largura total do container */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    min-height: 900px; /* Define uma altura mínima para o container */
 }
 
+/* Fundo das questões do Quiz */
 #fundo_questoes {
-    background-color: #003366;
-    width: 100%;
-    height: 2800px;
-    max-height: 5000px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    background-color: #003366; /* Define a cor de fundo como azul escuro */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 2800px; /* Define uma altura fixa inicial */
+    max-height: 5000px; /* Limita a altura máxima do fundo */
+    position: absolute; /* Posiciona o fundo sobre o conteúdo */
+    top: 0; /* Alinha o topo do fundo à parte superior da tela */
+    left: 0; /* Alinha a borda esquerda do fundo */
+    z-index: 1; /* Fica abaixo dos elementos do quiz */
 }
 
+/* Configuração do container de perguntas do Quiz */
 #quiz-container {
-    position: relative;
-    z-index: 2; /* Fica acima do fundo */
-    padding: 2rem;
-    color: #fff;
-} script{
-        position: relative;
-        z-index: 2;
-    }
+    position: relative; /* Mantém a posição relativa */
+    z-index: 2; /* Garante que fique acima do fundo de questões */
+    padding: 2rem; /* Define um espaçamento interno de 2rem */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Correção da tag script que não deveria estar no CSS */
+script {
+    position: relative; /* Define a posição relativa */
+    z-index: 2; /* Mantém a ordem de empilhamento */
+}
+
+/* Configuração do logotipo na barra de navegação */
 .navbar-logo img {
-    height: 40px; /* Define a altura da imagem */
-    margin-right: 10px; /* Adiciona margem à direita */
+    height: 40px; /* Define a altura da imagem do logotipo */
+    margin-right: 10px; /* Adiciona um espaço à direita da imagem */
     display: flex; /* Define a exibição como flexível */
 }
+
+/* Configuração para o botão de cabeçalho */
 .button_header {
-    background-color: #003366; /* Define a cor de fundo */
-    border-color: #003366; /* Define a cor da borda */
+    background-color: #003366; /* Define a cor de fundo como azul escuro */
+    border-color: #003366; /* Define a cor da borda como azul escuro */
 }
+
+/* Configuração para o efeito hover do botão do cabeçalho */
 .button_header:hover {
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
-    background-color: #005599; /* Define a nova cor de fundo ao passar o mouse */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+    background-color: #005599; /* Define uma nova cor de fundo quando o mouse passa sobre o botão */
 }
-#questoes{
-    color: #fff;
+
+/* Configuração para os textos das questões */
+#questoes {
+    color: #fff; /* Define a cor do texto das questões como branco */
 }
-@media (min-width: 576px){
-nav {
-        background-color: #034281; /* Mantém a cor da navbar */
+
+/* Regras para telas maiores */
+@media (min-width: 576px) {
+    nav {
+        background-color: #034281; /* Mantém uma cor de fundo para a barra de navegação */
         padding: 1rem; /* Ajusta o espaçamento interno */
-        color: white; /* Mantém a cor do texto */
+        color: white; /* Mantém a cor do texto como branco */
     }
 }
 
-#navbar{
-    transition: 0.3s;
+/* Configuração para a barra de navegação */
+#navbar {
+    transition: 0.3s; /* Adiciona uma transição suave para mudanças na barra de navegação */
 }

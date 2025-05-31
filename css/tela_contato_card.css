@@ -1,165 +1,162 @@
-/* Define o estilo da classe "card", usada para exibir informações de cada membro da equipe */
+/* ====== Estilização dos cartões (cards) da equipe ====== */
 .card {
-  /* Adiciona uma sombra ao redor do card, criando um efeito visual de profundidade */
-  box-shadow: 0 2px 4px 0 black;
-  /* Define a largura máxima do card para 300px, evitando que fique muito grande */
-  max-width: 300px;
-  /* Centraliza o card automaticamente dentro do seu contêiner pai */
-  margin: auto;
-  /* Alinha o conteúdo (texto e elementos internos) ao centro */
-  text-align: center;
-  /* Arredonda as bordas do card em 3 pixels para um visual mais suave */
-  border-radius: 3px;
-  /*animacao com transicao do card */
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px 0 black; /* Adiciona sombra ao redor do card para um efeito visual de profundidade */
+    max-width: 300px; /* Limita a largura máxima do card */
+    margin: auto; /* Centraliza o card automaticamente */
+    text-align: center; /* Alinha o conteúdo do card ao centro */
+    border-radius: 3px; /* Arredonda as bordas para um visual mais suave */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Adiciona uma animação suave ao card */
 }
 
-  /*linkando a transicao quando usuario colocar o mouse em cima do card*/
+/* Efeito de escala ao passar o mouse no card */
 .card:hover {
-  transform: scale(1.03);
+    transform: scale(1.03); /* Aumenta ligeiramente o tamanho do card ao passar o mouse */
 }
 
-/* Define o estilo da classe "title", que normalmente se refere ao cargo do membro */
+/* Estilização do título dentro do card (normalmente usado para exibir o cargo) */
 .title {
-  /* Define a cor do texto como cinza */
-  color: rgb(255, 255, 255);
-  /* Ajusta o tamanho da fonte para 18px, tornando-o mais legível */
-  font-size: 18px;
+    color: rgb(255, 255, 255); /* Define a cor do texto do título como branco */
+    font-size: 18px; /* Ajusta o tamanho do título */
 }
 
-/* Define o estilo para os links (<a>) da página */
+/* ====== Estilização geral dos links ====== */
 a {
-  /* Define o tamanho da fonte dos links como 20px, tornando-os mais visíveis */
-  font-size: 20px;
-  /* Define a cor do texto do link como preto */
-  color: black;
+    font-size: 20px; /* Aumenta o tamanho da fonte dos links */
+    color: black; /* Define a cor do texto do link como preto */
 }
 
-/* Estilização da seção da equipe */
-#equipe{
-    display: flex; /* Utiliza flexbox para organizar o elemento */
+/* ====== Estilização da seção da equipe ====== */
+#equipe {
+    display: flex; /* Usa flexbox para organizar os elementos */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     color: #ffffff; /* Define a cor do texto como branco */
     font-family: monospace; /* Define uma fonte monoespaçada */
-    font-size: x-large; /* Define o tamanho da fonte como grande */
+    font-size: x-large; /* Ajusta o tamanho da fonte */
 }
 
-/* Define o estilo para os botões e links quando o usuário passa o mouse sobre eles */
+/* ====== Estilização do corpo da página ====== */
 .corpo_site {
-    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro ao azul mais claro */
-    max-width: 100%; /* Define a largura máxima como 100% da tela */
-    width: 90%; /* Define a largura padrão como 90% */
-    padding: 255px 20px; /* Adiciona espaçamento interno: 255px em cima/baixo, 20px nas laterais */
-    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo gradiente azul escuro para azul claro */
+    max-width: 100%; /* Define a largura máxima */
+    width: 90%; /* Define a largura padrão */
+    padding: 255px 20px; /* Adiciona espaçamento interno */
+    margin: 0 auto; /* Centraliza o conteúdo */
 }
+
+/* ====== Estilização do fundo do menu ====== */
 .fundo_menu {
-    background-color: rgba(238, 236, 236, 0.5); /* Fundo translúcido */
-    width: 100%; /* Largura total */
-    height: 142px; /* Altura fixa do fundo */
-    position: absolute; /* Posicionamento absoluto no topo */
-    top: 0; /* Alinha ao topo da tela */
-    right: 0px; /* Alinha à esquerda da tela */
-    z-index: 1; /* Atrás dos botões e imagens */
-}.buttons_menu {
-    display: flex; /* Usa flexbox para organizar os botões */
+    background-color: rgba(238, 236, 236, 0.5); /* Define um fundo translúcido */
+    width: 100%; /* Define largura total */
+    height: 142px; /* Define uma altura fixa para o fundo */
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; /* Alinha ao topo */
+    right: 0; /* Alinha à direita */
+    z-index: 1; /* Mantém o fundo atrás dos botões */
+}
+
+/* ====== Estilização dos botões do menu ====== */
+.buttons_menu {
+    display: flex; /* Usa flexbox para posicionamento */
     justify-content: center; /* Centraliza os botões */
     align-items: center;
-    flex-wrap: wrap; /* Permite quebra de linha se necessário */
-    gap: 10px; /* Espaço entre os botões */
-    margin-top: -32px; /* Sobe o grupo de botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha */
+    gap: 10px; /* Adiciona espaçamento entre os botões */
+    margin-top: -32px; /* Move o grupo de botões para cima */
 }
+
 .buttons_registro {
     display: flex; /* Usa flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza os botões */
     flex-wrap: wrap; /* Permite quebra de linha */
-    gap: 9px; /* Espaço entre os botões */
-    margin-top: -108px; /* Sobe os botões */
+    gap: 9px; /* Espaço entre botões */
+    margin-top: -108px; /* Move os botões para cima */
     margin-left: 80%; /* Empurra os botões para a direita */
 }
+
+/* Estilização dos botões gerais */
 #button_sobre,
 #button_home,
 #button_contatos,
 #button_entrar,
 #button_cadastro {
-    color: white; /* Cor do texto branca */
-    background-color: #003366; /* Fundo azul escuro */
-    border-radius: 20px; /* Bordas arredondadas */
-    font-size: 18px; /* Tamanho do texto dos botões */
-    padding: 10px 25px; /* Espaço interno vertical e horizontal */
-    border: none; /* Remove a borda padrão */
-    transition: background-color 0.3s ease; /* Suaviza a mudança de cor ao passar o mouse */
-    position: relative; /* Necessário para sobreposição */
-    z-index: 2; /* Garante que o botão fique acima do fundo translúcido */
+    color: white; /* Define a cor do texto como branco */
+    background-color: #003366; /* Define a cor de fundo dos botões */
+    border-radius: 20px; /* Arredonda as bordas */
+    font-size: 18px; /* Define o tamanho da fonte */
+    padding: 10px 25px; /* Adiciona espaçamento interno */
+    border: none; /* Remove bordas padrão */
+    transition: background-color 0.3s ease; /* Adiciona um efeito de transição */
+    position: relative; /* Permite ajustes posicionais */
+    z-index: 2; /* Mantém os botões acima de outros elementos */
 }
 
-/* Estilo adicional específico para o botão "Área do Estudante" */
-
-
-/* Botão cadastro com largura maior */
+/* Botão de cadastro com largura maior */
 #button_cadastro {
-    width: auto; /* Largura automática com base no conteúdo */
-    min-width: 140px; /* Garante uma largura mínima */
-   
+    width: auto; /* Ajusta automaticamente a largura */
+    min-width: 140px; /* Define uma largura mínima */
 }
 
-/* ======== Efeitos de hover e foco ======== */
+/* Efeitos ao passar o mouse sobre os botões */
 #button_sobre:hover,
 #button_home:hover,
 #button_contatos:hover,
 #button_entrar:hover,
-#button_cadastro:hover,
-#button_area_estudante:hover {
-    background-color: #005599; /* Cor azul mais clara ao passar o mouse */
-    cursor: pointer; /* Cursor tipo ponteiro */
+#button_cadastro:hover {
+    background-color: #005599; /* Altera a cor do fundo ao passar o mouse */
+    cursor: pointer; /* Define o cursor como ponteiro */
 }
 
+/* Efeitos ao focar nos botões */
 #button_sobre:focus,
 #button_home:focus,
 #button_contatos:focus,
 #button_entrar:focus,
-#button_cadastro:focus,
-#button_area_estudante:focus
-{
-    outline: 2px solid #ffffff; /* Borda branca de foco (acessibilidade) */
-    background-color: #0077cc; /* Cor azul ainda mais clara quando focado */
+#button_cadastro:focus {
+    outline: 2px solid #ffffff; /* Adiciona uma borda branca ao focar */
+    background-color: #0077cc; /* Altera a cor ao focar */
 }
+
+/* ====== Estilização do logotipo ====== */
 #logo {
-    width: 102px; /* Largura fixa da imagem */
-    max-width: 200px; /* Define uma largura máxima */
-    height: auto; /* Altura proporcional à largura */
-    margin-top: 0px; /* Sem margem superior */
-    margin-left: 20px; /* Margem esquerda de 20px */
+    width: 102px; /* Define largura fixa */
+    max-width: 200px; /* Define largura máxima */
+    height: auto; /* Ajusta a altura automaticamente */
+    margin-top: 0px; /* Define margem superior */
+    margin-left: 20px; /* Define margem esquerda */
     position: relative; /* Permite uso de z-index */
-    z-index: 2; /* Fica acima de elementos com z-index menor */
+    z-index: 2; /* Mantém o logotipo acima dos outros elementos */
 }
 
+/* ====== Estilização de botões no cabeçalho ====== */
 .header-bg .btn-primary {
-    background-color: #003366;
-    border-color: #003366;
-    color: white;
+    background-color: #003366; /* Define cor de fundo */
+    border-color: #003366; /* Define cor da borda */
+    color: white; /* Define cor do texto */
 }
 
-/* Alterando a cor dos botões do header ao passar o mouse */
+/* Efeito hover para botões do cabeçalho */
 .header-bg .btn-primary:hover {
     background-color: #005599;
     border-color: #005599;
 }
 
-
-#navbar{
+/* Adiciona uma transição suave ao navbar */
+#navbar {
     transition: 0.3s;
 }
 
+/* ====== Estilização dos links sociais no card ====== */
 .card .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 8px;
+    display: flex; /* Usa flexbox para organização */
+    justify-content: center; /* Centraliza os ícones sociais */
+    gap: 12px; /* Adiciona espaço entre os ícones */
+    margin-top: 8px; /* Define uma margem superior */
 }
+
 .card .social-links a {
-  display: flex;
-  align-items: center;
-  font-size: 22px;
-  color: black;
+    display: flex; /* Alinha os ícones verticalmente */
+    align-items: center; /* Centraliza os ícones dentro do link */
+    font-size: 22px; /* Define tamanho do ícone */
+    color: black; /* Define cor padrão do ícone */
 }

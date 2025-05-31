@@ -125,6 +125,7 @@ $mysqli->close();
     <title>Resultado</title> <!-- Define o título da página que será exibido na aba do navegador -->
 </head>
 <body>
+
     <h2>Resultados das questões</h2> <!-- Exibe o título principal da página -->
 
     <!-- Exibe as informações pessoais do usuário, protegendo contra ataques XSS com htmlspecialchars -->
@@ -150,5 +151,6 @@ $mysqli->close();
 
     <!-- Link para retornar à página de questionários -->
     <a href="../html/tela_assuntos.html">Voltar para os Questionários</a>
+    
 </body>
 </html>

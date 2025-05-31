@@ -1,89 +1,92 @@
-/* Estilizando a navbar (barra de navegação) */
+/* ===== Estilização da navbar (barra de navegação) ===== */
 nav {
     background-color: #034281; /* Define a cor de fundo da navbar */
-    padding: 1rem auto; /* Define espaçamento interno (correção: 'auto' não tem efeito aqui) */
+    padding: 1rem auto; /* Define espaçamento interno (⚠️ 'auto' não tem efeito aqui) */
     color: white; /* Define a cor do texto dentro da navbar */
 }
 
-/* Estilizando os links da navbar */
+/* Estilizando os links dentro da navbar */
 .nav-link {
     color: white; /* Define a cor do texto dos links */
     text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
 
-/* Alterando o estilo do corpo da página */
+/* ===== Alterando o estilo do corpo da página ===== */
 body {
-    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo degradê */
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo degradê azul escuro para azul claro */
 }
 
-/* Estilizando o contêiner do formulário */
+/* ===== Estilizando o contêiner do formulário ===== */
 .form-container {
-    max-width: 400px; /* Define a largura máxima do contêiner */
-    margin-top: 200px auto; /* O 'auto' após '200px' não tem efeito aqui */
-    margin: 200px auto; /* Centraliza vertical e horizontalmente */
+    max-width: 400px; /* Define a largura máxima do contêiner do formulário */
+    margin-top: 200px auto; /* ⚠️ 'auto' após '200px' não tem efeito aqui */
+    margin: 200px auto; /* Centraliza o contêiner vertical e horizontalmente */
     padding: 2rem; /* Adiciona espaçamento interno */
-    background-color: white; /* Define a cor de fundo */
-    border-radius: 10px; /* Adiciona cantos arredondados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar profundidade */
+    background-color: white; /* Define a cor de fundo do formulário */
+    border-radius: 10px; /* Adiciona cantos arredondados para um design mais suave */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar profundidade ao contêiner */
 }
 
-/* Ajustando o tamanho do logo na navbar */
+/* ===== Ajustando o tamanho do logo na navbar ===== */
 .navbar-logo img {
-    height: 40px; /* Define a altura da imagem */
-    margin-right: 10px; /* Adiciona margem à direita */
+    height: 40px; /* Define a altura da imagem do logotipo */
+    margin-right: 10px; /* Adiciona margem à direita para espaçamento */
     display: flex; /* Exibe a imagem de forma flexível */
 }
 
-/* Estilizando os botões primários */
+/* ===== Estilizando os botões primários ===== */
 .btn-primary {
     background-color: #003366; /* Define a cor de fundo do botão */
-    border-color: #003366; /* Define a cor da borda */
+    border-color: #003366; /* Define a cor da borda do botão */
 }
 
-/* Estilizando a aparência do botão primário ao passar o mouse */
+/* ===== Alterando a aparência do botão primário ao passar o mouse ===== */
 .btn-primary:hover {
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
-    background-color: #005599; /* Altera a cor do botão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para mudança de cor */
+    background-color: #005599; /* Altera a cor de fundo do botão ao passar o mouse */
 }
 
-/* Estilizando o link "Esqueci a senha" */
+/* ===== Estilizando o link "Esqueci a senha" ===== */
 .forgot-password {
-    text-align: center; /* Centraliza o texto */
-    margin-top: 1rem; /* Adiciona espaçamento superior */
+    text-align: center; /* Centraliza o texto do link */
+    margin-top: 1rem; /* Adiciona espaçamento superior para afastar do botão */
 }
 
-/* Estilos responsivos para telas maiores */
+/* ===== Estilos responsivos para telas maiores (mínimo de 576px) ===== */
 @media (min-width: 576px) {
+    /* Ajusta a largura do formulário para telas maiores */
     .form-container {
-        max-width: 500px; /* Ajusta a largura máxima do contêiner para telas maiores */
+        max-width: 500px; /* Define um tamanho maior para o formulário */
     }
 
-    /* Ajustando a navbar para telas maiores */
+    /* Mantém as configurações da navbar para telas maiores */
     nav {
-        background-color: #034281; /* Mantém a cor de fundo */
+        background-color: #034281; /* Cor de fundo da navbar */
         padding: 1rem; /* Ajusta o espaçamento interno */
-        color: white; /* Mantém a cor do texto */
+        color: white; /* Define a cor do texto */
     }
 }
 
-#navbar{
-    transition: 0.3s;
+/* ===== Adicionando transição suave à barra de navegação ===== */
+#navbar {
+    transition: 0.3s; /* Define uma transição suave ao esconder/exibir a navbar */
 }
 
+/* ===== Ajustando o espaçamento no elemento 'main' ===== */
 main {
-    padding-top: 160px;
+    padding-top: 160px; /* Define um espaçamento superior para evitar sobreposição com a navbar */
 }
 
-/* cor dos botoes do header */
+/* ===== Estilizando os botões do cabeçalho ===== */
 .header-bg .btn-primary {
-    background-color: #003366;
-    border-color: #003366;
-    color: #fff;
+    background-color: #003366; /* Define a cor de fundo do botão */
+    border-color: #003366; /* Define a cor da borda */
+    color: #fff; /* Define a cor do texto como branco */
 }
 
-/* Alterando a cor dos botões do header ao passar o mouse */
+/* ===== Alterando a cor dos botões do cabeçalho ao passar o mouse ===== */
 .header-bg .btn-primary:hover {
-    background-color: #005599;
-    border-color: #005599;
-    color: #fff;
+    background-color: #005599; /* Define uma cor azul mais clara ao passar o mouse */
+    border-color: #005599; /* Mantém a borda da mesma cor do fundo */
+    color: #fff; /* Mantém a cor do texto como branco */
 }

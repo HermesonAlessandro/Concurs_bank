@@ -35,6 +35,6 @@ body {
     border-radius: 10px; /* Suaviza os cantos com bordas arredondadas */
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para destaque */
     text-align: left; /* Mantém o texto alinhado à esquerda */
-    margin-left: auto;
+    margin-left: auto; /* Move para a esquerda */
     margin-right: auto; /* Centraliza o perfil na página */
 }

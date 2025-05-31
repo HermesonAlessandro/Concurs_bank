@@ -1,67 +1,71 @@
+/* ====== Estilização geral do corpo do site ====== */
 .corpo_site {
-    padding-top: 100px; /* Espaço para o header fixo, ajuste conforme a altura real do header */
-    min-height: 100vh;
+    padding-top: 100px; /* Adiciona espaço para acomodar um header fixo */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos toda a altura da tela */
 }
-/* Estilizando a navbar (barra de navegação) */
+
+/* ====== Estilização da barra de navegação (navbar) ====== */
 nav {
     background-color: #034281; /* Define a cor de fundo da navbar */
-    padding: 1rem auto; /* Adiciona espaçamento interno */
-    color: white; /* Define a cor do texto */
-} 
+    padding: 1rem auto; /* ⚠️ 'auto' não tem efeito aqui, melhor usar apenas '1rem' */
+    color: white; /* Define a cor do texto dentro da navbar */
+}
 
-/* Estilizando os links da navbar */
+/* ====== Estilização dos links dentro da navbar ====== */
 .nav-link {
-    color: white; /* Define a cor do texto dos links */
+    color: white; /* Define a cor dos links na barra de navegação */
     text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
 
-/* Alterando o fundo do corpo do site */
+/* ====== Alteração do fundo do corpo do site ====== */
 body {
-    background: linear-gradient(#003366, #40E0D0); /* Adiciona um fundo degradê */
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo degradê azul escuro para azul claro */
 }
 
-/* Estilizando o container do formulário de login */
+/* ====== Estilizando o container do formulário de login ====== */
 .form-container {
-    max-width: 400px; /* Define a largura máxima do container */
-    margin-top: 200px auto; /* Define a margem superior (corrigindo redundância) */
-    margin: 200px auto; /* Centraliza o container verticalmente */
-    padding: 2rem; /* Adiciona espaçamento interno */
-    background-color: white; /* Define a cor de fundo */
-    border-radius: 10px; /* Adiciona cantos arredondados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    max-width: 400px; /* Define a largura máxima do container para evitar que fique muito grande */
+    margin-top: 200px auto; /* ⚠️ 'auto' após '200px' não tem efeito, ajuste correto abaixo */
+    margin: 200px auto; /* Centraliza o container na tela vertical e horizontalmente */
+    padding: 2rem; /* Adiciona espaçamento interno para melhor aparência */
+    background-color: white; /* Define a cor de fundo do formulário */
+    border-radius: 10px; /* Adiciona cantos arredondados para um design mais suave */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve para destacar o container */
 }
 
-/* Ajustando o tamanho do logo na navbar */
+/* ====== Ajustando o tamanho do logo na navbar ====== */
 .navbar-logo img {
-    height: 40px; /* Define a altura da imagem */
-    margin-right: 10px; /* Adiciona margem à direita */
-    display: flex; /* Define a exibição como flexível */
+    height: 40px; /* Define a altura da imagem do logo */
+    margin-right: 10px; /* Adiciona um espaçamento à direita do logo */
+    display: flex; /* Garante que a imagem seja exibida corretamente */
 }
 
-/* Estilizando os botões primários */
+/* ====== Estilizando os botões primários ====== */
 .btn-primary {
-    background-color: #003366; /* Define a cor de fundo */
-    border-color: #003366; /* Define a cor da borda */
-}
-/* Alterando a cor do botão primário ao passar o mouse */
-.btn-primary:hover {
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
-    background-color: #005599; /* Define a nova cor de fundo ao passar o mouse */
+    background-color: #003366; /* Define a cor de fundo dos botões primários */
+    border-color: #003366; /* Define a cor da borda dos botões primários */
 }
 
-/* Estilizando o link "Esqueci a senha" */
+/* ====== Alteração da cor do botão primário ao passar o mouse ====== */
+.btn-primary:hover {
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para mudança de cor */
+    background-color: #005599; /* Altera a cor do botão ao passar o mouse */
+}
+
+/* ====== Estilização do link "Esqueci a senha" ====== */
 .forgot-password {
     text-align: center; /* Centraliza o texto */
-    margin-top: 1rem; /* Adiciona espaçamento superior */
+    margin-top: 1rem; /* Adiciona espaçamento superior para separá-lo dos outros elementos */
 }
 
-/* Estilos responsivos para telas maiores */
+/* ====== Estilos responsivos para telas maiores ====== */
 @media (min-width: 576px) {
+    /* Ajusta a largura do container do formulário para telas maiores */
     .form-container {
-        max-width: 500px; /* Ajusta a largura máxima do container */
+        max-width: 500px; /* Define um tamanho maior para o formulário em telas maiores */
     }
 
-    /* Ajustando a navbar para telas maiores */
+    /* Ajusta a navbar para telas maiores */
     nav {
         background-color: #034281; /* Mantém a cor da navbar */
         padding: 1rem; /* Ajusta o espaçamento interno */
@@ -69,14 +73,14 @@ body {
     }
 }
 
-
+/* ====== Estilização dos botões do cabeçalho ====== */
 .header-bg .btn-primary {
-    background-color: #003366;
-    border-color: #003366;
+    background-color: #003366; /* Define a cor de fundo do botão */
+    border-color: #003366; /* Define a cor da borda do botão */
 }
 
-/* Alterando a cor dos botões do header ao passar o mouse */
+/* ====== Alteração da cor dos botões do cabeçalho ao passar o mouse ====== */
 .header-bg .btn-primary:hover {
-    background-color: #005599;
-    border-color: #005599;
+    background-color: #005599; /* Define uma cor mais clara ao passar o mouse */
+    border-color: #005599; /* Mantém a borda igual à cor do fundo */
 }

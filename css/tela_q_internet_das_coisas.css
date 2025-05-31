@@ -1,72 +1,95 @@
-body{
-     background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
-    
-    width: 81.7%;
-    padding:1rem auto; /* Define o padding (espaçamento interno) de 20px ao redor do conteúdo */
-    margin: auto; /* Define margens externas de 10px (não centraliza automaticamente, pois falta 'width') */
-    min-height: 100vh;
-    color: #fff;
-    position: relative;
-    z-index: 2;
+/* Estiliza o corpo da página */
+body {
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um gradiente de azul escuro para ciano como fundo */
+    width: 81.7%; /* Define a largura do corpo da página */
+    padding: 1rem auto; /* Define o espaçamento interno (o valor 'auto' aqui não é válido) */
+    margin: auto; /* Centraliza o corpo na página */
+    min-height: 100vh; /* Garante que a altura mínima do corpo seja a da tela inteira */
+    color: #fff; /* Define a cor do texto como branco */
+    position: relative; /* Permite ajustes posicionais */
+    z-index: 2; /* Mantém o corpo acima de elementos de fundo */
 }
-nav{
-    position: relative;
-    z-index: 2;
+
+/* Configura a barra de navegação */
+nav {
+    position: relative; /* Mantém a posição relativa */
+    z-index: 2; /* Garante que fique acima de elementos de fundo */
 }
- .nav-link {
+
+/* Estiliza os links dentro da navegação */
+.nav-link {
     color: white; /* Define a cor do texto dos links */
     text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
-body {
-    background: linear-gradient(#003366, #40E0D0); /* Adiciona um fundo degradê */
-}
+
+/* Configura o container do quiz */
 .quiz-wrapper {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 900px; /* Altura mínima para acomodar #fundo_questoes */
+    position: relative; /* Mantém a posição relativa */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    min-height: 900px; /* Define uma altura mínima */
 }
 
+/* Fundo das questões do quiz */
 #fundo_questoes {
-    background-color: #003366;
-    width: 100%;
-    height: 2800px;
-    max-height: 5000px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    background-color: #003366; /* Define a cor de fundo como azul escuro */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 2800px; /* Define uma altura padrão */
+    max-height: 5000px; /* Limita a altura máxima */
+    position: absolute; /* Fixa o fundo na posição absoluta */
+    top: 0; /* Alinha o topo do fundo */
+    left: 0; /* Alinha a borda esquerda do fundo */
+    z-index: 1; /* Mantém o fundo abaixo do conteúdo */
 }
 
+/* Configuração do container do quiz */
 #quiz-container {
-    position: relative;
+    position: relative; /* Mantém a posição relativa */
     z-index: 2; /* Fica acima do fundo */
-    padding: 2rem;
-    color: #fff;
-} script{
-        position: relative;
-        z-index: 2;
-    }
+    padding: 2rem; /* Adiciona espaçamento interno */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Correção: a tag <script> não deve estar no CSS */
+script {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estiliza o logotipo da barra de navegação */
 .navbar-logo img {
     height: 40px; /* Define a altura da imagem */
-    margin-right: 10px; /* Adiciona margem à direita */
-    display: flex; /* Define a exibição como flexível */
+    margin-right: 10px; /* Adiciona espaçamento à direita da imagem */
+    display: flex; /* Garante que a imagem seja exibida corretamente */
 }
+
+/* Estiliza o botão do cabeçalho */
 .button_header {
     background-color: #003366; /* Define a cor de fundo */
     border-color: #003366; /* Define a cor da borda */
 }
+
+/* Configura o efeito de hover no botão do cabeçalho */
 .button_header:hover {
     transition: background-color 0.3s ease; /* Adiciona uma transição suave */
     background-color: #005599; /* Define a nova cor de fundo ao passar o mouse */
 }
-#questoes{
-    color: #fff;
+
+/* Estiliza o texto das questões */
+#questoes {
+    color: #fff; /* Define a cor do texto como branco */
 }
-@media (min-width: 576px){
-nav {
-        background-color: #034281; /* Mantém a cor da navbar */
+
+/* Configura a barra de navegação para telas maiores */
+@media (min-width: 576px) {
+    nav {
+        background-color: #034281; /* Mantém a cor de fundo */
         padding: 1rem; /* Ajusta o espaçamento interno */
         color: white; /* Mantém a cor do texto */
     }
+}
+
+/* Adiciona uma transição suave para a barra de navegação */
+#navbar {
+    transition: 0.3s; /* Define a duração da transição */
 }

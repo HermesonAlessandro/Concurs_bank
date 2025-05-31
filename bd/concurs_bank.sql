@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Tempo de geração: 25-Maio-2025 às 08:44
+-- Tempo de geração: 31-Maio-2025 às 02:21
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.0.30
 
@@ -43,6 +43,7 @@ CREATE TABLE `estudante` (
 --
 
 CREATE TABLE `resultado` (
+  `id` int(11) NOT NULL,
   `cpf` varchar(14) NOT NULL,
   `nome_completo` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -76,7 +77,7 @@ ALTER TABLE `estudante`
 -- Índices para tabela `resultado`
 --
 ALTER TABLE `resultado`
-  ADD PRIMARY KEY (`cpf`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `sessao`
@@ -89,10 +90,16 @@ ALTER TABLE `sessao`
 --
 
 --
+-- AUTO_INCREMENT de tabela `resultado`
+--
+ALTER TABLE `resultado`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT de tabela `sessao`
 --
 ALTER TABLE `sessao`
-  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
