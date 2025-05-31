@@ -2,8 +2,11 @@
     background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro até o azul claro (de cima para baixo) */
     max-width: 100%; /* Limita a largura máxima do conteúdo a 100% da tela */
     width: 90%; /* O conteúdo ocupa 90% da largura da tela */
-    padding: 255px 20px; /* Espaçamento interno: 255px acima/abaixo e 20px nas laterais */
     margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    min-height: 100vh; /* Garante que a seção ocupe pelo menos a altura total da tela */
+    padding-top: 170px; /* Espaço suficiente para o header fixo */
+    padding-right: 20px; /* Espaçamento interno à direita */
+    padding-left: 20px; /* Espaçamento interno à esquerda */
 }
 
 #logo {
@@ -16,9 +19,7 @@
     z-index: 2; /* Garante que a imagem fique acima de elementos com z-index menor */
 }
 
-#button_sobre,
-#button_home,
-#button_contatos,
+
 #button_sair,
 #button_alterar,
 #button_perfil,
@@ -39,11 +40,8 @@
     min-width: 140px; /* Define uma largura mínima de 140px */
 }
 
-#button_sobre:hover,
-#button_home:hover,
-#button_contatos:hover,
+
 #button_sair:hover,
-#button_area_estudante:hover,
 #button_alterar:hover,
 #button_perfil:hover,
 .buttons_assunto button:hover {
@@ -51,11 +49,7 @@
     cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
 }
 
-#button_sobre:focus,
-#button_home:focus,
-#button_contatos:focus,
 #button_sair:focus,
-#button_area_estudante:focus,
 #button_alterar:focus,
 #button_perfil:focus,
 .buttons_assunto button:focus {
@@ -98,3 +92,54 @@
     border-radius: 12px; /* Bordas arredondadas */
     border: solid 1px #ffffff; /* Borda branca fina ao redor */
 }
+
+.header-bg .btn-primary {
+    background-color: #003366;
+    border-color: #003366;
+    color: white;
+}
+
+/* Alterando a cor dos botões do header ao passar o mouse */
+.header-bg .btn-primary:hover {
+    background-color: #005599;
+    border-color: #005599;
+}
+
+
+#navbar{
+    transition: 0.3s;
+}
+
+.btn-primary{
+    color: white;
+}
+
+#navbar .btn-dark.text-primary,
+#navbar .btn-primary.text-primary {
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .corpo_site {
+        padding-top: 140px; /* Reduz o espaço do topo em telas menores */
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .corpo_site {
+        padding-top: 220px; /* Aumenta o espaço para header alto em telas pequenas */
+    }
+    .header-bg .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .mx-auto.flex-wrap {
+        justify-content: center !important;
+        width: 100%;
+    }
+}
+
