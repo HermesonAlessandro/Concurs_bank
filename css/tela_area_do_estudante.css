@@ -4,8 +4,11 @@
     background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro ao azul mais claro */
     max-width: 100%; /* Define a largura máxima como 100% da tela */
     width: 90%; /* Define a largura padrão como 90% */
-    padding: 255px 20px; /* Adiciona espaçamento interno: 255px em cima/baixo, 20px nas laterais */
     margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    min-height: 100vh;
+    padding-top: 170px; /* Garante espaço para o header fixo */
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 /* ======== Título da página ======== */
@@ -152,10 +155,14 @@
 
 @media (max-width: 768px) {
     .corpo_site {
-        padding: 20px; /* Reduz o espaçamento interno */
-        width: 95%; /* Aumenta um pouco a largura */
+        padding-top: 140px; /* Reduz o espaço do topo em telas menores */
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100%;
     }
-
+    .tres_imagens {
+        margin-top: 40px; /* Evita sobreposição em telas pequenas */
+    }
     .buttons_menu,
     .buttons_registro {
         flex-direction: row; /* Coloca os botões em linha */
@@ -240,4 +247,14 @@
    font-size: 10px; /* Define o tamanho da fonte do texto */
    z-index: 2; /* Controla a ordem de empilhamento, garantindo que o rodapé fique acima de outros elementos */
 }
+}
+
+#navbar{
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #003366;
+    border-color: #003366;
+    color: white;
 }
