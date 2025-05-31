@@ -50,7 +50,10 @@ $sexo = ucfirst(trim(strtolower($usuario['sexo'])));
     </a>
 
     <!-- Link para voltar à página anterior -->
-    <a href="../html/tela_assuntos.html">Voltar</a>
+    <a href="../html/tela_assuntos.html"><button>Voltar</button></a>
+    <a href="../php/resultado.php"><button>Resultado</button></a>
+    <a href="../html/tela_alterar_senha.html"><button>Alterar senha</button></a>
+    <a href="../php/sair.php"><button>Sair</button></a>
 
     <hr> <!-- Linha horizontal para separar o conteúdo -->
 
