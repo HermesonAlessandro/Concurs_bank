@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!-- Configuração para tornar a página responsiva e se adaptar a diferentes tamanhos de tela -->
     <link rel="stylesheet" href="../css/tela_assuntos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <title>Assuntos</title> <!-- Define o título da página, exibido na aba do navegador -->
 </head>
 <body class="corpo_site"> <!-- Início do corpo do documento, onde o conteúdo visível será exibido -->
     
-    <header class="fundo_menu"> <!-- Seção de navegação, usada para criar um menu de acesso a outras páginas do site -->
-        
-        <!-- Logo do site, que funciona como um link para a página inicial -->
-        <a href="../html/tela_inicial.html">
-            <img id="logo" src="../img/Logo(CB).png" alt="Logo do site" width="80px" height="50px">
+    <header id = "navbar" class="header-bg fixed-top shadow gap-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+        <!-- Logo do site que direciona para a tela inicial -->
+        <a href="tela_inicial.html">
+            <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 120px;">
         </a>
 
-        <!-- Área de botões do menu principal -->
-        <div class="buttons_menu">
-        <a href="tela_inicial.html"><button id="button_home">Home</button></a> <!-- Botão para acessar a página inicial -->
-        <a href="tela_sobre_nos.html"><button id="button_sobre">Sobre nós</button></a> <!-- Botão para acessar a página "Sobre nós" -->
-        <a href="tela_contato.html"><button id="button_contatos">Contato</button></a> <!-- Botão para acessar a página de contatos -->
+        <!-- Menu de navegação com botões -->
+        <div class="mx-auto flex-wrap gap-2 justify-content-center">
+            <a href="../php/perfil.php" class="btn btn-primary">Perfil</a>
+            <a href="tela_alterar_senha.html" class="btn btn-primary">Aterar senha</a>
+            <a href="../php/sair.php" class="btn btn-primary">Sair</a>
         </div>
-        <div class="buttons_registro">
-        <a href="../php/sair.php"><button id="button_sair">Sair</button></a> <!-- Botão para sair do sistema -->
-        <a href="tela_alterar_senha.html"><button id="button_alterar" >Alterar senha</button></a> <!-- Botão para acessar a página de alteração de senha -->
-        <a href="../php/perfil.php"><button id="button_perfil">Perfil</button></a> <!-- Botão para acessar o perfil do usuário -->
-        </div>
-         <!-- Linha horizontal para separar o menu de navegação do conteúdo principal da página -->
-    </header>
+
+
+    </div>
+</header> <!-- Fechamento do cabeçalho -->
 
     <h2 id="qual_assunto">Qual é o Assunto?</h2> <!-- Título principal da página -->
     <!-- Formulário contendo botões para escolha de diferentes assuntos relacionados a tecnologia -->
@@ -45,6 +45,7 @@
         <p><button type="button" onclick="window.location.href='../html/q_internet_das_coisas_e_blockchain.html'">Internet das coisas</button></p>
     </form>
     <!-- Rodapé da página, contendo os direitos autorais -->
-     
+     <script src="../js/escondernav.js"></script>
+
 </body> <!-- Fim do corpo do documento -->
 </html> <!-- Fim do documento HTML -->
