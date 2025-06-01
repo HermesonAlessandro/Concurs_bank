@@ -118,39 +118,49 @@ $mysqli->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br"> <!-- Define que o documento HTML segue o padrão HTML5 e está em português do Brasil -->
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo compatibilidade com caracteres acentuados -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a visualização para dispositivos móveis -->
-    <title>Resultado</title> <!-- Define o título da página que será exibido na aba do navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="../css/tela_resultado.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <header class="header-bg fixed-top shadow">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <a href="tela_inicial.html">
+                <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 100px;">
+            </a>
+            <div class="mx-auto d-flex flex-wrap gap-2 justify-content-center">
+                <a href="tela_assuntos.html" class="btn btn-primary">Voltar</a>
+                <a href="../php/perfil.php" class="btn btn-primary">Perfil</a>
+                <a href="../php/sair.php" class="btn btn-primary">Sair</a>
+            </div>
+            <div style="width:100px"></div>
+        </div>
+    </header>
 
-    <h2>Resultados das questões</h2> <!-- Exibe o título principal da página -->
+    <div class="resultado-container">
+        <h2>Resultados das questões</h2>
+        <p><strong>Nome:</strong> <?php echo htmlspecialchars($nome); ?></p>
+        <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
+        <p><strong>CPF:</strong> <?php echo htmlspecialchars($cpf); ?></p>
 
-    <!-- Exibe as informações pessoais do usuário, protegendo contra ataques XSS com htmlspecialchars -->
-    <p><strong>Nome:</strong> <?php echo htmlspecialchars($nome); ?></p>
-    <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
-    <p><strong>CPF:</strong> <?php echo htmlspecialchars($cpf); ?></p>
+        <table class="resultado-table">
+            <tr>
+                <th>Assunto</th>
+                <th>Percentual de Acerto</th>
+            </tr>
+            <?php foreach ($percentuais as $tema => $percentual): ?>
+            <tr>
+                <td><?php echo htmlspecialchars($tema); ?></td>
+                <td><?php echo htmlspecialchars($percentual); ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
 
-    <!-- Criação de uma tabela para exibir os resultados do quiz -->
-    <table border="1"> <!-- Cria uma tabela com bordas visíveis -->
-        <tr>
-            <th>Assunto</th> <!-- Cabeçalho da coluna para mostrar o tema das questões -->
-            <th>Percentual de Acerto</th> <!-- Cabeçalho da coluna para exibir a porcentagem de acertos do usuário -->
-        </tr>
-        
-        <!-- Loop para exibir os resultados do quiz -->
-        <?php foreach ($percentuais as $tema => $percentual): ?>
-        <tr>
-            <td><?php echo htmlspecialchars($tema); ?></td> <!-- Exibe o nome do tema tratado no quiz -->
-            <td><?php echo htmlspecialchars($percentual); ?></td> <!-- Exibe a porcentagem de acertos do usuário -->
-        </tr>
-        <?php endforeach; ?>
-    </table>
-
-    <!-- Link para retornar à página de questionários -->
-    <a href="../html/tela_assuntos.html">Voltar para os Questionários</a>
-    
+        <a href="tela_assuntos.html" class="btn btn-primary btn-voltar">Voltar para as questões</a>
+    </div>
 </body>
 </html>
