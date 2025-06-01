@@ -23,26 +23,19 @@
         </a>
 
         <!-- Menu de navegação com botões -->
-        <div class="d-flex flex-wrap gap-2">
-            <a href="tela_inicial.html" class="btn btn-primary">Home</a>
-            <a href="tela_sobre_nos.html" class="btn btn-primary">Sobre nós</a>
-            <a href="tela_contato.html" class="btn btn-primary">Contatos</a>
+        <div class="mx-auto flex-wrap gap-2 justify-content-center">
+            <a href="tela_assuntos.html" class="btn btn-primary">Voltar</a>
+            <a href="../php/perfil.php" class="btn btn-primary">Perfil</a>
+            <a href="../php/sair.php" class="btn btn-primary">Sair</a>
         </div>
-
-        <!-- Botão para cadastro -->
-        <div class="d-flex flex-wrap gap-2">
-            <a href="tela_login.html" class="btn btn-dark text-primary">Login</a>
-            <a href="tela_cadastro.html" class="btn btn-light text-primary">Cadastrar-se</a>
-        </div>
-    </div>
 </header>
 
     <div class="container">
     <div class="form-container">
         <h2 class="text-center text-primary mb-4 flex-wrap">Alterar Senha</h2>
         
-        <!-- Formulário de login que envia dados via método POST -->
-        <form id="validacao_login" method="post" action="../php/login.php">
+        <!-- Formulário de alterar senha  -->
+        <form id="validacao_alterar_senha" method="post" action="../php/alterar_senha.php">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label> <!-- Campo para inserção do email -->
                 <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu email">
