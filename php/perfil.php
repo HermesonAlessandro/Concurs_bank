@@ -27,6 +27,10 @@ if($resultado->num_rows > 0){
 
 // Normaliza o valor do sexo removendo espaços e convertendo para a primeira letra para maiúscula
 $sexo = ucfirst(trim(strtolower($usuario['sexo'])));
+
+// Define a imagem do perfil com base no sexo do usuário
+$imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg":
+                 (($sexo == "Feminino") ? "../img/silhueta_feminina.jpg": "../img/silhueta_outro.jpg")
 ?>
 
 <!-- Estrutura do HTML -->
@@ -38,23 +42,32 @@ $sexo = ucfirst(trim(strtolower($usuario['sexo'])));
     <!-- Torna a página responsiva para diferentes tamanhos de tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link para o arquivo CSS externo que contém os estilos da página -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/tela_perfil.css">
     <!-- Define o título da página exibido na aba do navegador -->
     <title>Perfil</title>
 </head>
 <body>
 
-    <!-- Link para retornar à tela inicial -->
-    <a href="tela_inicial.html">
-        <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 120px;">
-    </a>
+    <header id="navbar" class="header-bg fixed-top shadow gap-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
 
-    <!-- Link para voltar à página anterior -->
-    <a href="../html/tela_assuntos.html"><button>Voltar</button></a>
-    <a href="../php/resultado.php"><button>Resultado</button></a>
-    <a href="../html/tela_alterar_senha.html"><button>Alterar senha</button></a>
-    <a href="../php/sair.php"><button>Sair</button></a>
+        <!-- Logo do site que direciona para a tela inicial -->
+        <a href="tela_inicial.html">
+            <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 120px;">
+        </a>
 
+        <!-- Menu de navegação com botões centralizado -->
+        <div class="mx-auto d-flex flex-wrap gap-2 justify-content-center">
+            <a href="tela_inicial.html" class="btn btn-primary">Home</a>
+            <a href="tela_sobre_nos.html" class="btn btn-primary">Sobre nós</a>
+            <a href="tela_contato.html" class="btn btn-primary">Contatos</a>
+        </div>
+
+        <!-- deixando um espaco vazio -->
+        <div style="width:120px"></div>
+    </div>
+</header> <!-- Fechamento do cabeçalho -->
     <hr> <!-- Linha horizontal para separar o conteúdo -->
 
     <div class="perfil-container">
@@ -69,6 +82,8 @@ $sexo = ucfirst(trim(strtolower($usuario['sexo'])));
             <p><strong>Email:</strong> <?php echo htmlspecialchars($usuario['email']); ?></p>
         </div>
     </div>
+
+    <script src="../js/escondernav.js"></script>
 
 </body>
 </html>
