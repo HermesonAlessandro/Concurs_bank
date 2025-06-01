@@ -1,7 +1,13 @@
 /* Define a fonte padrão da página e adiciona um espaçamento externo */
 body {
-    font-family: Arial, sans-serif; /* Usa uma fonte legível e amplamente suportada */
-    margin: 20px; /* Adiciona espaçamento ao redor do conteúdo */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(#003366, #40E0D0); /* Igual ao da tela_cadastro.css */
+    background-repeat: no-repeat; /* Impede que o degradê se repita */
+    background-attachment: fixed; /* Faz o degradê ocupar toda a tela mesmo ao rolar */
+    background-size: cover;       /* Faz o degradê cobrir toda a área da tela */
+    min-height: 100vh;
+    padding-top: 150px;
 }
 
 /* Define um contêiner flexível para alinhar elementos dentro dele */
@@ -35,6 +41,16 @@ body {
     border-radius: 10px; /* Suaviza os cantos com bordas arredondadas */
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para destaque */
     text-align: left; /* Mantém o texto alinhado à esquerda */
-    margin-left: auto; /* Move para a esquerda */
+    margin-left: auto;
     margin-right: auto; /* Centraliza o perfil na página */
+}
+
+.header-bg .btn-primary {
+    background-color: #003366;
+    border-color: #003366;
+    color: #fff;
+}
+
+#navbar{
+    transition: 0.3s;
 }
