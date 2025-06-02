@@ -22,15 +22,11 @@ $resultado = $stmt->get_result(); // Obtém os resultados da consulta
 if($resultado->num_rows > 0){
     $usuario = $resultado->fetch_assoc(); // Obtém os dados do usuário e armazena em um array associativo
 }else{
-    die("Erro: Usuário não encontrado."); // Encerra a execução se o e-mail não estiver cadastrado
+    die("Erro: Usuário não encontrado!"); // Encerra a execução se o e-mail não estiver cadastrado
 }
 
 // Normaliza o valor do sexo removendo espaços e convertendo para a primeira letra para maiúscula
 $sexo = ucfirst(trim(strtolower($usuario['sexo'])));
-
-// Define a imagem do perfil com base no sexo do usuário
-$imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg":
-                 (($sexo == "Feminino") ? "../img/silhueta_feminina.jpg": "../img/silhueta_outro.jpg")
 ?>
 
 <!-- Estrutura do HTML -->
@@ -53,15 +49,14 @@ $imagem_perfil = ($sexo == "Masculino") ? "../img/silhueta_masculina.jpg":
     <div class="container d-flex justify-content-between align-items-center flex-wrap">
 
         <!-- Logo do site que direciona para a tela inicial -->
-        <a href="tela_inicial.html">
+        <a href="../html/tela_inicial.html">
             <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 120px;">
         </a>
 
         <!-- Menu de navegação com botões centralizado -->
         <div class="mx-auto d-flex flex-wrap gap-2 justify-content-center">
-            <a href="tela_inicial.html" class="btn btn-primary">Home</a>
-            <a href="tela_sobre_nos.html" class="btn btn-primary">Sobre nós</a>
-            <a href="tela_contato.html" class="btn btn-primary">Contatos</a>
+            <a href="../html/tela_assuntos.html" class="btn btn-primary">Voltar</a>
+            <a href="../php/resultado.php" class="btn btn-primary">Resultado</a>
         </div>
 
         <!-- deixando um espaco vazio -->

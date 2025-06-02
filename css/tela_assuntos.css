@@ -1,136 +1,149 @@
+/* Estilo geral para a área principal do site */
 .corpo_site {
     background: linear-gradient(#003366, #40E0D0); /* Aplica um fundo com gradiente do azul escuro até o azul claro (de cima para baixo) */
-    max-width: 100%; /* Limita a largura máxima do conteúdo a 100% da tela */
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
     width: 90%; /* O conteúdo ocupa 90% da largura da tela */
     margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
     min-height: 100vh; /* Garante que a seção ocupe pelo menos a altura total da tela */
     padding-top: 170px; /* Espaço suficiente para o header fixo */
-    padding-right: 20px; /* Espaçamento interno à direita */
-    padding-left: 20px; /* Espaçamento interno à esquerda */
+    padding-right: 20px; /* Adiciona espaçamento interno à direita */
+    padding-left: 20px; /* Adiciona espaçamento interno à esquerda */
 }
 
+/* Configuração do logotipo */
 #logo {
-    width: 102px; /* Largura fixa da imagem */
-    max-width: 200px; /* Define o limite máximo de largura como 200px */
+    width: 102px; /* Define largura fixa da imagem */
+    max-width: 200px; /* Define um limite máximo de largura */
     height: auto; /* Mantém a proporção da imagem */
     margin-top: 0px; /* Sem margem superior */
-    margin-left: 20px; /* Espaço de 20px à esquerda */
-    position: relative; /* Permite controlar sobreposição com z-index */
+    margin-left: 20px; /* Define um espaçamento de 20px à esquerda */
+    position: relative; /* Permite controle sobreposição com z-index */
     z-index: 2; /* Garante que a imagem fique acima de elementos com z-index menor */
 }
 
-
+/* Estilização dos botões */
 #button_sair,
 #button_alterar,
 #button_perfil,
 .buttons_assunto button {
-    color: white; /* Cor do texto branca */
-    background-color: #003366; /* Fundo azul escuro */
-    border-radius: 20px; /* Bordas arredondadas */
-    font-size: 18px; /* Tamanho da fonte dos botões */
+    color: white; /* Define a cor do texto como branco */
+    background-color: #003366; /* Cor de fundo azul escuro */
+    border-radius: 20px; /* Bordas arredondadas para um visual moderno */
+    font-size: 18px; /* Define o tamanho da fonte */
     padding: 10px 25px; /* Espaçamento interno: 10px vertical e 25px horizontal */
-    border: none; /* Remove borda padrão */
+    border: none; /* Remove a borda padrão do botão */
     transition: background-color 0.3s ease; /* Suaviza a transição de cor ao interagir */
     position: relative; /* Necessário para controle de camadas com z-index */
     z-index: 2; /* Garante que os botões fiquem acima do fundo translúcido */
 }
 
+/* Ajuste específico para o botão de saída */
 #button_sair {
     width: auto; /* Largura baseada no conteúdo interno */
-    min-width: 140px; /* Define uma largura mínima de 140px */
+    min-width: 140px; /* Define uma largura mínima */
 }
 
-
+/* Estilo dos botões ao passar o mouse */
 #button_sair:hover,
 #button_alterar:hover,
 #button_perfil:hover,
 .buttons_assunto button:hover {
-    background-color: #005599; /* Cor azul mais clara ao passar o mouse */
+    background-color: #005599; /* Muda para um azul mais claro */
     cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
 }
 
+/* Estilo dos botões ao receber foco */
 #button_sair:focus,
 #button_alterar:focus,
 #button_perfil:focus,
 .buttons_assunto button:focus {
-    outline: 2px solid #ffffff; /* Contorno branco para acessibilidade quando o botão está em foco */
+    outline: 2px solid #ffffff; /* Adiciona um contorno branco para acessibilidade */
     background-color: #0077cc; /* Azul ainda mais claro ao focar */
 }
 
+/* Configuração para a organização dos botões */
 .buttons_menu {
     display: flex; /* Usa Flexbox para organizar os botões */
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Alinha verticalmente os botões */
+    align-items: center; /* Alinha verticalmente */
     flex-wrap: wrap; /* Permite que os botões quebrem linha se necessário */
     gap: 10px; /* Espaçamento entre os botões */
-    margin-top: -30px; /* Sobe o grupo de botões em 30px */
+    margin-top: -30px; /* Move os botões para cima */
 }
 
+/* Configuração dos botões de registro */
 .buttons_registro {
     display: flex; /* Usa Flexbox */
-    justify-content: center; /* Centraliza os botões horizontalmente */
+    justify-content: center; /* Centraliza os botões */
     flex-wrap: wrap; /* Permite quebra de linha */
-    gap: 9px; /* Espaço de 9px entre os botões */
-    margin-top: -108px; /* Sobe o grupo de botões em 108px */
-    margin-left: 80%; /* Empurra o grupo para a direita (80% da largura do contêiner pai) */
+    gap: 9px; /* Espaçamento entre os botões */
+    margin-top: -108px; /* Move os botões para cima */
+    margin-left: 80%; /* Posiciona os botões à direita */
 }
 
+/* Configuração do fundo do menu */
 .fundo_menu {
-    background-color: rgba(238, 236, 236, 0.5); /* Fundo cinza claro com 50% de transparência */
+    background-color: rgba(238, 236, 236, 0.5); /* Fundo cinza claro com transparência */
     width: 100%; /* Ocupa toda a largura disponível */
-    height: 142px; /* Altura fixa da faixa de fundo */
-    position: absolute; /* Posiciona em relação ao contêiner pai mais próximo com posição relativa */
+    height: 142px; /* Altura fixa */
+    position: absolute; /* Posiciona em relação ao contêiner pai */
     top: 0; /* Alinha ao topo */
     right: 0px; /* Alinha à direita */
-    z-index: 1; /* Fica abaixo dos botões e do logo (z-index: 2 neles) */
+    z-index: 1; /* Mantém atrás dos botões e do logo */
 }
 
+/* Estilização do campo de seleção de assunto */
 #qual_assunto {
-    color: #ffffff; /* Cor do texto branca */
-    margin-left: 10px; /* Espaço de 10px à esquerda */
+    color: #ffffff; /* Define a cor do texto como branco */
+    margin-left: 10px; /* Adiciona espaçamento à esquerda */
     background-color: #40e0d083; /* Fundo azul claro translúcido */
     border-radius: 12px; /* Bordas arredondadas */
-    border: solid 1px #ffffff; /* Borda branca fina ao redor */
+    border: solid 1px #ffffff; /* Borda branca fina */
 }
 
+/* Botões do header */
 .header-bg .btn-primary {
     background-color: #003366;
     border-color: #003366;
     color: white;
 }
 
-/* Alterando a cor dos botões do header ao passar o mouse */
+/* Alteração da cor dos botões ao passar o mouse */
 .header-bg .btn-primary:hover {
     background-color: #005599;
     border-color: #005599;
 }
 
-
-#navbar{
-    transition: 0.3s;
+/* Configuração da barra de navegação */
+#navbar {
+    transition: 0.3s; /* Suaviza transições de estilo */
 }
 
-.btn-primary{
+/* Estilização dos botões primários */
+.btn-primary {
     color: white;
 }
 
+/* Correção de cor para botões escuros */
 #navbar .btn-dark.text-primary,
 #navbar .btn-primary.text-primary {
-    color: #fff !important;
+    color: #fff !important; /* Mantém a cor do texto como branco */
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .corpo_site {
-        padding-top: 140px; /* Reduz o espaço do topo em telas menores */
+        padding-top: 140px; /* Ajuste do espaçamento superior */
         padding-right: 10px;
         padding-left: 10px;
         width: 100%;
     }
 }
 
+/* Ajustes para telas médias */
 @media (max-width: 992px) {
     .corpo_site {
-        padding-top: 220px; /* Aumenta o espaço para header alto em telas pequenas */
+        padding-top: 220px; /* Aumento do espaço do header */
     }
     .header-bg .container {
         flex-direction: column;
@@ -142,4 +155,3 @@
         width: 100%;
     }
 }
-

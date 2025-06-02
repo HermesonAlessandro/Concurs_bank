@@ -8,9 +8,6 @@ if (!$mysqli) {
     die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error);
 }
 
-// Exibe o conteúdo da variável $_POST para fins de depuração (remova em produção)
-var_dump($_POST);
-
 $email = $_POST['email']; // Obtém o e-mail enviado pelo formulário
 $senha = $_POST['senha']; // Obtém a senha enviada pelo formulário
 
@@ -20,7 +17,7 @@ $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 // Validação da senha no servidor: verifica comprimento e presença de caracteres especiais
 if(strlen($senha) < 8 || !preg_match('/[A-Z]/', $senha) || !preg_match('/[a-z]/', $senha) || 
    !preg_match('/[0-9]/', $senha) || !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $senha)){
-    echo "<script>alert('Senha não atende aos requisitos mínimos.');</script>";
+    echo "<script>alert('Senha não atende aos requisitos mínimos!');</script>";
     exit();
 }
 
@@ -33,7 +30,7 @@ if (!isset($_SESSION['tentativas_login'])) {
 if ($_SESSION['tentativas_login'] >= 3) {
     $_SESSION['tentativas_login'] = 0; // Reseta a contagem após atingir 3 tentativas
     echo "<script>
-            alert('Você atingiu 3 tentativas! Redirecionando para redefinição de senha.');
+            alert('Você atingiu 3 tentativas! Redirecionando para redefinição de senha!');
             window.location.href = '../html/tela_alterar_senha.html'; // Redireciona para página de recuperação de senha
           </script>";
     exit();

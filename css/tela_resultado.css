@@ -1,62 +1,123 @@
+/* Define o estilo geral do corpo da página */
 body {
+    /* Define um fundo com um gradiente de azul escuro (#003366) para turquesa (#40E0D0) */
     background: linear-gradient(#003366, #40E0D0);
+    /* Garante que a altura mínima da página ocupe toda a tela */
     min-height: 100vh;
+    /* Adiciona espaço na parte superior para acomodar um cabeçalho fixo */
     padding-top: 150px;
 }
+
+/* Estilização do cabeçalho fixo */
 .header-bg {
+    /* Define a cor de fundo do cabeçalho */
     background-color: #034281;
+    /* Garante que o cabeçalho sempre esteja acima de outros elementos */
     z-index: 1030;
 }
+
+/* Estiliza os botões primários dentro do cabeçalho */
 .header-bg .btn-primary {
+    /* Define a cor de fundo padrão do botão */
     background-color: #003366;
+    /* Define a cor da borda do botão */
     border-color: #003366;
+    /* Define a cor do texto dentro do botão */
     color: #fff;
 }
+
+/* Estiliza os botões primários quando o usuário passa o mouse sobre eles */
 .header-bg .btn-primary:hover {
+    /* Define a cor de fundo do botão ao passar o mouse */
     background-color: #005599;
+    /* Define a cor da borda do botão ao passar o mouse */
     border-color: #005599;
+    /* Mantém o texto branco */
     color: #fff;
 }
+
+/* Estilização do container que exibe os resultados */
 .resultado-container {
+    /* Define um fundo branco semi-transparente */
     background: rgba(255,255,255,0.97);
+    /* Arredonda as bordas do container */
     border-radius: 16px;
+    /* Define a largura máxima do container */
     max-width: 600px;
+    /* Centraliza o container na tela com margem automática */
     margin: 40px auto;
+    /* Adiciona espaçamento interno para melhor apresentação */
     padding: 32px 24px;
+    /* Adiciona uma sombra sutil para dar efeito de elevação */
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    /* Garante que a rolagem horizontal funcione caso necessário */
     overflow-x: auto;
 }
+
+/* Estiliza o título dentro do container */
 .resultado-container h2 {
+    /* Define a cor do texto */
     color: #003366;
+    /* Adiciona espaço abaixo do título */
     margin-bottom: 24px;
+    /* Centraliza o texto */
     text-align: center;
 }
+
+/* Estiliza os parágrafos dentro do container */
 .resultado-container p {
+    /* Define a cor do texto */
     color: #003366;
+    /* Ajusta o tamanho da fonte para melhor leitura */
     font-size: 1.1rem;
+    /* Adiciona um pequeno espaçamento abaixo dos parágrafos */
     margin-bottom: 8px;
 }
+
+/* Estiliza a tabela que exibe os resultados */
 .resultado-table {
+    /* Define a largura total da tabela */
     width: 100%;
+    /* Adiciona um espaçamento acima e abaixo da tabela */
     margin: 24px 0;
+    /* Define a cor de fundo da tabela */
     background: #3e8edf;
+    /* Arredonda os cantos da tabela */
     border-radius: 8px;
+    /* Garante que o conteúdo não ultrapasse os limites da tabela */
     overflow: hidden;
+    /* Define uma largura mínima para a tabela */
     min-width: 350px;
 }
+
+/* Estiliza as células da tabela */
 .resultado-table th, .resultado-table td {
+    /* Adiciona espaçamento interno para melhor apresentação */
     padding: 12px 16px;
+    /* Centraliza o texto dentro das células */
     text-align: center;
 }
+
+/* Estiliza os cabeçalhos da tabela */
 .resultado-table th {
+    /* Define a cor de fundo para os cabeçalhos */
     background: #003366;
+    /* Define a cor do texto para branco */
     color: white;
 }
+
+/* Define um fundo alternado para linhas pares da tabela */
 .resultado-table tr:nth-child(even) {
+    /* Aplica um fundo cinza claro para diferenciação visual */
     background: #e9ecef;
 }
+
+/* Estilização do botão de retorno */
 .btn-voltar {
+    /* Faz o botão ocupar toda a largura disponível */
     display: block;
+    /* Centraliza o botão horizontalmente */
     margin: 24px auto 0 auto;
+    /* Ajusta a largura do botão para se adaptar ao conteúdo */
     width: fit-content;
 }

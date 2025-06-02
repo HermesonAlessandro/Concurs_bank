@@ -5,11 +5,11 @@ document.querySelector('#validacao_alterar_senha').addEventListener('submit', fu
     
     // Obtém os valores inseridos nos campos de entrada do formulário
     const email = document.getElementById('email').value;  // Email digitado pelo usuário
-    const novasenha = document.getElementById('novasenha').value;  // Senha digitada pelo usuário
-    const confirmarsenha = document.getElementById('confirmarsenha').value;  // Confirmação da senha digitada pelo usuário
+    const nova_senha = document.getElementById('nova_senha').value;  // Senha digitada pelo usuário
+    const senha = document.getElementById('senha').value;  // Confirmação da senha digitada pelo usuário
 
     // Verifica se algum campo está vazio
-    if(!email || !novasenha || !confirmarsenha){
+    if(!email || !nova_senha || !senha){
         alert('Todos os campos devem ser preechidos!');
         return; // Interrompe o processamento do formulário
     }
@@ -21,13 +21,13 @@ document.querySelector('#validacao_alterar_senha').addEventListener('submit', fu
     }
     
     // Validação da novasenha: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, um numero e um caractere especial
-    if (novasenha.length < 8 || !/[A-Z]/.test(novasenha) || !/[a-z]/.test(novasenha) || !/[0-9]/.test(novasenha) || !/[!@#$%^&*(),.?":{}|<>]/.test(novasenha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas/um numero e um caractere especial
+    if (nova_senha.length < 8 || !/[A-Z]/.test(nova_senha) || !/[a-z]/.test(nova_senha) || !/[0-9]/.test(nova_senha) || !/[!@#$%^&*(),.?":{}|<>]/.test(nova_senha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas/um numero e um caractere especial
         alert('Nova senha deve ter pelo menos 8 caracteres, incluindo maiúsculas, minúsculas, um número e um caractere especial');
         return; // Interrompe o processamento do formulário
     }
 
     // Validação da confirmação da senha: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, um numero e um caractere especial
-    if (confirmarsenha.length < 8 || !/[A-Z]/.test(confirmarsenha) || !/[a-z]/.test(confirmarsenha) || !/[0-9]/.test(confirmarsenha) || !/[!@#$%^&*(),.?":{}|<>]/.test(confirmarsenha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas/um numero e um caractere especial
+    if (senha.length < 8 || !/[A-Z]/.test(senha) || !/[a-z]/.test(senha) || !/[0-9]/.test(senha) || !/[!@#$%^&*(),.?":{}|<>]/.test(senha)) { // Confere tamanho mínimo e presença de maiúsculas/minúsculas/um numero e um caractere especial
         alert('Senhas não coincidem, Senha deve ter pelo menos 8 caracteres, incluindo maiúsculas, minúsculas, um número e um caractere especial');
         return; // Interrompe o processamento do formulário
     }

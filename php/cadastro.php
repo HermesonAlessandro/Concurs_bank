@@ -8,9 +8,6 @@ if (!$mysqli) {
     die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error); // Encerra o script caso haja erro na conexão
 }
 
-// Exibe os dados enviados pelo formulário para fins de depuração (remova em produção)
-var_dump($_POST);
-
 // Obtém os dados enviados pelo formulário via método POST
 $cpf = $_POST['cpf']; // CPF do usuário
 $nome = $_POST['nome']; // Nome completo do usuário
@@ -22,7 +19,7 @@ $senha = $_POST['senha']; // Senha do usuário
 // Validação da senha no servidor: verifica comprimento e presença de caracteres especiais
 if(strlen($senha) < 8 || !preg_match('/[A-Z]/', $senha) || !preg_match('/[a-z]/', $senha) || 
    !preg_match('/[0-9]/', $senha) || !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $senha)){
-    echo "<script>alert('Senha não atende aos requisitos mínimos.');</script>"; // Exibe alerta caso a senha seja inválida
+    echo "<script>alert('Senha não atende aos requisitos mínimos!');</script>"; // Exibe alerta caso a senha seja inválida
     exit(); // Encerra a execução do script
 }
 
@@ -36,7 +33,7 @@ $resultado_verifica = $stmt_verifica->get_result(); // Obtém o resultado da con
 if($resultado_verifica->num_rows > 0){
     // Se o CPF já existir, exibe um alerta e interrompe o fluxo de cadastro
     echo "<script>
-            alert('CPF já cadastrado! Por favor, use um CPF diferente.');
+            alert('CPF já cadastrado! Por favor, use um CPF diferente!');
             window.history.back(); // Retorna para a página anterior
           </script>";
     exit(); // Encerra o script
@@ -51,7 +48,7 @@ $resultado_verifica_email = $stmt_verifica_email->get_result();
 
 if($resultado_verifica_email->num_rows > 0){
     echo "<script>
-            alert('E-mail já cadastrado! Por favor, use um e-mail diferente.');
+            alert('E-mail já cadastrado! Por favor, use um e-mail diferente!');
             window.history.back();
           </script>";
     exit();
@@ -84,7 +81,7 @@ if($stmt->execute()){
     exit(); // Encerra a execução do script
 } else {
     // Se houver erro na inserção, exibe uma mensagem de erro
-    echo "<script>alert('Erro ao cadastrar o estudante! Tente novamente.'); window.history.back();</script>";
+    echo "<script>alert('Erro ao cadastrar o estudante! Tente novamente!'); window.history.back();</script>";
 }
 
 // Fecha a consulta preparada

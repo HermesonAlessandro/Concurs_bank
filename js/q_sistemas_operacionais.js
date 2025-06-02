@@ -1,7 +1,7 @@
 // Array contendo as questões do quiz
 const questoes = [
         {
-            id: "questao1", 
+            id: "questao01", 
             pergunta: " (CESPE - 2022 - TCU) Acerca dos sistemas operacionais, julgue o item. Um dos principais objetivos de um sistema operacional é fornecer uma interface entre o hardware e o usuário, além de gerenciar recursos como memória, processador e dispositivos de entrada esaída.",
             alternativas:{
                 A: "Verdadeiro",
@@ -21,7 +21,7 @@ const questoes = [
         },
 
         {
-            id: "questao2", 
+            id: "questao02", 
             pergunta: "(FCC - 2020 - TRT 2ª Região) No gerenciamento de processos, qual é o estado que indica que um processo está esperando por algum evento, como a conclusão de uma operação de E/S?",
             alternativas:{
                 A: "Pronto",
@@ -41,7 +41,7 @@ const questoes = [
         },
 
         {
-            id: "questao3", 
+            id: "questao03", 
             pergunta: " (CESGRANRIO - 2021 - Petrobras) O sistema operacional utiliza uma área especial chamada de memória virtual. Assinale a alternativacorreta sobre esse conceito",
             alternativas:{
                 A: "Impede o uso de disco como memória",
@@ -61,7 +61,7 @@ const questoes = [
         },
 
         {
-            id: "questao4", 
+            id: "questao04", 
             pergunta: " (IBFC - 2019 - TJ-MG) Qual técnica de gerenciamento de memória divide a memória em blocos fixos?",
             alternativas:{
                 A: "Paginação",
@@ -81,7 +81,7 @@ const questoes = [
         },
 
         {
-            id: "questao5", 
+            id: "questao05", 
             pergunta: " (FGV - 2021 - SEFAZ-RJ)Em relação aos sistemas de arquivos, qual das opções abaixo representa um sistema de arquivos utilizado em sistemas Linux?",
             alternativas:{
                 A: "NTFS",
@@ -101,7 +101,7 @@ const questoes = [
         },
 
         {
-            id: "questao6", 
+            id: "questao06", 
             pergunta: " (CESPE - 2022 - Polícia Federal) O comando chmod no Linux é utilizado para:",
             alternativas:{
                 A: "Gerenciar usuários",
@@ -116,12 +116,12 @@ const questoes = [
                 B: "chmod altera permissões de arquivos e diretórios no Linux.",
                 C: "Isso é feito com ps, top, etc.",
                 D: "Comandos como top ou htop são usados para isso.",
-                E: " Usam-se apt, yum, dnf etc., dependendo da distribuição."
+                E: "Usam-se apt, yum, dnf etc., dependendo da distribuição."
             }
         },
 
         {
-            id: "questao7", 
+            id: "questao07", 
             pergunta: " (IBFC - 2023 - PC-SP) No Windows, qual funcionalidade permite criar um ponto de restauração do sistema?",
             alternativas:{
                 A: "Gerenciador de Tarefas",
@@ -141,7 +141,7 @@ const questoes = [
         },
 
         {
-            id: "questao8", 
+            id: "questao08", 
             pergunta: " (FCC - 2020 - TRF 3ª Região) A técnica que permite que vários processos compartilhem a CPU alternadamente é chamada de:",
             alternativas:{
                 A: "Pipeline",
@@ -161,7 +161,7 @@ const questoes = [
         },
 
         {
-            id: "questao9", 
+            id: "questao09", 
             pergunta: "(CESPE - 2021 - CGU)Em sistemas operacionais, deadlock ocorre quando:",
             alternativas:{
                 A: "Um processo é finalizado abruptamente",
@@ -207,7 +207,7 @@ function criarQuestoes() {
     const container = document.getElementById("quiz-container");
 
     // Recupera o tema do quiz a partir de um atributo ou variável global, garantindo que um tema padrão seja usado caso nenhum seja definido
-    const temaAtual = document.getElementById("quiz-container").getAttribute("data-tema") || "Banco de dados"; 
+    const temaAtual = document.getElementById("quiz-container").getAttribute("data-tema") || "Sistemas operacionais"; 
 
     // Exibe no console o tema carregado para fins de depuração
     console.log("Tema carregado:", temaAtual);
@@ -275,7 +275,7 @@ function criarQuestoes() {
 
         // Verifica se todas as questões foram respondidas antes de prosseguir
         if(Object.values(respostas).includes(null)){
-            alert("Por favor, responda todas as questões antes de finalizar.");
+            alert("Por favor, responda todas as questões antes de finalizar!");
             return;
         }
 
@@ -329,7 +329,7 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             // Exibe mensagem de acerto ou erro ao usuário
             resultado.innerHTML = correto 
                 ? "<strong>Resposta correta!</strong><br>" 
-                : "<strong>Resposta errada.</strong><br>";
+                : "<strong>Resposta errada!</strong><br>";
 
             // Exibe todas as alternativas, destacando a correta
             Object.entries(explicacoes).forEach(([key, value]) => {
@@ -345,7 +345,7 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             // Exibe mensagem de aviso caso nenhuma alternativa tenha sido selecionada
-            resultado.textContent = "Por favor, selecione uma alternativa."; 
+            resultado.textContent = "Por favor, selecione uma alternativa!"; 
         }
     });
 }

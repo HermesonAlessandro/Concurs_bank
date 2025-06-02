@@ -4,12 +4,12 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Configura o MySQLi
 include_once "conexao.php"; // Inclui o arquivo de conexão com o banco de dados
 
 // Verifica se a conexão com o banco de dados foi bem-sucedida
-if(!$mysqli){
-    die("Erro ao conectar ao banco de dados: ".$mysqli->connect_error); // Encerra o script caso haja erro na conexão
+if (!$mysqli) {
+    die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error); // Encerra o script caso haja erro na conexão
 }
 
 // Função para validar se a senha atende aos critérios de segurança
-function validarSenha($senha){
+function validarSenha($senha) {
     return strlen($senha) >= 8 && // Verifica se a senha tem pelo menos 8 caracteres
            preg_match('/[A-Z]/', $senha) && // Verifica se contém pelo menos uma letra maiúscula
            preg_match('/[a-z]/', $senha) && // Verifica se contém pelo menos uma letra minúscula
@@ -17,25 +17,36 @@ function validarSenha($senha){
            preg_match('/[!@#$%^&*(),.?":{}|<>]/', $senha); // Verifica se contém pelo menos um caractere especial
 }
 
-// Exibe os dados enviados pelo formulário para fins de depuração (remova em produção)
-var_dump($_POST);
-
 // Obtém os dados enviados pelo formulário via método POST
 $email = $_POST['email']; // Obtém o e-mail enviado pelo formulário
-$novasenha = $_POST['novasenha']; // Obtém a nova senha enviada pelo formulário
-$confirmarsenha = $_POST['confirmarsenha']; // Obtém a confirmação da nova senha enviada pelo formulário
+$nova_senha = $_POST['nova_senha']; // Obtém a nova senha enviada pelo formulário
+$senha = $_POST['senha']; // Obtém a confirmação da nova senha enviada pelo formulário
 
 // Sanitiza o e-mail para evitar injeções maliciosas
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
 // Verifica se as senhas informadas coincidem
-if($novasenha !== $confirmarsenha){
+if ($nova_senha !== $senha) {
     echo "<script>alert('As senhas não coincidem!'); history.back();</script>"; // Exibe um alerta caso as senhas sejam diferentes
     exit(); // Encerra a execução do script
 }
 
 // Criptografa a nova senha para armazenamento seguro no banco de dados
-$senha_hash = password_hash($novasenha, PASSWORD_DEFAULT);
+$senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
+
+// Verifica se o email existe no banco antes de atualizar
+$sql_verificar = "SELECT email FROM estudante WHERE email = ?";
+$stmt_verificar = $mysqli->prepare($sql_verificar);
+$stmt_verificar->bind_param("s", $email);
+$stmt_verificar->execute();
+$stmt_verificar->store_result();
+
+if ($stmt_verificar->num_rows == 0) {
+    echo "<script>alert('E-mail não encontrado!'); history.back();</script>"; // Exibe um alerta caso o e-mail não esteja cadastrado
+    exit();
+}
+
+$stmt_verificar->close();
 
 try {
     // Inicia uma transação para garantir que todas as alterações sejam aplicadas corretamente
@@ -66,7 +77,7 @@ try {
 } catch (Exception $e) {
     // Caso ocorra um erro, desfaz todas as alterações realizadas durante a transação
     $mysqli->rollback();
-    echo "<script>alert('Erro ao alterar senha! Tente novamente.'); history.back();</script>";
+    echo "<script>alert('Erro ao alterar senha! Tente novamente!'); history.back();</script>";
 }
 
 // Fecha as conexões com o banco de dados para liberar recursos

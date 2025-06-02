@@ -1,56 +1,58 @@
 /* Define a fonte padrão da página e adiciona um espaçamento externo */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: linear-gradient(#003366, #40E0D0); /* Igual ao da tela_cadastro.css */
+    font-family: Arial, sans-serif; /* Define uma fonte legível e moderna */
+    margin: 0; /* Remove margens padrão do navegador */
+    background: linear-gradient(#003366, #40E0D0); /* Aplica um degradê ao fundo */
     background-repeat: no-repeat; /* Impede que o degradê se repita */
     background-attachment: fixed; /* Faz o degradê ocupar toda a tela mesmo ao rolar */
-    background-size: cover;       /* Faz o degradê cobrir toda a área da tela */
-    min-height: 100vh;
-    padding-top: 150px;
+    background-size: cover; /* Faz o degradê cobrir toda a área da tela */
+    min-height: 100vh; /* Garante que o corpo tenha altura mínima de 100% da viewport */
+    padding-top: 150px; /* Adiciona espaçamento no topo para acomodar outros elementos */
 }
 
 /* Define um contêiner flexível para alinhar elementos dentro dele */
 .container {
     display: flex; /* Organiza os elementos em uma única linha */
-    align-items: center; /* Alinha verticalmente os elementos (imagem e link) */
+    align-items: center; /* Alinha verticalmente os elementos dentro do contêiner */
 }
 
 /* Estiliza o logotipo do site e define sua posição na página */
 .logo {
     position: absolute; /* Permite posicionamento livre na página */
-    left: 20px; /* Move a logo para o lado esquerdo */
-    top: 20px;  /* Mantém a logo no topo */
-    height: 120px; /* Define a altura da logo */
+    left: 20px; /* Move a logo para o lado esquerdo da tela */
+    top: 20px; /* Mantém a logo no topo */
+    height: 120px; /* Define a altura da logo para um tamanho adequado */
 }
 
 /* Estiliza o link para voltar, posicionando abaixo da logo */
 .voltar {
-    position: absolute; /* Permite que fique fixo na tela */
+    position: absolute; /* Mantém a posição fixa na tela */
     left: 20px; /* Mantém o link alinhado à esquerda */
     top: 160px; /* Posiciona o link logo abaixo da logo */
-    font-size: 16px; /* Define o tamanho da fonte do link */
+    font-size: 16px; /* Define o tamanho da fonte do link para facilitar a leitura */
 }
 
 /* Estiliza o contêiner do perfil do usuário */
 .perfil-container {
-    margin-top: 100px; /* Empurra o painel de perfil para baixo */
+    margin-top: 100px; /* Empurra o painel de perfil para baixo, evitando sobreposição */
     width: 600px; /* Define a largura fixa do contêiner */
     padding: 20px; /* Adiciona espaçamento interno ao contêiner */
-    border: 1px solid #ccc; /* Adiciona uma borda sutil ao redor do perfil */
+    border: 1px solid #ccc; /* Adiciona uma borda sutil para destacar o perfil */
     border-radius: 10px; /* Suaviza os cantos com bordas arredondadas */
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para destaque */
-    text-align: left; /* Mantém o texto alinhado à esquerda */
-    margin-left: auto;
-    margin-right: auto; /* Centraliza o perfil na página */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para destacar o perfil */
+    text-align: left; /* Mantém o texto alinhado à esquerda para melhor leitura */
+    margin-left: auto; /* Centraliza o contêiner horizontalmente */
+    margin-right: auto; /* Garante o alinhamento central */
 }
 
+/* Estiliza o botão primário da interface */
 .header-bg .btn-primary {
-    background-color: #003366;
-    border-color: #003366;
-    color: #fff;
+    background-color: #003366; /* Define a cor de fundo do botão */
+    border-color: #003366; /* Define a cor da borda do botão */
+    color: #fff; /* Altera a cor do texto para branco, garantindo contraste */
 }
 
-#navbar{
-    transition: 0.3s;
+/* Adiciona uma transição suave ao menu de navegação */
+#navbar {
+    transition: 0.3s; /* Define um tempo de transição para efeitos visuais */
 }

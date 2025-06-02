@@ -10,7 +10,7 @@ if (!$mysqli) {
 
 // Verifica se o usuário está logado antes de acessar os resultados
 if(!isset($_SESSION['email'])){
-    echo "<script>alert('Você precisa estar logado para acessar os resultados.'); window.location.href = 'tela_login.html';</script>";
+    echo "<script>alert('Você precisa estar logado para acessar os resultados!'); window.location.href = '../html/tela_login.html';</script>";
     exit();
 }
 
@@ -31,7 +31,7 @@ if($resultado_usuario->num_rows > 0){
     $nome = $dados_usuario['nome_completo'];
 }else{
     // Se o usuário não for encontrado, redireciona para a tela de login
-    echo "<script>alert('Usuário não encontrado!'); window.location.href = 'tela_login.html';</script>";
+    echo "<script>alert('Usuário não encontrado!'); window.location.href = '../html/tela_login.html';</script>";
     exit();
 }
 
@@ -44,7 +44,7 @@ $gabaritos = [
     "Sistemas operacionais" => ["questao01" => "A", "questao02" => "C", "questao03" => "B", "questao04" => "A", "questao05" => "C", "questao06" => "B", "questao07" => "C", "questao08" => "D", "questao09" => "C", "questao10" => "C"],
     "Governança de TI" => ["questao01" => "A", "questao02" => "E", "questao03" => "B", "questao04" => "B", "questao05" => "C", "questao06" => "D", "questao07" => "A", "questao08" => "B", "questao09" => "D", "questao10" => "B"],
     "Ia e big data" => ["questao01" => "A", "questao02" => "C", "questao03" => "D", "questao04" => "E", "questao05" => "C", "questao06" => "A", "questao07" => "B", "questao08" => "E", "questao09" => "A", "questao10" => "D"],
-    "Computação em  nuvem" => ["questao01" => "D", "questao02" => "A", "questao03" => "A", "questao04" => "A", "questao05" => "A", "questao06" => "B", "questao07" => "C", "questao08" => "E", "questao09" => "C", "questao10" => "B"],
+    "Computação em nuvem" => ["questao01" => "D", "questao02" => "A", "questao03" => "A", "questao04" => "A", "questao05" => "A", "questao06" => "B", "questao07" => "C", "questao08" => "E", "questao09" => "C", "questao10" => "B"],
     "Pacote office" => ["questao01" => "C", "questao02" => "B", "questao03" => "C", "questao04" => "C", "questao05" => "C", "questao06" => "A", "questao07" => "E", "questao08" => "A", "questao09" => "D", "questao10" => "A"],
     "Internet das coisas e blockchain" => ["questao01" => "E", "questao02" => "E", "questao03" => "C", "questao04" => "B", "questao05" => "B", "questao06" => "C", "questao07" => "B", "questao08" => "C", "questao09" => "D", "questao10" => "B"],
 ];
@@ -57,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)){
 
     // Verifica se o tema informado é válido
     if(!isset($gabaritos[$tema])){
-        echo "<script>alert('Tema inválido!'); window.location.href = 'tela_assuntos.html';</script>";
+        echo "<script>alert('Tema inválido!'); window.location.href = '../html/tela_assuntos.html';</script>";
         exit();
     }
 
@@ -133,7 +133,6 @@ $mysqli->close();
                 <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 100px;">
             </a>
             <div class="mx-auto d-flex flex-wrap gap-2 justify-content-center">
-                <a href="tela_assuntos.html" class="btn btn-primary">Voltar</a>
                 <a href="../php/perfil.php" class="btn btn-primary">Perfil</a>
                 <a href="../php/sair.php" class="btn btn-primary">Sair</a>
             </div>
@@ -160,7 +159,7 @@ $mysqli->close();
             <?php endforeach; ?>
         </table>
 
-        <a href="tela_assuntos.html" class="btn btn-primary btn-voltar">Voltar para as questões</a>
+        <a href="../html/tela_assuntos.html" class="btn btn-primary btn-voltar">Voltar para as questões</a>
     </div>
 </body>
 </html>

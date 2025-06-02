@@ -8,9 +8,6 @@ if (!$mysqli) {
     die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error);
 }
 
-// Exibe o conteúdo da variável $_POST para fins de depuração (remova em produção)
-var_dump($_POST);
-
 // Obtém o email da sessão antes de destruí-la
 $email = $_SESSION['email'] ?? null;
 

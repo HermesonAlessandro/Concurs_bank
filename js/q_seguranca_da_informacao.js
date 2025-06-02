@@ -207,7 +207,7 @@ function criarQuestoes() {
     const container = document.getElementById("quiz-container");
 
     // Recupera o tema do quiz a partir de um atributo ou variável global, garantindo que um tema padrão seja usado caso nenhum seja definido
-    const temaAtual = document.getElementById("quiz-container").getAttribute("data-tema") || "Banco de dados"; 
+    const temaAtual = document.getElementById("quiz-container").getAttribute("data-tema") || "Segurança da informação"; 
 
     // Exibe no console o tema carregado para fins de depuração
     console.log("Tema carregado:", temaAtual);
@@ -275,7 +275,7 @@ function criarQuestoes() {
 
         // Verifica se todas as questões foram respondidas antes de prosseguir
         if(Object.values(respostas).includes(null)){
-            alert("Por favor, responda todas as questões antes de finalizar.");
+            alert("Por favor, responda todas as questões antes de finalizar!");
             return;
         }
 
@@ -329,7 +329,7 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             // Exibe mensagem de acerto ou erro ao usuário
             resultado.innerHTML = correto 
                 ? "<strong>Resposta correta!</strong><br>" 
-                : "<strong>Resposta errada.</strong><br>";
+                : "<strong>Resposta errada!</strong><br>";
 
             // Exibe todas as alternativas, destacando a correta
             Object.entries(explicacoes).forEach(([key, value]) => {
@@ -345,7 +345,7 @@ function validarResposta(questaoId, respostaCorreta, explicacoes) {
             document.querySelector(`#${questaoId} button[type="submit"]`).disabled = true;
         } else {
             // Exibe mensagem de aviso caso nenhuma alternativa tenha sido selecionada
-            resultado.textContent = "Por favor, selecione uma alternativa."; 
+            resultado.textContent = "Por favor, selecione uma alternativa!"; 
         }
     });
 }
