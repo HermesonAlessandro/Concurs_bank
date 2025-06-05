@@ -129,7 +129,7 @@ $mysqli->close();
 <body>
     <header class="header-bg fixed-top shadow">
         <div class="container d-flex justify-content-between align-items-center flex-wrap">
-            <a href="tela_inicial.html">
+            <a href="../html/tela_inicial.html">
                 <img src="../img/Logo(CB).png" alt="Logo do site" style="height: 100px;">
             </a>
             <div class="mx-auto d-flex flex-wrap gap-2 justify-content-center">
